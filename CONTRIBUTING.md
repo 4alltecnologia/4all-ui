@@ -1,9 +1,6 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
-
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+When contributing to this repository, please first discuss the change you wish to make via issue, or any other method with the owners of this repository before making a change.
 
 ## Pull Request Process
 
@@ -19,3 +16,4 @@ Please note we have a code of conduct, please follow it in all your interactions
 2. sync with origin
 3. run `npm version [major|minor|patch] -m ":bookmark: release new version <next version>"`
 4. `git push origin master --tags` :tada:
+5. publish on github pages run `npm run predeploy` and then `npm run deploy`
