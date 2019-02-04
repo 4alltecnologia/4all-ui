@@ -10,4 +10,4 @@ deploy:
       secure: $NPM_AUTH_KEY
     on:
       tags: true
-      repo: leonardo-alves/npm-test-github-ci
+      repo: 4alltecnologia/4all-ui
