@@ -1,7 +1,15 @@
-import ExampleComponent from './'
+import Button from './components/Button';
+import Loader from './components/Loader';
 
-describe('ExampleComponent', () => {
+describe('Button', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
-  })
-})
+    expect(Button).toBeTruthy();
+  });
+});
+
+
+describe('Loader', () => {
+  it('is truthy', () => {
+    expect(Loader).toBeTruthy();
+  });
+});
