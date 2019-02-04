@@ -15,12 +15,12 @@ npm install --save 4all-ui
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from '4all-ui'
+import { Button } from '4all-ui'
 
 class Example extends Component {
   render () {
     return (
-      <MyComponent />
+      <Button>Button Text</Button>
     )
   }
 }
@@ -28,4 +28,4 @@ class Example extends Component {
 
 ## License
 
-MIT © [Leonardo Alves](https://github.com/Leonardo Alves)
+MIT © [4all Tecnologia](https://github.com/4alltecnologia)
