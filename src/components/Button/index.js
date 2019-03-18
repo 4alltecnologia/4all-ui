@@ -6,6 +6,8 @@ import { GlobalStyle } from '../../styles/mixins';
 import Loader from '../Loader';
 
 const Button = ({
+  id,
+  className,
   isLoading,
   width,
   height,
@@ -24,7 +26,8 @@ const Button = ({
   <Fragment>
     <GlobalStyle />
     <styles.CustomButton
-      className="btn-4all"
+      id={id}
+      className={`btn-4all ${className}`}
       color={color}
       width={width}
       height={height}
@@ -48,6 +51,8 @@ const Button = ({
 );
 
 Button.propTypes = {
+  id: PropTypes.string,
+  className: PropTypes.string,
   color: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
@@ -65,6 +70,8 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+  id: null,
+  className: null,
   color: '#FFF',
   width: 'auto',
   height: 'auto',
