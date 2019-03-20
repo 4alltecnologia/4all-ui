@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
-import { MAIN_COLOR } from '../../styles/variables';
+import theme from '../../styles/variables';
 import { GlobalStyle } from '../../styles/mixins';
 import Loader from '../Loader';
 
@@ -22,6 +22,7 @@ const Button = ({
   secondary,
   loaderSize,
   loaderWidth,
+  noHover,
 }) => (
   <Fragment>
     <GlobalStyle />
@@ -41,6 +42,7 @@ const Button = ({
       secondary={secondary}
       loaderSize={loaderSize}
       loaderWidth={loaderWidth}
+      noHover={noHover}
     >
       {isLoading && (
         <Loader size={loaderSize} color={color} width={loaderWidth} />
@@ -67,6 +69,7 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   loaderSize: PropTypes.string,
   loaderWidth: PropTypes.string,
+  noHover: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -77,13 +80,14 @@ Button.defaultProps = {
   height: 'auto',
   borderColor: '',
   border: 'none',
-  bgColor: MAIN_COLOR,
+  bgColor: theme.colors.MAIN_COLOR,
   isLoading: false,
   disabled: false,
   customStyles: null,
   secondary: false,
   loaderSize: '20px',
   loaderWidth: '3px',
+  noHover: false,
 };
 
 
