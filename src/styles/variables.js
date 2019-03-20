@@ -1,21 +1,37 @@
+const styles = {
+  fontSizes: {
+    SIZE_1: '35px',
+    SIZE_2: '30px',
+    SIZE_3: '25px',
+    SIZE_4: '20px',
+    SIZE_5: '16px',
+    SIZE_6: '14px',
+    SIZE_7: '12px',
+  },
+  fontWeights: {
+    BOLD: '700',
+    SEMIBOLD: '600',
+    NORMAL: 'normal',
+  },
+  buttons: {
+    HEIGHT_SMALL: '40px',
+    HEIGHT_MEDIUM: '45px',
+    HEIGHT_LARGE: '50px',
+  },
+  colors: {
+    MAIN_COLOR: '#4FA444',
+    DANGER_COLOR: '#D34848',
+    INFO_COLOR: '#588de7',
+    HIGHLIGHT_COLOR: '#E29A09',
+    GRAY_DARKER: '#333333',
+    GRAY_MEDIUM: '#979797',
+    GRAY_MEDIUM_2: '#E4E4E4',
+    GRAY_LIGHT: '#F5F5F5',
+    WHITE: '#FFFFFF',
+  },
+  borders: {
+    RADIUS_1: '3px',
+  },
+};
 
-export const FONT_SIZE_1 = '35px';
-export const FONT_SIZE_2 = '30px';
-export const FONT_SIZE_3 = '25px';
-export const FONT_SIZE_4 = '20px';
-export const FONT_SIZE_5 = '16px';
-export const FONT_SIZE_6 = '13px';
-
-export const FONT_WEIGHT_BOLD = '600';
-export const FONT_WEIGHT_NORMAL = 'normal';
-
-export const MAIN_COLOR = '#4FA444';
-export const DANGER_COLOR = '#D34848';
-export const INFO_COLOR = '#588de7';
-export const HIGHLIGHT_COLOR = '#E29A09';
-export const GRAY_DARKER = '#333333';
-export const GRAY_MEDIUM = '#979797';
-export const GRAY_MEDIUM_2 = '#E4E4E4';
-export const GRAY_LIGHT = '#F5F5F5';
-
-export const BORDER_RADIUS_1 = '3px';
+export default styles;

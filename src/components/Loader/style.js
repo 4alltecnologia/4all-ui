@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { MAIN_COLOR } from '../../styles/variables';
 import { flexPosition } from '../../styles/mixins';
 
 export const LoaderWrapper = styled.div`

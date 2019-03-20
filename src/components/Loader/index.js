@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
-import { MAIN_COLOR } from '../../styles/variables';
+import theme from '../../styles/variables';
 
 const Loader = ({ size, color, width }) => {
   return (
@@ -17,7 +17,7 @@ Loader.propTypes = {
 
 Loader.defaultProps = {
   size: '40px',
-  color: MAIN_COLOR,
+  color: theme.colors.MAIN_COLOR,
   width: '6px',
 };
 
