@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+- 9
+jobs:
+  include:
+    - stage: test
+      script: npm run test
+    - stage: gh-pages
+      deploy:
+        provider: pages
+        before_script: npm run predeploy
+        script: npm run deploy
+        skip-cleanup: true
+        github-token: $GITHUB_TOKEN
+        keep-history: true
+        on:
+          tags: true
+    - stage: npm release
+      deploy:
+        provider: npm
+        skip_cleanup: true
+        email: leo01_alves@hotmail.com
+        tag: latest
+        api_key:
+          secure: $NPM_AUTH_KEY
+        on:
+          tags: true
+          repo: 4alltecnologia/4all-ui
