@@ -1,13 +1,32 @@
 language: node_js
 node_js:
 - 9
-deploy:
-  - provider: npm
-    skip_cleanup: true
-    email: leo01_alves@hotmail.com
-    tag: latest
-    api_key:
-      secure: $NPM_AUTH_KEY
-    on:
-      tags: true
-      repo: 4alltecnologia/4all-ui
+jobs:
+  include:
+    - stage: install
+      script: npm install
+    - stage: test
+      script: npm run test
+    - stage: build
+      script: npm run build
+    - stage: predeploy gh-pages
+      skip-cleanup: true
+      script: npm run predeploy
+    - stage: gh-pages
+      script: npm run deploy
+      provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+      keep-history: true
+      on:
+        tags: true
+    - stage: deploy
+      provider: npm
+      skip_cleanup: true
+      email: leo01_alves@hotmail.com
+      tag: latest  
+      api_key:
+        secure: $NPM_AUTH_KEY
+      on:
+        tags: true
+        repo: 4alltecnologia/4all-ui
