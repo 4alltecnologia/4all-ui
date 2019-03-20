@@ -3,18 +3,12 @@ node_js:
 - 9
 jobs:
   include:
-    - stage: install
-      script: npm install
     - stage: test
       script: npm run test
-    - stage: build
-      script: npm run build
-    - stage: predeploy gh-pages
-      skip-cleanup: true
-      script: npm run predeploy
     - stage: gh-pages
       deploy:
         provider: pages
+        before_script: npm run predeploy
         script: npm run deploy
         skip-cleanup: true
         github-token: $GITHUB_TOKEN
