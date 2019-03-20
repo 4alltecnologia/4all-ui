@@ -2,8 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { action } from '@storybook/addon-actions'; // eslint-disable-line import/no-extraneous-dependencies
 import Button from '../components/Button';
-import { GRAY_DARKER, FONT_SIZE_4, INFO_COLOR } from '../styles/variables';
-import Loader from '../components/Loader';
+import theme from '../styles/variables';
 
 storiesOf('Button', module)
   .add('primary style', () => (
@@ -39,45 +38,16 @@ storiesOf('Button', module)
   ))
   .add('with custom styles', () => (
     <Button
-      bgColor={GRAY_DARKER}
+      bgColor={theme.colors.GRAY_DARKER}
       width="200px"
       height="70px"
       border="4px dashed #fff"
       customStyles={{
-        fontSize: FONT_SIZE_4,
+        fontSize: theme.fontSizes.SIZE_4,
         borderRadius: '50px',
       }}
       onClick={action('With Custom Styles')}
     >
       Hello Button
     </Button>
-  ));
-
-storiesOf('Loader', module)
-  .add('Primary Style', () => (
-    <Loader />
-  ))
-  .add('Custom Style', () => (
-    <Loader
-      color={INFO_COLOR}
-      size="60px"
-      width="10px"
-    />
-  ))
-  .add('Full Screen Style', () => (
-    <div style={{
-      width: '100%',
-      height: '100vh',
-      boxSizing: 'border-box',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}
-    >
-      <Loader
-        color={INFO_COLOR}
-        size="60px"
-        width="10px"
-      />
-    </div>
   ));
