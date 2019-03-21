@@ -7,10 +7,8 @@ jobs:
       script: npm run test
     - stage: gh-pages
       skip-cleanup: true
-      before_script: 
+      script: 
       - npm run predeploy
-      script:
-      - npm run deploy
       deploy:
         provider: pages
         local-dir: storybook-static
