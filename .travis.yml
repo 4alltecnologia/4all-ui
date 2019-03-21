@@ -6,12 +6,12 @@ jobs:
     - stage: test
       script: npm run test
     - stage: gh-pages
-      skip-cleanup: true
       script: 
       - npm run predeploy
       deploy:
         provider: pages
         local-dir: storybook-static
+        skip-cleanup: true
         github-token: $GITHUB_TOKEN
         keep-history: true
         on:
