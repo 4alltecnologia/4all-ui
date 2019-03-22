@@ -1,7 +1,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from '../style';
+import * as styles from '../../../styles/sharedComponents/tabs';
 
 const NavTab = ({
   children,
@@ -14,6 +14,7 @@ const NavTab = ({
   height,
   hoverColor,
   activeBorderColor,
+  noOutline,
 }) => {
   return (
     <styles.CustomNavLink
@@ -27,6 +28,7 @@ const NavTab = ({
       height={height}
       hoverColor={hoverColor}
       activeBorderColor={activeBorderColor}
+      noOutline={noOutline}
     >
       {children}
     </styles.CustomNavLink>
@@ -44,6 +46,7 @@ NavTab.propTypes = {
   height: PropTypes.string,
   hoverColor: PropTypes.string,
   activeBorderColor: PropTypes.string,
+  noOutline: PropTypes.bool,
 };
 
 NavTab.defaultProps = {
@@ -56,6 +59,7 @@ NavTab.defaultProps = {
   height: null,
   hoverColor: null,
   activeBorderColor: null,
+  noOutline: false,
 };
 
 export default NavTab;

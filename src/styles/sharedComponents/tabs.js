@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { flexPosition, fontStyle } from '../../styles/mixins';
-import styles from '../../styles/variables';
+import { flexPosition, fontStyle } from '../mixins';
+import styles from '../variables';
 
 const removeLinkEffects = css`
   &:hover, &:active, &:focus, &:visited {
@@ -10,8 +10,7 @@ const removeLinkEffects = css`
   box-sizing: border-box;
 `;
 
-export const CustomNavLink = styled(NavLink)`
-  ${removeLinkEffects}
+const tabStyle = css`
   ${fontStyle(styles.colors.GRAY_MEDIUM_3, styles.fontSizes.SIZE_7, styles.fontWeights.SEMIBOLD)}
   ${flexPosition({ align: 'center', justify: 'center' })}
   text-align: center;
@@ -19,6 +18,9 @@ export const CustomNavLink = styled(NavLink)`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || '64px'};
   text-decoration: none;
+  ${({ noOutline }) => noOutline ? `
+    outline: none;
+  ` : null}
   &.active {
     border-bottom: 4px solid ${({ activeBorderColor }) => activeBorderColor || styles.colors.MAIN_COLOR};
     padding-bottom: 1px;
@@ -36,11 +38,25 @@ export const CustomNavLink = styled(NavLink)`
   ${({ customStyles }) => customStyles}
 `;
 
+export const CustomNavLink = styled(NavLink)`
+  ${removeLinkEffects}
+  ${tabStyle}
+`;
+
+export const CustomButtonTab = styled.button`
+  ${removeLinkEffects}
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  ${tabStyle}
+`;
+
 const secondaryStyle = css`
-  ${CustomNavLink} {
+  ${CustomNavLink}, ${CustomButtonTab} {
     border-bottom: 1px solid ${styles.colors.GRAY_LIGHT_2};
     &.active {
       border-bottom: 4px solid ${styles.colors.INFO_COLOR};
+      padding-bottom: 2px;
     }
   }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from './style';
+import * as styles from '../../styles/sharedComponents/tabs';
 import { GlobalStyle } from '../../styles/mixins';
 import NavTab from './NavTab';
 
