@@ -1,84 +1,86 @@
-import React, { Fragment } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { NavTabs, NavTab } from '../components/NavTabs';
-import theme from '../styles/variables';
+import { Tabs, Tab } from '../components/Tabs';
+import styles from '../styles/variables';
 
-const RouterMock = ({ children }) => (  // eslint-disable-line
-  <BrowserRouter>
-    <Fragment>
-      <Route path="/1" />
-      <Route path="/2" />
-      <Route path="/3" />
-      {children}
-    </Fragment>
-  </BrowserRouter>
-);
+const ProvideTabManager = (WrappedComponent) => {  // eslint-disable-line
+  const MockComponent = (props) => {
+    const [currentTab, setCurrentTab] = useState(1);
+    return (
+      <WrappedComponent props={props} setCurrentTab={setCurrentTab} currentTab={currentTab} />
+    );
+  };
 
-storiesOf('NavTabs (current location)', module)
-  .add('primary style', () => (
-    <RouterMock>
-      <NavTabs>
-        <NavTab path="/1" exact>Tab 1</NavTab>
-        <NavTab path="/2" exact>Tab 2</NavTab>
-        <NavTab path="/3" exact>Tab 3</NavTab>
-      </NavTabs>
-    </RouterMock>
-  ))
-  .add('secondary style', () => (
-    <RouterMock>
-      <NavTabs secondary>
-        <NavTab path="/1" exact>Tab 1</NavTab>
-        <NavTab path="/2" exact>Tab 2</NavTab>
-        <NavTab path="/3" exact>Tab 3</NavTab>
-      </NavTabs>
-    </RouterMock>
-  ))
-  .add('custom style', () => (
-    <RouterMock>
-      <NavTabs>
-        <NavTab
-          path="/1"
-          exact
+  return <MockComponent />;
+};
+
+storiesOf('Tabs', module)
+  .add('primary style', () => {
+    const FirstStory = ({ currentTab, setCurrentTab }) => (
+      <Tabs>
+        <Tab active={currentTab === 1} onClick={() => setCurrentTab(1)}>Tab 1</Tab>
+        <Tab active={currentTab === 2} onClick={() => setCurrentTab(2)}>Tab 2</Tab>
+        <Tab active={currentTab === 3} onClick={() => setCurrentTab(3)}>Tab 3</Tab>
+      </Tabs>
+    );
+    return ProvideTabManager(FirstStory);
+  })
+  .add('secondary style', () => {
+    const FirstStory = ({ currentTab, setCurrentTab }) => (
+      <Tabs secondary>
+        <Tab active={currentTab === 1} onClick={() => setCurrentTab(1)}>Tab 1</Tab>
+        <Tab active={currentTab === 2} onClick={() => setCurrentTab(2)}>Tab 2</Tab>
+        <Tab active={currentTab === 3} onClick={() => setCurrentTab(3)}>Tab 3</Tab>
+      </Tabs>
+    );
+    return ProvideTabManager(FirstStory);
+  })
+  .add('custom style', () => {
+    const FirstStory = ({ currentTab, setCurrentTab }) => (
+      <Tabs>
+        <Tab
+          active={currentTab === 1}
+          onClick={() => setCurrentTab(1)}
           width="200px"
           height="40px"
-          activeBorderColor={theme.colors.DANGER_COLOR}
+          activeBorderColor={styles.colors.DANGER_COLOR}
           customStyles={{
             marginRight: '20px',
-            borderBottom: `1px solid ${theme.colors.GRAY_LIGHT_2}`,
+            borderBottom: `1px solid ${styles.colors.GRAY_LIGHT_2}`,
           }}
           activeStyle={{ borderWidth: '3px' }}
         >
           Tab 1
-        </NavTab>
-        <NavTab
-          path="/2"
-          exact
+        </Tab>
+        <Tab
+          active={currentTab === 2}
+          onClick={() => setCurrentTab(2)}
           width="200px"
           height="40px"
-          activeBorderColor={theme.colors.DANGER_COLOR}
+          activeBorderColor={styles.colors.DANGER_COLOR}
           customStyles={{
             marginRight: '20px',
-            borderBottom: `1px solid ${theme.colors.GRAY_LIGHT_2}`,
+            borderBottom: `1px solid ${styles.colors.GRAY_LIGHT_2}`,
           }}
           activeStyle={{ borderWidth: '3px' }}
         >
           Tab 2
-        </NavTab>
-        <NavTab
-          path="/3"
-          exact
+        </Tab>
+        <Tab
+          active={currentTab === 3}
+          onClick={() => setCurrentTab(3)}
           width="200px"
           height="40px"
-          activeBorderColor={theme.colors.DANGER_COLOR}
+          activeBorderColor={styles.colors.DANGER_COLOR}
           customStyles={{
             marginRight: '20px',
-            borderBottom: `1px solid ${theme.colors.GRAY_LIGHT_2}`,
+            borderBottom: `1px solid ${styles.colors.GRAY_LIGHT_2}`,
           }}
           activeStyle={{ borderWidth: '3px' }}
         >
           Tab 3
-        </NavTab>
-      </NavTabs>
-    </RouterMock>
-  ));
+        </Tab>
+      </Tabs>
+    );
+    return ProvideTabManager(FirstStory);
+  });
