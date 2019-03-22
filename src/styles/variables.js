@@ -25,8 +25,9 @@ const styles = {
     HIGHLIGHT_COLOR: '#E29A09',
     GRAY_DARKER: '#333333',
     GRAY_MEDIUM: '#979797',
-    GRAY_MEDIUM_2: '#E4E4E4',
+    GRAY_MEDIUM_3: '#a0a0a0',
     GRAY_LIGHT: '#F5F5F5',
+    GRAY_LIGHT_2: '#E4E4E4',
     WHITE: '#FFFFFF',
   },
   borders: {

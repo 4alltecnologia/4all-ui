@@ -10,6 +10,7 @@ configureActions({
 function loadStories() {
   require('../src/stories/button.js');
   require('../src/stories/loader.js');
+  require('../src/stories/tabs.js');
   // You can require as many stories as you need.
 }
 
