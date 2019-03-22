@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import * as styles from '../../../styles/sharedComponents/tabs';
 
 const NavTab = ({
+  id,
+  className,
   children,
   customStyles,
   path,
@@ -18,6 +20,8 @@ const NavTab = ({
 }) => {
   return (
     <styles.CustomNavLink
+      id={id}
+      className={className}
       exact={!!exact}
       activeClassName="active"
       to={path}
@@ -47,6 +51,8 @@ NavTab.propTypes = {
   hoverColor: PropTypes.string,
   activeBorderColor: PropTypes.string,
   noOutline: PropTypes.bool,
+  id: PropTypes.string,
+  className: PropTypes.string,
 };
 
 NavTab.defaultProps = {
@@ -60,6 +66,8 @@ NavTab.defaultProps = {
   hoverColor: null,
   activeBorderColor: null,
   noOutline: false,
+  id: '',
+  className: '',
 };
 
 export default NavTab;

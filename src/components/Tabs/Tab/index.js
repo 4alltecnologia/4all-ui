@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import * as styles from '../../../styles/sharedComponents/tabs';
 
 const Tab = ({
+  id,
+  className,
   children,
   customStyles,
   active,
@@ -18,7 +20,8 @@ const Tab = ({
 }) => {
   return (
     <styles.CustomButtonTab
-      className={active ? 'active' : ''}
+      id={id}
+      className={active ? `active ${className}` : className}
       customStyles={customStyles}
       activeStyle={activeStyle}
       hoverStyle={hoverStyle}
@@ -46,9 +49,13 @@ Tab.propTypes = {
   activeBorderColor: PropTypes.string,
   active: PropTypes.bool,
   noOutline: PropTypes.bool,
+  id: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Tab.defaultProps = {
+  id: '',
+  className: '',
   customStyles: null,
   activeStyle: null,
   hoverStyle: null,
