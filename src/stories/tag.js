@@ -1,12 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import theme from '../styles/variables';
+import { action } from '@storybook/addon-actions'; // eslint-disable-line import/no-extraneous-dependencies
 import Tag from '../components/Tag';
+import theme from '../styles/variables';
 
 storiesOf('Tag', module)
   .add('With Close Button', () => (
     <div style={{ display: 'flex' }}>
-      <Tag showCloseIcon>Label</Tag>
+      <Tag onRemoveTag={action('With onRemoveTag Function ')}>Label</Tag>
     </div>
   ))
   .add('Primary', () => (

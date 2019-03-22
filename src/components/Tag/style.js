@@ -32,10 +32,9 @@ export const CustomTag = styled.div`
   min-width: 50px;
   border-radius: 20px;
   border: 1px solid ${theme.colors.GRAY_MEDIUM_2};
-  padding: ${({ showCloseIcon }) => showCloseIcon ? '1px 15px' : '6px 25px'};
+  padding: ${({ onRemoveTag }) => onRemoveTag ? '1px 15px' : '6px 25px'};
   margin-right: 10px;
   margin-bottom: 10px;
-  cursor: pointer;
   background-color: ${props => props.bgColor};
   color: ${({ color }) => color || '#FFF'};
   height: ${({ height }) => height || 'auto'};
@@ -44,7 +43,7 @@ export const CustomTag = styled.div`
   &:hover {
     ${props => props.hoverStyle};
   }
-  ${({ showCloseIcon }) => showCloseIcon ? 'justify-content: space-between' : null}
+  ${({ onRemoveTag }) => onRemoveTag ? 'justify-content: space-between' : null}
   ${({ customStyles }) => customStyles};
   ${({ error }) => error ? errorTag : null};
   ${({ secondary }) => secondary ? secondaryTag : null};
@@ -55,4 +54,5 @@ export const CloseIcon = styled.img`
   margin-right: 0px;
   margin-left: 25px;
   width: 27px;
+  cursor: pointer;
 `;

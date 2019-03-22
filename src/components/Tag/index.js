@@ -19,7 +19,7 @@ const Tag = ({
   onHoverTag,
   onBlurTag,
   onClick,
-  showCloseIcon,
+  onRemoveTag,
   children,
   secondary,
   error,
@@ -40,15 +40,16 @@ const Tag = ({
       onMouseOver={onHoverTag ? () => onHoverTag(tag) : null}
       onFocus={onHoverTag ? () => onHoverTag(tag) : null}
       onClick={onClick}
-      showCloseIcon={showCloseIcon}
+      onRemoveTag={!!onRemoveTag}
       secondary={secondary}
       error={error}
     >
       {children}
-      {showCloseIcon && (
+      {!!onRemoveTag && (
         <styles.CloseIcon
           src={closeIcon}
           alt="Icone 4all"
+          onClick={onRemoveTag}
         />
       )}
     </styles.CustomTag>
@@ -69,7 +70,7 @@ Tag.propTypes = {
   disabled: PropTypes.bool,
   customStyles: PropTypes.object,
   onClick: PropTypes.func,
-  showCloseIcon: PropTypes.bool,
+  onRemoveTag: PropTypes.func,
   children: PropTypes.any.isRequired,
   secondary: PropTypes.bool,
   error: PropTypes.bool,
@@ -88,7 +89,7 @@ Tag.defaultProps = {
   onHoverTag: null,
   onBlurTag: null,
   onClick: null,
-  showCloseIcon: false,
+  onRemoveTag: null,
   customStyles: null,
   secondary: false,
   error: false,

@@ -62,7 +62,7 @@ Tag props
 - `onHoverTag` - function for tag hover event (`type: function`)
 - `onBlurTag` - function for tag blur event (`type: function`)
 - `onClick` - function for tag click event (`type: function`)
-- `remove` - if true, show remove icon on tag (`type: boolean`)
+- `onRemoveTag` - function for tag icon click event (`type: function`)
 - `color` - font color of the tag (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
