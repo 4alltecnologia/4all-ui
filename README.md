@@ -39,7 +39,7 @@ Component Button Props
 - `borderColor` - color of the button border (`type: String`)
 - `bgColor` - background-color of the button (`type: String`)
 - `disabled` - disabled style (`type: boolean`)
-- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `onClick` - function for button click event (`type: function`)
 - `color` - font color of the button (`type: String`)
 - `border` - border of the button (e.g.  `1px solid #ccc`)
@@ -64,8 +64,21 @@ Tag props
 - `onClick` - function for tag click event (`type: function`)
 - `onRemoveTag` - function for tag icon click event (`type: function`)
 - `color` - font color of the tag (`type: String`)
-- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
+
+## Input
+Input props
+- `disabled` - disabled style (`type: boolean`)
+- `error` - error style (`type: boolean`)
+- `onChange` - function for input change event (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `type` - input type (`type: string`)
+- `value` - input value (`type: any`)
+- `placeholder` - default input placeholder (`type: string`)
+- `maxLength` - set a maximum length (`type: string`)
+- `checked` - checked style (`type: bool`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
