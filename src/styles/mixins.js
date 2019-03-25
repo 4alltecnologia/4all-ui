@@ -16,5 +16,6 @@ export const fontStyle = (color, fontSize, fontWeight) => `
 export const GlobalStyle = createGlobalStyle`
   * {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
   }
 `;
