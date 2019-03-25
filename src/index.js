@@ -1,5 +1,6 @@
 import Button from './components/Button';
 import Loader from './components/Loader';
+import Tag from './components/Tag';
 import './fonts.css';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
@@ -12,5 +13,6 @@ const theme = {
 export {
   Button,
   Loader,
+  Tag,
   theme,
 };
