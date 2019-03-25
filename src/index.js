@@ -1,5 +1,7 @@
 import Button from './components/Button';
 import Loader from './components/Loader';
+import { NavTabs, NavTab } from './components/NavTabs';
+import { Tabs, Tab } from './components/Tabs';
 import Tag from './components/Tag';
 import Switch from './components/Switch';
 import './fonts.css';
@@ -14,6 +16,10 @@ const theme = {
 export {
   Button,
   Loader,
+  NavTabs,
+  NavTab,
+  Tabs,
+  Tab,
   Tag,
   Switch,
   theme,
