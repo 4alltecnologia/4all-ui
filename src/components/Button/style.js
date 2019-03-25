@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 import { flexPosition, fontStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 import { lightenDarkenColor } from '../../helpers/helpers';
