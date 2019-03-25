@@ -10,27 +10,33 @@ const Switch = ({
   disabled,
   onChange,
   customStyles,
+  sliderStyles,
   labelStyles,
   children,
 }) => {
   return (
     <Fragment>
-      <GlobalStyle />
       <styles.Switch>
-        <styles.SwitchInput
-          id={id}
-          className={`switch-4all ${className}`}
-          checked={checked}
-          type="checkbox"
-          onChange={onChange}
-          disabled={disabled}
-          customStyles={customStyles}
-        />
-        <styles.Slider checked={checked} />
+        <GlobalStyle />
+        <styles.SwitchBlock>
+          <styles.SwitchInput
+            id={id}
+            className={`switch-4all ${className}`}
+            checked={checked}
+            type="checkbox"
+            onChange={onChange}
+            disabled={disabled}
+          />
+          <styles.Slider
+            checked={checked}
+            customStyles={customStyles}
+            sliderStyles={sliderStyles}
+          />
+        </styles.SwitchBlock>
+        <styles.SwitchText labelStyles={labelStyles}>
+          {children}
+        </styles.SwitchText>
       </styles.Switch>
-      <styles.SwitchText labelStyles={labelStyles}>
-        {children}
-      </styles.SwitchText>
     </Fragment>
   );
 };
@@ -41,6 +47,7 @@ Switch.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   customStyles: PropTypes.object,
+  sliderStyles: PropTypes.object,
   labelStyles: PropTypes.object,
   onChange: PropTypes.func,
   children: PropTypes.any,
@@ -53,6 +60,7 @@ Switch.defaultProps = {
   disabled: false,
   onChange: null,
   customStyles: null,
+  sliderStyles: null,
   labelStyles: null,
   children: '',
 };

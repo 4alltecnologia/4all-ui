@@ -1,21 +1,23 @@
 import styled from 'styled-components';
+import { flexPosition } from '../../styles/mixins';
 import theme from '../../styles/variables';
 
-export const Switch = styled.label`
+export const Switch = styled.div`
+  ${flexPosition({ align: 'center' })};
+`;
+
+export const SwitchBlock = styled.label`
   position: relative;
   display: inline-block;
   width: 41px;
   min-width: 41px;
   height: 24px;
   margin: 0;
-  ${({ customStyles }) => customStyles};
 `;
 
 export const SwitchText = styled.span`
   position: relative;
-  top: -7px;
   margin-left: 10px;
-  user-select: none;
   ${({ labelStyles }) => labelStyles};
 `;
 
@@ -23,6 +25,13 @@ export const SwitchInput = styled.input`
   position: absolute;
   opacity: 0;
   cursor: pointer;
+  :focus {
+    ~ span {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+    }
+  }
 `;
 
 export const Slider = styled.span`
@@ -33,10 +42,11 @@ export const Slider = styled.span`
   right: 0;
   bottom: 0;
   background-color: ${theme.colors.GRAY_MEDIUM_2};
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
   border-radius: 34px;
   background-color: ${props => props.checked ? theme.colors.MAIN_COLOR : theme.colors.GRAY_LIGHTER};
+  ${({ customStyles }) => customStyles};
   
   :before{
     position: absolute;
@@ -45,13 +55,14 @@ export const Slider = styled.span`
     width: 16px;
     bottom: 4px;
     background-color: ${theme.colors.WHITE};
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
     border-radius: 50%;
     background-color: ${props => props.checked ? '#fff' : ''};
     transform: ${props => props.checked ? 'translateX(20px)' : 'translateX(4px)'};
     -webkit-transform: ${props => props.checked ? 'translateX(20px)' : 'translateX(4px)'};
     -ms-transform: ${props => props.checked ? 'translateX(20px)' : 'translateX(4px)'};
+    ${({ sliderStyles }) => sliderStyles};
   }
 `;
