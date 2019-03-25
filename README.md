@@ -107,6 +107,14 @@ Tag props
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
 
+## Switch
+Switch props
+- `checked` - check/uncheck the switch (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for switch state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
+- `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
 
 ## License
 
