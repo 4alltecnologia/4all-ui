@@ -4,8 +4,8 @@ import { State, Store, StateDecorator } from '@sambego/storybook-state';
 import Switch from '../components/Switch';
 
 const store = new Store({
-  primaryChecked: false,
-  withLabelChecked: false,
+  primary: false,
+  withLabel: false,
 });
 
 storiesOf('Switch', module)
@@ -14,8 +14,8 @@ storiesOf('Switch', module)
     <State store={store}>
       {state => [
         <Switch
-          checked={state.primaryChecked}
-          onChange={() => store.set({ primaryChecked: !state.primaryChecked })}
+          checked={state.primary}
+          onChange={() => store.set({ primary: !state.primary })}
         />,
       ]}
     </State>
@@ -25,10 +25,10 @@ storiesOf('Switch', module)
     <State store={store}>
       {state => [
         <Switch
-          checked={state.withLabelChecked}
-          onChange={() => store.set({ withLabelChecked: !state.withLabelChecked })}
+          checked={state.withLabel}
+          onChange={() => store.set({ withLabel: !state.withLabel })}
         >
-          {state.withLabelChecked ? 'On' : 'Off'}
+          {state.withLabel ? 'On' : 'Off'}
         </Switch>,
       ]}
     </State>
