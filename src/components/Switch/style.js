@@ -11,6 +11,13 @@ export const Switch = styled.label`
   ${({ customStyles }) => customStyles};
 `;
 
+export const SwitchText = styled.span`
+  position: relative;
+  top: -7px;
+  margin-left: 10px;
+  user-select: none;
+`;
+
 export const SwitchInput = styled.input`
   position: absolute;
   opacity: 0;

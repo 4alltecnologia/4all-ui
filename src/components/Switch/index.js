@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 
@@ -8,23 +8,27 @@ const Switch = ({
   checked,
   disabled,
   onChange,
-  onClick,
   customStyles,
+  children,
 }) => {
   return (
-    <styles.Switch>
-      <styles.SwitchInput
-        id={id}
-        className={`switch-4all ${className}`}
-        checked={checked}
-        type="checkbox"
-        onChange={onChange}
-        onClick={onClick}
-        disabled={disabled}
-        customStyles={customStyles}
-      />
-      <styles.Slider checked={checked} />
-    </styles.Switch>
+    <Fragment>
+      <styles.Switch>
+        <styles.SwitchInput
+          id={id}
+          className={`switch-4all ${className}`}
+          checked={checked}
+          type="checkbox"
+          onChange={onChange}
+          disabled={disabled}
+          customStyles={customStyles}
+        />
+        <styles.Slider checked={checked} />
+      </styles.Switch>
+      <styles.SwitchText>
+        {children}
+      </styles.SwitchText>
+    </Fragment>
   );
 };
 
@@ -35,7 +39,7 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
   customStyles: PropTypes.object,
   onChange: PropTypes.func,
-  onClick: PropTypes.func,
+  children: PropTypes.any,
 };
 
 Switch.defaultProps = {
@@ -44,8 +48,8 @@ Switch.defaultProps = {
   checked: false,
   disabled: false,
   onChange: null,
-  onClick: null,
   customStyles: null,
+  children: '',
 };
 
 

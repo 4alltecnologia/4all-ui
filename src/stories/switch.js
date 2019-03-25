@@ -1,25 +1,37 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { action } from '@storybook/addon-actions'; // eslint-disable-line import/no-extraneous-dependencies
-import { Store, StateDecorator } from '@sambego/storybook-state';
+import { State, Store, StateDecorator } from '@sambego/storybook-state';
 import Switch from '../components/Switch';
 
 const store = new Store({
-  checked: false,
+  primaryChecked: false,
+  withLabelChecked: false,
 });
-
-const toggle = () => {
-  store.set({ checked: !store.get('checked') });
-};
 
 storiesOf('Switch', module)
   .addDecorator(StateDecorator(store))
   .add('Primary', () => (
-    <Switch
-      onClick={action('On Click Switch')}
-      onChange={toggle}
-      checked={store.get('checked')}
-    />
+    <State store={store}>
+      {state => [
+        <Switch
+          checked={state.primaryChecked}
+          onChange={() => store.set({ primaryChecked: !state.primaryChecked })}
+        />,
+      ]}
+    </State>
+  ))
+  .addDecorator(StateDecorator(store))
+  .add('With Label', () => (
+    <State store={store}>
+      {state => [
+        <Switch
+          checked={state.withLabelChecked}
+          onChange={() => store.set({ withLabelChecked: !state.withLabelChecked })}
+        >
+          {state.withLabelChecked ? 'On' : 'Off'}
+        </Switch>,
+      ]}
+    </State>
   ))
   .add('Disabled', () => (
     <div style={{ display: 'flex' }}>

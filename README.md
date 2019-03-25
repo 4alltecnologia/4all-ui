@@ -66,6 +66,14 @@ Tag props
 - `color` - font color of the tag (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
+
+## Switch
+Switch props
+- `checked` - check/uncheck the switch (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for switch state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
