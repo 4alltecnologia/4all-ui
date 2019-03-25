@@ -92,6 +92,22 @@ Component Button Props
 - `children` - anything, but normally just a string (`type: jsx`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
 
+## Tag
+Tag props
+- `width` - width of the tag (`type: String`)
+- `height` - height of the tag (`type: String`)
+- `bgColor` - background-color of the tag (`type: String`)
+- `disabled` - disabled style (`type: boolean`)
+- `border` - border of the tag (e.g.  `1px solid #ccc`)
+- `onHoverTag` - function for tag hover event (`type: function`)
+- `onBlurTag` - function for tag blur event (`type: function`)
+- `onClick` - function for tag click event (`type: function`)
+- `onRemoveTag` - function for tag icon click event (`type: function`)
+- `color` - font color of the tag (`type: String`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `secondary` - secondary style (`type: boolean`)
+
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)

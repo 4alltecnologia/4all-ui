@@ -2,6 +2,7 @@ import Button from './components/Button';
 import Loader from './components/Loader';
 import { NavTabs, NavTab } from './components/NavTabs';
 import { Tabs, Tab } from './components/Tabs';
+import Tag from './components/Tag';
 import './fonts.css';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
@@ -18,5 +19,6 @@ export {
   NavTab,
   Tabs,
   Tab,
+  Tag,
   theme,
 };

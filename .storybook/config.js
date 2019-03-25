@@ -12,6 +12,7 @@ function loadStories() {
   require('../src/stories/loader.js');
   require('../src/stories/navTabs.js');
   require('../src/stories/tabs.js');
+  require('../src/stories/tag.js');
   // You can require as many stories as you need.
 }
 
