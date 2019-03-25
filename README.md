@@ -2,7 +2,7 @@
 
 > Biblioteca de componentes de UI utilizados pela 4all
 
-[![NPM](https://img.shields.io/npm/v/4all-ui.svg)](https://www.npmjs.com/package/4all-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-eslint-brightgreen.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
+[![NPM](https://img.shields.io/npm/v/4all-ui.svg)](https://www.npmjs.com/package/4all-ui) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-eslint-brightgreen.svg)](https://www.npmjs.com/package/eslint-config-airbnb) [![Build Status](https://travis-ci.org/4alltecnologia/4all-ui.svg?branch=master)](https://travis-ci.org/4alltecnologia/4all-ui)
 
 ![npm-badge](https://nodei.co/npm/4all-ui.png?downloads=true&stars=true)
 
@@ -52,6 +52,46 @@ Loader props
 - `width` - border width of the Loader (`type: String`)
 - `color` - color of the Loader (`type: String`)
 
+## NavTabs
+Component Button Props
+- `secondary` - secondary styles for NavTab (`type: boolean`)
+- `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+- `children` - the component [NavTab](#NavTab) (type: jsx)
+
+## NavTab
+Component Button Props
+- `path` - path to go when click in NavTab (`type: String`)
+- `exact` - active style will be applied only if location match exact as the path ([react router feature](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md#exact-bool)) (`type: boolean`)
+- `activeStyle` - custom styles to be inserted inside styled-components with high prority only for active tab (`type: default's react style object`)
+- `hoverStyle` - custom styles to be inserted inside styled-components with high prority only for hovered tab (`type: default's react style object`)
+- `width` - width of the tab (`type: String`)
+- `height` - height of the tab (`type: String`)
+- `hoverColor` - color of the tab when hovering (`type: String`)
+- `activeBorderColor` - color of the border when tab is active (`type: String`)
+- `noOutline` - remove default outline style when tab is focused (`type: boolean`)
+- `children` - anything, but normally just a string (`type: jsx`)
+- `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+
+## Tabs
+Component Button Props
+- `secondary` - secondary styles for NavTab (`type: boolean`)
+- `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+- `children` - the component [Tab](#Tab) (`type: jsx`)
+
+## Tab
+Component Button Props
+- `onClick` - function to be called when Tab is clicked (`type: function`)
+- `active` - true/false that indicates if the current Tab is active (`type: boolean`)
+- `activeStyle` - custom styles to be inserted inside styled-components with high prority only for active tab (`type: default's react style object`)
+- `hoverStyle` - custom styles to be inserted inside styled-components with high prority only for hovered tab (`type: default's react style object`)
+- `width` - width of the tab (`type: String`)
+- `height` - height of the tab (`type: String`)
+- `hoverColor` - color of the tab when hovering (`type: String`)
+- `activeBorderColor` - color of the border when tab is active (`type: String`)
+- `noOutline` - remove default outline style when tab is focused (`type: boolean`)
+- `children` - anything, but normally just a string (`type: jsx`)
+- `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+
 ## Tag
 Tag props
 - `width` - width of the tag (`type: String`)
@@ -78,6 +118,15 @@ Input props
 - `placeholder` - default input placeholder (`type: string`)
 - `maxLength` - set a maximum length (`type: string`)
 - `checked` - checked style (`type: bool`)
+
+## Switch
+Switch props
+- `checked` - check/uncheck the switch (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for switch state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
+- `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
 
 ## License
 

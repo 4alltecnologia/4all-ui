@@ -1,11 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 import { flexPosition, fontStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 import { lightenDarkenColor } from '../../helpers/helpers';
 
 const secondaryButton = css`
   ${fontStyle(theme.colors.GRAY_DARKER, '14px', theme.fontWeights.BOLD)}
-  border: 1px solid ${theme.colors.GRAY_MEDIUM_2};
+  border: 1px solid ${theme.colors.GRAY_LIGHT_2};
   background-color: transparent;
   &:hover {
     background-color: transparent;
@@ -42,9 +42,9 @@ export const CustomButton = styled.button`
   ${({ secondary }) => secondary ? secondaryButton : null};
   ${({ disabled }) => disabled ? `
     border: none;
-    background-color: ${theme.colors.GRAY_MEDIUM_2};
+    background-color: ${theme.colors.GRAY_LIGHT_2};
     &:hover {
-      background-color: ${theme.colors.GRAY_MEDIUM_2};
+      background-color: ${theme.colors.GRAY_LIGHT_2};
     }
     color: #fff;
     ` : null};
