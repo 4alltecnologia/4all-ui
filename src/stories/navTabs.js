@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import StoryRouter from 'storybook-react-router'; // eslint-disable-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { NavTabs, NavTab } from '../components/NavTabs';
 import theme from '../styles/variables';
@@ -16,13 +17,12 @@ const RouterMock = ({ children }) => (  // eslint-disable-line
 );
 
 storiesOf('NavTabs (current location)', module)
-  .addDecorator(storyFn => (
-    <RouterMock>
-      {storyFn()}
-    </RouterMock>
-  ))
+  .addDecorator(StoryRouter())
   .add('primary style', () => (
     <NavTabs>
+      <Route path="/1" />
+      <Route path="/2" />
+      <Route path="/3" />
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
@@ -30,6 +30,9 @@ storiesOf('NavTabs (current location)', module)
   ))
   .add('secondary style', () => (
     <NavTabs secondary>
+      <Route path="/1" />
+      <Route path="/2" />
+      <Route path="/3" />
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
@@ -37,6 +40,9 @@ storiesOf('NavTabs (current location)', module)
   ))
   .add('custom style', () => (
     <NavTabs>
+      <Route path="/1" />
+      <Route path="/2" />
+      <Route path="/3" />
       <NavTab
         path="/1"
         exact
