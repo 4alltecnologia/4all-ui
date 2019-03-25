@@ -16,6 +16,7 @@ export const SwitchText = styled.span`
   top: -7px;
   margin-left: 10px;
   user-select: none;
+  ${({ labelStyles }) => labelStyles};
 `;
 
 export const SwitchInput = styled.input`

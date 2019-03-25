@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
+import { GlobalStyle } from '../../styles/mixins';
 
 const Switch = ({
   id,
@@ -9,10 +10,12 @@ const Switch = ({
   disabled,
   onChange,
   customStyles,
+  labelStyles,
   children,
 }) => {
   return (
     <Fragment>
+      <GlobalStyle />
       <styles.Switch>
         <styles.SwitchInput
           id={id}
@@ -25,7 +28,7 @@ const Switch = ({
         />
         <styles.Slider checked={checked} />
       </styles.Switch>
-      <styles.SwitchText>
+      <styles.SwitchText labelStyles={labelStyles}>
         {children}
       </styles.SwitchText>
     </Fragment>
@@ -38,6 +41,7 @@ Switch.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
   customStyles: PropTypes.object,
+  labelStyles: PropTypes.object,
   onChange: PropTypes.func,
   children: PropTypes.any,
 };
@@ -49,6 +53,7 @@ Switch.defaultProps = {
   disabled: false,
   onChange: null,
   customStyles: null,
+  labelStyles: null,
   children: '',
 };
 

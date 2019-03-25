@@ -73,6 +73,7 @@ Switch props
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for switch state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
 
 ## License
 
