@@ -1,12 +1,12 @@
 import React from 'react';
-import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import Button from '../components/Button';
 import theme from '../styles/variables';
+import customWithInfo from './helpers/customWithInfo';
 
 storiesOf('Button', module)
-  .addDecorator(withInfo())
+  .addDecorator(customWithInfo())
   .add('primary style', () => (
     <Button onClick={action('Primary Style Click')}>Hello Button</Button>
   ))

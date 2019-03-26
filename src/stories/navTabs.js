@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
-import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import { NavTabs, NavTab } from '../components/NavTabs';
 import theme from '../styles/variables';
+import customWithInfo from './helpers/customWithInfo';
 
 export const RouterMock = ({ children }) => (  // eslint-disable-line
   <BrowserRouter>
@@ -22,21 +22,21 @@ storiesOf('NavTabs (current location)', module)
       {storyFn()}
     </RouterMock>
   ))
-  .add('primary style', withInfo()(() => (
+  .add('primary style', customWithInfo()(() => (
     <NavTabs>
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
     </NavTabs>
   )))
-  .add('secondary style', withInfo()(() => (
+  .add('secondary style', customWithInfo()(() => (
     <NavTabs secondary>
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
     </NavTabs>
   )))
-  .add('custom style', withInfo()(() => (
+  .add('custom style', customWithInfo()(() => (
     <NavTabs>
       <NavTab
         path="/1"

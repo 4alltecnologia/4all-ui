@@ -1,12 +1,12 @@
 import React from 'react';
-import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import theme from '../styles/variables';
 import Loader from '../components/Loader';
+import customWithInfo from './helpers/customWithInfo';
 
 
 storiesOf('Loader', module)
-  .addDecorator(withInfo())
+  .addDecorator(customWithInfo())
   .add('Primary Style', () => (
     <Loader />
   ))
