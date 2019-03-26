@@ -29,6 +29,7 @@ export const Input = styled.input`
 
 export const Container = styled.div`
   position: relative;
+  width: ${({ width }) => width};
 `;
 
 export const Icon = styled.img`

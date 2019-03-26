@@ -17,8 +17,9 @@ const Input = ({
   checked,
   customStyles,
   className,
+  width,
 }) => (
-  <styles.Container>
+  <styles.Container width={width}>
     <styles.Input
       id={id}
       name={name}
@@ -32,6 +33,7 @@ const Input = ({
       hasIcon={checked}
       customStyles={customStyles}
       className={className}
+      width={width}
     />
 
     {checked && <styles.Icon src={checkIcon} alt="Check" />}
@@ -53,6 +55,7 @@ Input.propTypes = {
   checked: PropTypes.bool,
   customStyles: PropTypes.object,
   className: PropTypes.string,
+  width: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -67,6 +70,7 @@ Input.defaultProps = {
   checked: false,
   customStyles: {},
   className: '',
+  width: '100%',
 };
 
 export default Input;

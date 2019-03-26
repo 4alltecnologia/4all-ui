@@ -26,6 +26,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.primary}
       placeholder="Primary style"
+      width="250px"
     />
   )))
   .add('Disabled style', customWithInfo()(state => (
@@ -34,6 +35,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.disabled}
       placeholder="Disabled style"
+      width="250px"
       disabled
     />
   )))
@@ -43,6 +45,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.error}
       placeholder="Error style"
+      width="250px"
       error
     />
   )))
@@ -52,6 +55,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.checked}
       placeholder="Checked style"
+      width="250px"
       checked
     />
   )))
@@ -61,6 +65,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.disabledChecked}
       placeholder="Disabled checked style"
+      width="250px"
       disabled
       checked
     />
@@ -71,6 +76,7 @@ storiesOf('InputCurrency', module)
       onChange={handleChange}
       value={state.custom}
       placeholder="Custom style"
+      width="250px"
       customStyles={{
         backgroundColor: '#f1f1f1',
         color: '#118473',
