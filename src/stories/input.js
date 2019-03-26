@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { State, Store } from '@sambego/storybook-state'; // eslint-disable-line import/no-extraneous-dependencies
 import Input from '../components/Input';
+import customWithInfo from './helpers/customWithInfo';
 
 const store = new Store({
   primary: '',
@@ -19,15 +20,15 @@ storiesOf('Input', module)
       {state => (storyFn(state))}
     </State>
   ))
-  .add('Primary style', state => (
+  .add('Primary style', customWithInfo()(state => (
     <Input
       name="primary"
       onChange={handleChange}
       value={state.primary}
       placeholder="Primary style"
     />
-  ))
-  .add('Disabled style', state => (
+  )))
+  .add('Disabled style', customWithInfo()(state => (
     <Input
       name="disabled"
       onChange={handleChange}
@@ -35,8 +36,8 @@ storiesOf('Input', module)
       placeholder="Disabled style"
       disabled
     />
-  ))
-  .add('Error style', state => (
+  )))
+  .add('Error style', customWithInfo()(state => (
     <Input
       name="error"
       onChange={handleChange}
@@ -44,8 +45,8 @@ storiesOf('Input', module)
       placeholder="Error style"
       error
     />
-  ))
-  .add('Checked style', state => (
+  )))
+  .add('Checked style', customWithInfo()(state => (
     <Input
       name="checked"
       onChange={handleChange}
@@ -53,8 +54,8 @@ storiesOf('Input', module)
       placeholder="Checked style"
       checked
     />
-  ))
-  .add('Disabled checked style', state => (
+  )))
+  .add('Disabled checked style', customWithInfo()(state => (
     <Input
       name="disabledChecked"
       onChange={handleChange}
@@ -63,8 +64,8 @@ storiesOf('Input', module)
       disabled
       checked
     />
-  ))
-  .add('Custom style', state => (
+  )))
+  .add('Custom style', customWithInfo()(state => (
     <Input
       name="custom"
       onChange={handleChange}
@@ -76,4 +77,4 @@ storiesOf('Input', module)
         border: '3px dashed #118473',
       }}
     />
-  ));
+  )));
