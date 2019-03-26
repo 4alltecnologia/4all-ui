@@ -35,35 +35,35 @@ storiesOf('Tag', module)
       <Tag
         bgColor={theme.colors.WHITE}
         color={theme.colors.INFO_COLOR}
-        border={`1px solid ${theme.colors.GRAY_MEDIUM_2}`}
+        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
       >
         Label
       </Tag>
       <Tag
         bgColor={theme.colors.WHITE}
         color={theme.colors.MAIN_COLOR}
-        border={`1px solid ${theme.colors.GRAY_MEDIUM_2}`}
+        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
       >
         Label
       </Tag>
       <Tag
         bgColor={theme.colors.WHITE}
         color="black"
-        border={`1px solid ${theme.colors.GRAY_MEDIUM_2}`}
+        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
       >
         Label
       </Tag>
       <Tag
         bgColor={theme.colors.WHITE}
         color={theme.colors.HIGHLIGHT_COLOR}
-        border={`1px solid ${theme.colors.GRAY_MEDIUM_2}`}
+        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
       >
         Label
       </Tag>
       <Tag
         bgColor={theme.colors.WHITE}
         color={theme.colors.DANGER_COLOR}
-        border={`1px solid ${theme.colors.GRAY_MEDIUM_2}`}
+        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
       >
         Label
       </Tag>
