@@ -1,10 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { action } from '@storybook/addon-actions'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
 import Button from '../components/Button';
 import theme from '../styles/variables';
+import customWithInfo from './helpers/customWithInfo';
 
 storiesOf('Button', module)
+  .addDecorator(customWithInfo())
   .add('primary style', () => (
     <Button onClick={action('Primary Style Click')}>Hello Button</Button>
   ))

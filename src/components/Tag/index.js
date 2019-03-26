@@ -36,7 +36,7 @@ const Tag = ({
       disabled={disabled}
       customStyles={customStyles}
       border={border}
-      onMouseLeave={onBlurTag ? () => onBlurTag : null}
+      onMouseLeave={onBlurTag ? () => onBlurTag(tag) : null}
       onMouseOver={onHoverTag ? () => onHoverTag(tag) : null}
       onFocus={onHoverTag ? () => onHoverTag(tag) : null}
       onClick={onClick}

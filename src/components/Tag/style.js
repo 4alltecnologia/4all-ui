@@ -9,7 +9,7 @@ const errorTag = css`
 
 const secondaryTag = css`
   ${fontStyle(theme.colors.GRAY_DARKER, theme.fontSizes.FONT_SIZE_6, theme.fontWeights.FONT_WEIGHT_BOLD)};
-  border: 1px solid ${theme.colors.GRAY_MEDIUM_2};
+  border: 1px solid ${theme.colors.GRAY_LIGHT_2};
   background-color: transparent;
   &:hover {
     background-color: transparent;
@@ -18,9 +18,10 @@ const secondaryTag = css`
 
 const disabledStyle = css`
   border: none;
-  background-color: ${theme.colors.GRAY_MEDIUM_2};
+  cursor: not-allowed;
+  background-color: ${theme.colors.GRAY_LIGHT_2};
   &:hover {
-    background-color: ${theme.colors.GRAY_MEDIUM_2};
+    background-color: ${theme.colors.GRAY_LIGHT_2};
   }
   color: #fff;
 `;
@@ -31,7 +32,6 @@ export const CustomTag = styled.div`
   ${fontStyle(props => props.color, theme.fontSizes.SIZE_6, theme.fontWeights.BOLD)}
   min-width: 50px;
   border-radius: 20px;
-  border: 1px solid ${theme.colors.GRAY_MEDIUM_2};
   padding: ${({ onRemoveTag }) => onRemoveTag ? '1px 15px' : '6px 25px'};
   margin-right: 10px;
   margin-bottom: 10px;
