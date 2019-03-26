@@ -31,6 +31,7 @@ const Switch = ({
             checked={checked}
             customStyles={customStyles}
             sliderStyles={sliderStyles}
+            disabled={disabled}
           />
         </styles.SwitchBlock>
         <styles.SwitchText labelStyles={labelStyles}>
