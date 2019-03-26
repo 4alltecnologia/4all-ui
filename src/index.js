@@ -7,6 +7,7 @@ import Input from './components/Input';
 import Switch from './components/Switch';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
+import InputCurrency from './components/InputCurrency';
 
 const theme = {
   styles,
@@ -24,4 +25,5 @@ export {
   Switch,
   theme,
   Input,
+  InputCurrency,
 };

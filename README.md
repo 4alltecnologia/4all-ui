@@ -119,6 +119,17 @@ Input props
 - `maxLength` - set a maximum length (`type: string`)
 - `checked` - checked style (`type: bool`)
 
+## InputCurrency
+InputCurrency props
+- `disabled` - disabled style (`type: boolean`)
+- `error` - error style (`type: boolean`)
+- `onChange` - function for input change event (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `type` - input type (`type: string`)
+- `value` - input value (`type: any`)
+- `placeholder` - default input placeholder (`type: string`)
+- `checked` - checked style (`type: bool`)
+
 ## Switch
 Switch props
 - `checked` - check/uncheck the switch (`type: boolean`)
