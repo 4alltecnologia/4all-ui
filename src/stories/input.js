@@ -9,6 +9,7 @@ const store = new Store({
   error: '',
   checked: '',
   custom: '',
+  disabledChecked: '',
 });
 const handleChange = e => store.set({ [e.target.name]: e.target.value });
 
@@ -50,6 +51,16 @@ storiesOf('Input', module)
       onChange={handleChange}
       value={state.checked}
       placeholder="Checked style"
+      checked
+    />
+  ))
+  .add('Disabled checked style', state => (
+    <Input
+      name="disabledChecked"
+      onChange={handleChange}
+      value={state.disabledChecked}
+      placeholder="Disabled checked style"
+      disabled
       checked
     />
   ))
