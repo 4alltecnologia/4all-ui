@@ -1,6 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Store, State } from '@sambego/storybook-state';
+import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import { Tabs, Tab } from '../components/Tabs';
 import styles from '../styles/variables';
@@ -15,13 +16,13 @@ storiesOf('Tabs', module)
       {state => [storyFn(state)]}
     </State>
   ))
-  .add('primary style', state => (
+  .add('primary style', withInfo()(state => (
     <Tabs>
       <Tab active={state.currentTab === 1} onClick={() => store.set({ currentTab: 1 })}>Tab 1</Tab>
       <Tab active={state.currentTab === 2} onClick={() => store.set({ currentTab: 2 })}>Tab 2</Tab>
       <Tab active={state.currentTab === 3} onClick={() => store.set({ currentTab: 3 })}>Tab 3</Tab>
     </Tabs>
-  ))
+  )))
   .add('secondary style', state => (
     <Tabs secondary>
       <Tab active={state.currentTab === 1} onClick={() => store.set({ currentTab: 1 })}>Tab 1</Tab>

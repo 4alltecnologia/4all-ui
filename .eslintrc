@@ -33,6 +33,7 @@
     "linebreak-style": 0,
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
+    "import/no-extraneous-dependencies": 0,
     "import/prefer-default-export": 0
   }
 }

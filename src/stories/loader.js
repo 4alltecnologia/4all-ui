@@ -1,10 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
+import { withInfo } from '@storybook/addon-info';
+import { storiesOf } from '@storybook/react';
 import theme from '../styles/variables';
 import Loader from '../components/Loader';
 
 
 storiesOf('Loader', module)
+  .addDecorator(withInfo())
   .add('Primary Style', () => (
     <Loader />
   ))
