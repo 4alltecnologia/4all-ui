@@ -19,6 +19,7 @@ const InputCurrency = ({
   customStyles,
   checked,
   className,
+  width,
 }) => (
   <Input
     id={id}
@@ -32,6 +33,7 @@ const InputCurrency = ({
     customStyles={customStyles}
     checked={checked}
     className={className}
+    width={width}
   />
 );
 
@@ -47,6 +49,7 @@ InputCurrency.propTypes = {
   customStyles: PropTypes.object,
   checked: PropTypes.bool,
   className: PropTypes.string,
+  width: PropTypes.string,
 };
 
 InputCurrency.defaultProps = {
@@ -60,6 +63,7 @@ InputCurrency.defaultProps = {
   checked: false,
   customStyles: {},
   className: '',
+  width: '100%',
 };
 
 export default InputCurrency;
