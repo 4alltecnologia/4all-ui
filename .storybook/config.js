@@ -8,13 +8,8 @@ configureActions({
 });
 
 function loadStories() {
-  require('../src/stories/button.js');
-  require('../src/stories/loader.js');
-  require('../src/stories/navTabs.js');
-  require('../src/stories/tabs.js');
-  require('../src/stories/tag.js');
-  require('../src/stories/switch.js');
-  // You can require as many stories as you need.
+  const req = require.context('../src/stories', true, /\.js$/);
+  req.keys().forEach(filename => req(filename));
 }
 
 configure(loadStories, module);
