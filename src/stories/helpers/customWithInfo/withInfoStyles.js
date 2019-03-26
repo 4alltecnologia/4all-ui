@@ -6,6 +6,8 @@ const withInfoStyles = {
       animation: 'highlight 4s infinite',
       backgroundColor: styles.colors.INFO_COLOR,
       fontWeight: 'bold',
+      fontSize: '14px',
+      padding: '11px 20px',
     },
     topRight: {
       bottom: '30px',

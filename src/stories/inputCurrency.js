@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
 import { State, Store } from '@sambego/storybook-state'; // eslint-disable-line import/no-extraneous-dependencies
 import InputCurrency from '../components/InputCurrency';
+import customWithInfo from './helpers/customWithInfo';
 
 const store = new Store({
   primary: 0,
@@ -19,7 +20,7 @@ storiesOf('InputCurrency', module)
       {state => (storyFn(state))}
     </State>
   ))
-  .add('Primary style', state => (
+  .add('Primary style', customWithInfo()(state => (
     <InputCurrency
       name="primary"
       onChange={handleChange}
@@ -27,8 +28,8 @@ storiesOf('InputCurrency', module)
       placeholder="Primary style"
       width="250px"
     />
-  ))
-  .add('Disabled style', state => (
+  )))
+  .add('Disabled style', customWithInfo()(state => (
     <InputCurrency
       name="disabled"
       onChange={handleChange}
@@ -37,8 +38,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       disabled
     />
-  ))
-  .add('Error style', state => (
+  )))
+  .add('Error style', customWithInfo()(state => (
     <InputCurrency
       name="error"
       onChange={handleChange}
@@ -47,8 +48,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       error
     />
-  ))
-  .add('Checked style', state => (
+  )))
+  .add('Checked style', customWithInfo()(state => (
     <InputCurrency
       name="checked"
       onChange={handleChange}
@@ -57,8 +58,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       checked
     />
-  ))
-  .add('Disabled checked style', state => (
+  )))
+  .add('Disabled checked style', customWithInfo()(state => (
     <InputCurrency
       name="disabledChecked"
       onChange={handleChange}
@@ -68,8 +69,8 @@ storiesOf('InputCurrency', module)
       disabled
       checked
     />
-  ))
-  .add('Custom style', state => (
+  )))
+  .add('Custom style', customWithInfo()(state => (
     <InputCurrency
       name="custom"
       onChange={handleChange}
@@ -82,4 +83,4 @@ storiesOf('InputCurrency', module)
         border: '1px dashed #118473',
       }}
     />
-  ));
+  )));
