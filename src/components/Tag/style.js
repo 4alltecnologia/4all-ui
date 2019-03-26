@@ -18,6 +18,7 @@ const secondaryTag = css`
 
 const disabledStyle = css`
   border: none;
+  cursor: not-allowed;
   background-color: ${theme.colors.GRAY_LIGHT_2};
   &:hover {
     background-color: ${theme.colors.GRAY_LIGHT_2};
