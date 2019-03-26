@@ -18,6 +18,7 @@ const InputCurrency = ({
   error,
   customStyles,
   checked,
+  className,
 }) => (
   <Input
     id={id}
@@ -30,6 +31,7 @@ const InputCurrency = ({
     error={error}
     customStyles={customStyles}
     checked={checked}
+    className={className}
   />
 );
 
@@ -44,6 +46,7 @@ InputCurrency.propTypes = {
   error: PropTypes.bool,
   customStyles: PropTypes.object,
   checked: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 InputCurrency.defaultProps = {
@@ -56,6 +59,7 @@ InputCurrency.defaultProps = {
   error: false,
   checked: false,
   customStyles: {},
+  className: '',
 };
 
 export default InputCurrency;

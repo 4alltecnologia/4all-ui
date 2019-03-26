@@ -16,6 +16,7 @@ const Input = ({
   error,
   checked,
   customStyles,
+  className,
 }) => (
   <styles.Container>
     <styles.Input
@@ -30,6 +31,7 @@ const Input = ({
       error={error}
       hasIcon={checked}
       customStyles={customStyles}
+      className={className}
     />
 
     {checked && <styles.Icon src={checkIcon} alt="Check" />}
@@ -50,6 +52,7 @@ Input.propTypes = {
   error: PropTypes.bool,
   checked: PropTypes.bool,
   customStyles: PropTypes.object,
+  className: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -63,6 +66,7 @@ Input.defaultProps = {
   error: false,
   checked: false,
   customStyles: {},
+  className: '',
 };
 
 export default Input;
