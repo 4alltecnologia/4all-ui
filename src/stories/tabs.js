@@ -4,6 +4,7 @@ import { Store, State } from '@sambego/storybook-state';
 import { storiesOf } from '@storybook/react';
 import { Tabs, Tab } from '../components/Tabs';
 import styles from '../styles/variables';
+import customWithInfo from './helpers/customWithInfo';
 
 const store = new Store({
   currentTab: 1,
@@ -15,21 +16,21 @@ storiesOf('Tabs', module)
       {state => [storyFn(state)]}
     </State>
   ))
-  .add('primary style', state => (
+  .add('primary style', customWithInfo()(state => (
     <Tabs>
       <Tab active={state.currentTab === 1} onClick={() => store.set({ currentTab: 1 })}>Tab 1</Tab>
       <Tab active={state.currentTab === 2} onClick={() => store.set({ currentTab: 2 })}>Tab 2</Tab>
       <Tab active={state.currentTab === 3} onClick={() => store.set({ currentTab: 3 })}>Tab 3</Tab>
     </Tabs>
-  ))
-  .add('secondary style', state => (
+  )))
+  .add('secondary style', customWithInfo()(state => (
     <Tabs secondary>
       <Tab active={state.currentTab === 1} onClick={() => store.set({ currentTab: 1 })}>Tab 1</Tab>
       <Tab active={state.currentTab === 2} onClick={() => store.set({ currentTab: 2 })}>Tab 2</Tab>
       <Tab active={state.currentTab === 3} onClick={() => store.set({ currentTab: 3 })}>Tab 3</Tab>
     </Tabs>
-  ))
-  .add('custom style', state => (
+  )))
+  .add('custom style', customWithInfo()(state => (
     <Tabs>
       <Tab
         active={state.currentTab === 1}
@@ -74,4 +75,4 @@ storiesOf('Tabs', module)
         Tab 3
       </Tab>
     </Tabs>
-  ));
+  )));

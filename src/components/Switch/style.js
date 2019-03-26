@@ -24,7 +24,6 @@ export const SwitchText = styled.span`
 export const SwitchInput = styled.input`
   position: absolute;
   opacity: 0;
-  cursor: pointer;
   :focus {
     ~ span {
       outline-width: 2px;
@@ -36,12 +35,12 @@ export const SwitchInput = styled.input`
 
 export const Slider = styled.span`
   position: absolute;
-  cursor: pointer;
+  cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${theme.colors.GRAY_MEDIUM_2};
+  background-color: ${theme.colors.GRAY_LIGHT_2};
   -webkit-transition: transform .4s;
   transition: transform .4s;
   border-radius: 34px;
