@@ -43,7 +43,7 @@ const Input = ({
 
       {hasIcon && (
         <styles.IconContainer>
-          {search && <styles.Icon src={searchIcon} alt="Search Icon" />}
+          {(search && !checked) && <styles.Icon src={searchIcon} alt="Search Icon" />}
           {checked && <styles.Icon src={checkIcon} alt="Check Icon" />}
         </styles.IconContainer>
       )}
