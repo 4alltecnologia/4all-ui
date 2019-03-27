@@ -8,6 +8,7 @@ import Switch from './components/Switch';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
+import Textarea from './components/Textarea';
 
 const theme = {
   styles,
@@ -26,4 +27,5 @@ export {
   theme,
   Input,
   InputCurrency,
+  Textarea,
 };
