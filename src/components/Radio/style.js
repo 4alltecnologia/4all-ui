@@ -60,7 +60,7 @@ export const CustomRadio = styled.span`
 `;
 
 export const InputContainer = styled.span`
-  display: flex;
+  ${flexPosition({})}
   margin-right: 8px;
   margin-top: ${({ customDescStyles }) => (customDescStyles ? '0px' : '2px')};
   position: relative;
