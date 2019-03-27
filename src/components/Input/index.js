@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import checkIcon from '../../images/check.svg';
+import searchIcon from '../../images/search.svg';
 import { GlobalStyle } from '../../styles/mixins';
 
 const Input = ({
@@ -18,6 +19,7 @@ const Input = ({
   customStyles,
   className,
   width,
+  search,
 }) => (
   <styles.Container width={width}>
     <styles.Input
@@ -30,13 +32,16 @@ const Input = ({
       maxLength={maxLength}
       disabled={disabled}
       error={error}
-      hasIcon={checked}
+      hasIcon={checked || search}
       customStyles={customStyles}
       className={className}
       width={width}
     />
 
-    {checked && <styles.Icon src={checkIcon} alt="Check" />}
+    <styles.IconContainer>
+      {search && <styles.Icon src={searchIcon} alt="Search Icon" />}
+      {checked && <styles.Icon src={checkIcon} alt="Check Icon" />}
+    </styles.IconContainer>
 
     <GlobalStyle />
   </styles.Container>
@@ -56,6 +61,7 @@ Input.propTypes = {
   customStyles: PropTypes.object,
   className: PropTypes.string,
   width: PropTypes.string,
+  search: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -71,6 +77,7 @@ Input.defaultProps = {
   customStyles: {},
   className: '',
   width: '100%',
+  search: false,
 };
 
 export default Input;

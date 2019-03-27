@@ -13,7 +13,7 @@ export const Input = styled.input`
   height: 40px;
   max-width: 100%;
   padding: 10px;
-  ${({ hasIcon }) => hasIcon && 'padding-right: 40px;'}
+  ${({ hasIcon }) => hasIcon && 'padding-right: 47px;'}
   width: 100%;
 
   ${({ customStyles }) => customStyles}
@@ -33,8 +33,16 @@ export const Container = styled.div`
 `;
 
 export const Icon = styled.img`
+  display: block;
+`;
+
+export const IconContainer = styled.div`
+  align-items: center;
+  display: flex;
+  height: 40px;
+  justify-content: center;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 7px;
+  right: 0;
+  top: 0;
+  width: 47px;
 `;

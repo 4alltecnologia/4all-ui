@@ -118,6 +118,7 @@ Input props
 - `placeholder` - default input placeholder (`type: string`)
 - `maxLength` - set a maximum length (`type: string`)
 - `checked` - checked style (`type: bool`)
+- `search` - search style (`type: bool`)
 
 ## InputCurrency
 InputCurrency props
