@@ -20,32 +20,37 @@ const Input = ({
   className,
   width,
   search,
-}) => (
-  <styles.Container width={width}>
-    <styles.Input
-      id={id}
-      name={name}
-      type={type}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      maxLength={maxLength}
-      disabled={disabled}
-      error={error}
-      hasIcon={checked || search}
-      customStyles={customStyles}
-      className={className}
-      width={width}
-    />
+}) => {
+  const hasIcon = checked || search;
 
-    <styles.IconContainer>
-      {search && <styles.Icon src={searchIcon} alt="Search Icon" />}
-      {checked && <styles.Icon src={checkIcon} alt="Check Icon" />}
-    </styles.IconContainer>
+  return (
+    <styles.Container width={width}>
+      <styles.Input
+        id={id}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+        maxLength={maxLength}
+        disabled={disabled}
+        error={error}
+        hasIcon={hasIcon}
+        customStyles={customStyles}
+        className={className}
+        width={width}
+      />
 
-    <GlobalStyle />
-  </styles.Container>
-);
+      {hasIcon && (
+        <styles.IconContainer>
+          {search && <styles.Icon src={searchIcon} alt="Search Icon" />}
+          {checked && <styles.Icon src={checkIcon} alt="Check Icon" />}
+        </styles.IconContainer>
+      )}
+      <GlobalStyle />
+    </styles.Container>
+  );
+};
 
 Input.propTypes = {
   id: PropTypes.string,
