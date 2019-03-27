@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { State, Store } from '@sambego/storybook-state'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
+import { State, Store } from '@sambego/storybook-state';
 import customWithInfo from './helpers/customWithInfo';
 import Checkbox from '../components/Checkbox';
 
