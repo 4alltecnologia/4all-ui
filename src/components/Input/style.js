@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontStyle } from '../../styles/mixins';
+import { fontStyle, flexPosition } from '../../styles/mixins';
 import theme from '../../styles/variables';
 
 export const Input = styled.input`
@@ -37,10 +37,8 @@ export const Icon = styled.img`
 `;
 
 export const IconContainer = styled.div`
-  align-items: center;
-  display: flex;
+  ${flexPosition({ align: 'center', justify: 'center' })}
   height: 40px;
-  justify-content: center;
   position: absolute;
   right: 0;
   top: 0;
