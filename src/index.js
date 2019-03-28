@@ -9,6 +9,7 @@ import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
 import Checkbox from './components/Checkbox';
+import Radio from './components/Radio';
 
 const theme = {
   styles,
@@ -28,4 +29,5 @@ export {
   Input,
   InputCurrency,
   Checkbox,
+  Radio,
 };
