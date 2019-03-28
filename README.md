@@ -139,6 +139,15 @@ Switch props
 - `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
 - `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
 
+## ProgressBar
+ProgressBar props
+- `progress` - current progress (`type: string`)
+- `barColor` - progress bar's bar color (`type: string`)
+- `height` - component's height (`type: string`)
+- `width` - component's width (`type: string`)
+- `roundness`- component's roundness/border-radius (`type: string`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
