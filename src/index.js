@@ -8,6 +8,8 @@ import Switch from './components/Switch';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
+import Checkbox from './components/Checkbox';
+import Radio from './components/Radio';
 
 const theme = {
   styles,
@@ -26,4 +28,6 @@ export {
   theme,
   Input,
   InputCurrency,
+  Checkbox,
+  Radio,
 };
