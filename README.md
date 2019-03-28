@@ -148,6 +148,15 @@ ProgressBar props
 - `roundness`- component's roundness/border-radius (`type: string`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 
+## Checkbox
+Checkbox props
+- `checked` - check/uncheck the checkbox (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `label` - checkbox label text (`type: string`)
+- `mixed`- mixed style (`type: boolean`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
