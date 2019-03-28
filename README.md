@@ -140,6 +140,17 @@ Switch props
 - `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
 - `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
 
+## Textarea
+Textarea props
+- `value` - input value (`type: any`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `error` - error style (`type: boolean`)
+- `height` - component height (`type: string`)
+- `width` - component width (`type: string`)
+- `placeholder` - default input placeholder (`type: string`)
+
 ## Radio
 Radio props
 - `checked` - check/uncheck the radio (`type: boolean`)
