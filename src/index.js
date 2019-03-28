@@ -9,6 +9,7 @@ import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
 import Alert from './components/Alert';
+import Checkbox from './components/Checkbox';
 
 const theme = {
   styles,
@@ -28,4 +29,5 @@ export {
   Input,
   InputCurrency,
   Alert,
+  Checkbox,
 };
