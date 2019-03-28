@@ -38,7 +38,7 @@ const ProgressBar = ({
 ProgressBar.propTypes = {
   id: PropType.string,
   className: PropType.string,
-  progress: PropType.string,
+  progress: PropType.number,
   barColor: PropType.string,
   height: PropType.string,
   width: PropType.string,
