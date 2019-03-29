@@ -9,6 +9,7 @@ import Select from './components/Select';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
+import ProgressBar from './components/ProgressBar';
 import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
@@ -31,6 +32,7 @@ export {
   Input,
   InputCurrency,
   Select,
+  ProgressBar,
   Textarea,
   Checkbox,
   Radio,
