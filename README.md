@@ -170,6 +170,17 @@ Checkbox props
 - `label` - checkbox label text (`type: string`)
 - `mixed`- mixed style (`type: boolean`)
 
+## Tooltip
+Tooltip props
+- `top` - tooltip above the button flag (`type: boolean`)
+- `right` - tooltip at the right of the button flag (`type: boolean`)
+- `secondary` - secondary style (`type: boolean`)
+- `backgroundColor` - background color (`type: string`)
+- `fontColor` - font color (`type: string`)
+- `width` - tooltip width (`type: string`)
+- `buttonSize` - button width/height (`type: number`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
