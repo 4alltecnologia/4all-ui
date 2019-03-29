@@ -32,6 +32,7 @@ const styles = {
   },
   borders: {
     RADIUS_1: '3px',
+    RADIUS_ROUND: '50%',
   },
 };
 
