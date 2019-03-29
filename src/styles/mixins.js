@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styles from './variables';
 
 export const flexPosition = ({ align = '', justify = '', direction = '' }) => `
   display: flex;
@@ -12,6 +13,24 @@ export const fontStyle = (color, fontSize, fontWeight) => `
   ${fontSize && `font-size: ${fontSize};`}
   ${fontWeight && `font-weight: ${fontWeight};`}
 `;
+
+export const customScrollbar = () => `
+  &::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: ${styles.colors.GRAY_LIGHT};
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: ${styles.colors.GRAY_LIGHT_2};
+  }
+`;
+
 
 export const GlobalStyle = createGlobalStyle`
   * {
