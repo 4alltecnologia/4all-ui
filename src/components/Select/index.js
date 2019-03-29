@@ -40,7 +40,6 @@ class Select extends PureComponent {
       formatLabel,
       error,
       closeMenuOnSelect,
-      customStyle,
       customValueStyles,
       canRemove,
       valueBgColor,
@@ -49,7 +48,6 @@ class Select extends PureComponent {
       iconColor,
     } = this.props;
     const style = {
-      ...customStyle,
       valueBgColor,
       valueColor,
       multiRemoveBgColor,
@@ -105,7 +103,6 @@ Select.propTypes = {
   formatLabel: PropTypes.func,
   closeMenuOnSelect: PropTypes.bool,
   canRemove: PropTypes.bool,
-  customStyle: PropTypes.object,
   customValueStyles: PropTypes.object,
   valueBgColor: PropTypes.string,
   valueColor: PropTypes.string,
@@ -124,7 +121,6 @@ Select.defaultProps = {
   name: '',
   value: null,
   canRemove: true,
-  customStyle: {},
   customValueStyles: {},
   valueBgColor: null,
   valueColor: null,

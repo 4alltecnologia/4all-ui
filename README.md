@@ -170,6 +170,24 @@ Checkbox props
 - `label` - checkbox label text (`type: string`)
 - `mixed`- mixed style (`type: boolean`)
 
+## Select
+_For this component we are using `react-select` and customizing it, if you want to see its [docs](https://react-select.com/)_
+
+Select props
+- `id` - id of the select (`type: String`)
+- `value` - object passed as [option](https://react-select.com/props#select-props) (`type: String`)
+- `name` - name of the select (`type: String`)
+- `onChange` - function triggered when some option is clicked or removed (`type: boolean`)
+- `isMultiple` - can select more than one value (`type: boolean`)
+- `formatLabel` - function to format the selected label [example](https://4alltecnologia.github.io/4all-ui/?path=/story/select--custom-select-label) (`type: String`)
+- `error` - style if some error ocurred on input (`type: boolean`)
+- `closeMenuOnSelect` - should close menu when select after select an option (`type: boolean`)
+- `customValueStyles` - object with custom styles to be applied to the value label (`type: object`)
+- `canRemove` - in multiselect show button to remove selected option (`type: boolean`)
+- `valueBgColor` - background color of the selected option label (`type: string`)
+- `valueColor` - color color of the selected option label (`type: string`)
+- `iconColor` - color of the icons (`type: string`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
