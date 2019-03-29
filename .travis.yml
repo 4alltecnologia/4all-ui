@@ -3,6 +3,7 @@ node_js:
 - 9
 jobs:
   include:
+    if: tag IS present
     - stage: test
       script: npm run test
     - stage: gh-pages

@@ -13,6 +13,7 @@ const styles = {
     SEMIBOLD: '600',
     NORMAL: 'normal',
   },
+  fontFamily: "'Open Sans', sans-serif",
   buttons: {
     HEIGHT_SMALL: '40px',
     HEIGHT_MEDIUM: '45px',
