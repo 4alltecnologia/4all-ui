@@ -193,7 +193,8 @@ _For this component we are using `react-select` and customizing it, if you want 
 
 Select props
 - `id` - id of the select (`type: String`)
-- `value` - object passed as [option](https://react-select.com/props#select-props) (`type: String`)
+- `value` - object passed as [option](https://react-select.com/props#select-props) (`type: object`)
+- `options` - array of options that can be selected [docs](https://react-select.com/props#select-props) (`type: array`)
 - `name` - name of the select (`type: String`)
 - `onChange` - function triggered when some option is clicked or removed (`type: boolean`)
 - `isMultiple` - can select more than one value (`type: boolean`)

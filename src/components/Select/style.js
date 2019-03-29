@@ -43,19 +43,17 @@ export const customStyles = ({ error, customStyle = {}, canRemove }) => ({
     border: `1px solid ${error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2}`,
     borderRadius: theme.borders.RADIUS_1,
   }),
-  multiValue: (styles) => {
-    return {
-      ...styles,
-      backgroundColor: customStyle.valueBgColor || theme.colors.MAIN_COLOR,
-      borderRadius: '15px',
-      padding: '0px 0px 0px 5px',
-      fontSize: theme.fontSizes.SIZE_7,
-      fontWeight: theme.fontWeights.SEMIBOLD,
-      fontFamily: theme.fontFamily,
-      marginRight: '3px',
-      ...customStyle.customValueStyles,
-    };
-  },
+  multiValue: styles => ({
+    ...styles,
+    backgroundColor: customStyle.valueBgColor || theme.colors.MAIN_COLOR,
+    borderRadius: '15px',
+    padding: '0px 0px 0px 5px',
+    fontSize: theme.fontSizes.SIZE_7,
+    fontWeight: theme.fontWeights.SEMIBOLD,
+    fontFamily: theme.fontFamily,
+    marginRight: '3px',
+    ...customStyle.customValueStyles,
+  }),
   multiValueLabel: styles => ({
     ...styles,
     color: customStyle.valueColor || '#FFF',
