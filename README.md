@@ -137,8 +137,26 @@ Switch props
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for switch state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-- `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
-- `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
+- `sliderStyles` - custom styles for the circle inside the switch (`type: default style object`)
+- `labelStyles`- custom styles for the text next to the switch (`type: default style object`)
+
+## Alert
+Alert props
+- `secondary` - secondary style (`type: bool`)
+- `fontColor` - custom font color (`type: string`)
+- `backgroundColor` - custom background color (`type: string`)
+- `iconColor` - custom icon color (`type: string`)
+- `width`- component width (`type: string`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+
+## ProgressBar
+ProgressBar props
+- `progress` - current progress (`type: string`)
+- `barColor` - progress bar's bar color (`type: string`)
+- `height` - component's height (`type: string`)
+- `width` - component's width (`type: string`)
+- `roundness`- component's roundness/border-radius (`type: string`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 
 ## Textarea
 Textarea props

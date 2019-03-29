@@ -8,6 +8,8 @@ import Switch from './components/Switch';
 import styles from './styles/variables';
 import * as mixins from './styles/mixins';
 import InputCurrency from './components/InputCurrency';
+import Alert from './components/Alert';
+import ProgressBar from './components/ProgressBar';
 import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
@@ -30,6 +32,8 @@ export {
   theme,
   Input,
   InputCurrency,
+  Alert,
+  ProgressBar,
   Textarea,
   Checkbox,
   Radio,
