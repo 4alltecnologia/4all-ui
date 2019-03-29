@@ -1,6 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react'; // eslint-disable-line import/no-extraneous-dependencies
-import { State, Store } from '@sambego/storybook-state'; // eslint-disable-line import/no-extraneous-dependencies
+import { storiesOf } from '@storybook/react';
+import { State, Store } from '@sambego/storybook-state';
 import Input from '../components/Input';
 import customWithInfo from './helpers/customWithInfo';
 
@@ -11,6 +11,7 @@ const store = new Store({
   checked: '',
   custom: '',
   disabledChecked: '',
+  search: '',
 });
 const handleChange = e => store.set({ [e.target.name]: e.target.value });
 
@@ -68,6 +69,27 @@ storiesOf('Input', module)
       width="250px"
       disabled
       checked
+    />
+  )))
+  .add('Search style', customWithInfo()(state => (
+    <Input
+      name="search"
+      onChange={handleChange}
+      value={state.search}
+      placeholder="Search style"
+      width="250px"
+      search
+    />
+  )))
+  .add('Search disabled style', customWithInfo()(state => (
+    <Input
+      name="search"
+      onChange={handleChange}
+      value={state.search}
+      placeholder="Search style"
+      width="250px"
+      search
+      disabled
     />
   )))
   .add('Custom style', customWithInfo()(state => (

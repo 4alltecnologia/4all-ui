@@ -118,6 +118,7 @@ Input props
 - `placeholder` - default input placeholder (`type: string`)
 - `maxLength` - set a maximum length (`type: string`)
 - `checked` - checked style (`type: bool`)
+- `search` - search style (`type: bool`)
 
 ## InputCurrency
 InputCurrency props
@@ -135,9 +136,39 @@ Switch props
 - `checked` - check/uncheck the switch (`type: boolean`)
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for switch state change (`type: function`)
-- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `sliderStyles` - custom styles for the circle inside the switch(`type: default style object`)
 - `labelStyles`- custom styles for the text next to the switch(`type: default style object`)
+
+## Textarea
+Textarea props
+- `value` - input value (`type: any`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `error` - error style (`type: boolean`)
+- `height` - component height (`type: string`)
+- `width` - component width (`type: string`)
+- `placeholder` - default input placeholder (`type: string`)
+
+## Radio
+Radio props
+- `checked` - check/uncheck the radio (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for radio change (`type: function`)
+- `customDescStyles` - custom styles to be inserted into the styled-components with high prority type (`type: default style object`)
+- `value` - input value (`type: any`)
+- `label` - radio label text (`type: string`)
+- `desc` - radio description (`type: string`)
+
+## Checkbox
+Checkbox props
+- `checked` - check/uncheck the checkbox (`type: boolean`)
+- `disabled` - disabled style (`type: boolean`)
+- `onChange` - function for state change (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
+- `label` - checkbox label text (`type: string`)
+- `mixed`- mixed style (`type: boolean`)
 
 ## License
 
