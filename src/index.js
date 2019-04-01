@@ -14,6 +14,7 @@ import ProgressBar from './components/ProgressBar';
 import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
+import Tooltip from './components/Tooltip';
 
 const theme = {
   styles,
@@ -38,4 +39,5 @@ export {
   Textarea,
   Checkbox,
   Radio,
+  Tooltip,
 };
