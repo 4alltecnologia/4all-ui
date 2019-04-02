@@ -37,7 +37,7 @@ export const CustomButton = styled.button`
   background-color: ${({ bgColor }) => bgColor || theme.colors.MAIN_COLOR};
   border: ${({ border }) => border || 'none'};
   border-radius: ${theme.borders.RADIUS_1};
-  padding: 0 15px;
+  padding: 0 10px;
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, width 0.3s ease, height 0.3s ease;
   i {
