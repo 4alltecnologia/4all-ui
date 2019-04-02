@@ -29,7 +29,7 @@ export const CustomButton = styled.button`
   ${flexPosition({ align: 'center', justify: 'center' })}
   color: ${({ color }) => color || theme.colors.WHITE};
   font-size: ${({ fontSize }) => fontSize || theme.fontSizes.SIZE_6};
-  font-weight: ${({ fontWeight }) => fontWeight || theme.fontWeights.BOLD};
+  font-weight: ${({ fontWeight }) => fontWeight || theme.fontWeights.SEMIBOLD};
   min-width: 40px;
   min-height: 40px;
   height: ${({ height }) => height || 'auto'};
