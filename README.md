@@ -45,6 +45,7 @@ Component Button Props
 - `border` - border of the button (e.g.  `1px solid #ccc`)
 - `secondary` - secondary style (`type: boolean`)
 - `border` - border of the button (`type: string`, e.g.  `1px solid #ccc`)
+- `link` - link style (`type: boolean`)
 
 ## Loader
 Loader props
