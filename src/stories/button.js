@@ -16,6 +16,9 @@ storiesOf('Button', module)
   .add('disabled style', () => (
     <Button onClick={action('Disabled Style Click')} disabled>Hello Button</Button>
   ))
+  .add('link style', () => (
+    <Button onClick={action('Link Style Click')} link>Hello Button</Button>
+  ))
   // .add('loading style', () => (
   //   <Button onClick={action('Loading Style Click')} isLoading>Hello Button</Button>
   // ))

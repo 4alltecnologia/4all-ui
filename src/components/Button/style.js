@@ -11,6 +11,7 @@ const secondaryButton = css`
   )}
   border: 1px solid ${theme.colors.GRAY_LIGHT_2};
   background-color: transparent;
+
   &:hover {
     background-color: transparent;
   }
@@ -21,6 +22,18 @@ const hoverButton = css`
     background-color: ${({ bgColor }) => bgColor === '#000000'
     ? lightenDarkenColor(bgColor, 30)
     : lightenDarkenColor(bgColor, -30)};
+  }
+`;
+
+const linkButton = css`
+  background-color: transparent;
+  color: ${theme.colors.INFO_COLOR};
+  min-height: auto;
+  min-width: auto;
+  padding: 0;
+
+  &:hover {
+    background-color: transparent;
   }
 `;
 
@@ -54,5 +67,6 @@ export const CustomButton = styled.button`
       background-color: ${theme.colors.GRAY_LIGHT_2};
     }
     ` : null};
+  ${({ link }) => link && linkButton};
   ${({ customStyles }) => customStyles};
 `;

@@ -23,6 +23,7 @@ const Button = ({
   loaderSize,
   loaderWidth,
   noHover,
+  link,
 }) => (
   <Fragment>
     <GlobalStyle />
@@ -43,6 +44,7 @@ const Button = ({
       loaderSize={loaderSize}
       loaderWidth={loaderWidth}
       noHover={noHover}
+      link={link}
     >
       {isLoading && (
         <Loader size={loaderSize} color={color} width={loaderWidth} />
@@ -70,6 +72,7 @@ Button.propTypes = {
   loaderSize: PropTypes.string,
   loaderWidth: PropTypes.string,
   noHover: PropTypes.bool,
+  link: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -88,6 +91,7 @@ Button.defaultProps = {
   loaderSize: '20px',
   loaderWidth: '3px',
   noHover: false,
+  link: false,
 };
 
 
