@@ -4,7 +4,6 @@ node_js:
 jobs:
   include:
     - stage: test
-      if: tag IS present
       script: npm run test
     - stage: gh-pages
       if: tag IS present
