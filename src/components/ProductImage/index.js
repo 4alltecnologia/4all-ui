@@ -9,7 +9,6 @@ const ProductImage = ({
   className,
   image,
   small,
-  path,
   alt,
   title,
   size,
@@ -23,7 +22,7 @@ const ProductImage = ({
       className={`product-image ${className}`}
       id={id}
       small={small}
-      src={path ? `${path}/${image}` : image}
+      src={image}
       alt={alt}
       title={title}
       customStyles={customStyles}
@@ -57,7 +56,6 @@ ProductImage.propTypes = {
   className: PropTypes.string,
   image: PropTypes.any.isRequired,
   small: PropTypes.bool,
-  path: PropTypes.string,
   alt: PropTypes.string,
   title: PropTypes.string,
   size: PropTypes.string,
@@ -70,7 +68,6 @@ ProductImage.defaultProps = {
   id: '',
   className: '',
   small: false,
-  path: '',
   alt: '',
   title: '',
   size: '68px',
