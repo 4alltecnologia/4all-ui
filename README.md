@@ -218,6 +218,78 @@ Select props
 - `valueBgColor` - background color of the selected option label (`type: string`)
 - `valueColor` - color color of the selected option label (`type: string`)
 - `iconColor` - color of the icons (`type: string`)
+- `height` - height of the select input (`type: string`)
+- `optionHeight` - height of the options (`type: string`)
+
+## Theme
+
+### Usage
+```javascript
+import styled from 'styled-components';
+import { theme } from '4all-ui';
+
+const ContainerDiv = styled.div`
+  background-color: ${theme.styles.colors.MAIN_COLOR};
+  ${theme.mixins.flexPosition({ align: 'center', justify: 'space-between', direction: 'column' })}
+`;
+
+```
+
+### Properties
+```javascript
+const theme = {
+  styles: {
+    fontSizes: {
+      SIZE_1: '35px',
+      SIZE_2: '30px',
+      SIZE_3: '25px',
+      SIZE_4: '20px',
+      SIZE_5: '16px',
+      SIZE_6: '14px',
+      SIZE_7: '12px',
+    },
+    fontWeights: {
+      BOLD: '700',
+      SEMIBOLD: '600',
+      NORMAL: 'normal',
+    },
+    fontFamily: "'Open Sans', sans-serif",
+    buttons: {
+      HEIGHT_SMALL: '40px',
+      HEIGHT_MEDIUM: '45px',
+      HEIGHT_LARGE: '50px',
+    },
+    colors: {
+      MAIN_COLOR: '#4FA444',
+      DANGER_COLOR: '#D34848',
+      INFO_COLOR: '#588de7',
+      HIGHLIGHT_COLOR: '#E29A09',
+      GRAY_DARKER: '#333333',
+      GRAY_MEDIUM: '#979797',
+      GRAY_MEDIUM_3: '#a0a0a0',
+      GRAY_LIGHT: '#F5F5F5',
+      GRAY_LIGHT_2: '#E4E4E4',
+      WHITE: '#FFFFFF',
+    },
+    borders: {
+      RADIUS_1: '3px',
+      RADIUS_ROUND: '50%',
+    },
+  },
+  mixins: {
+    flexPosition: function({ align/*(align-items)*/, justify/*(justify-content)*/, direction/*(flex-direction)*/ }) {
+      /* return string to be inserted into your styled-component */
+      },
+    fontStyle: function(color, fontSize, fontWeight) {
+      /* return string to be inserted into your styled-component */
+    },
+    customScrollbar: function() {
+      /* return string to be inserted into your styled-component */
+    },
+    GlobalStyle: <GlobalStyle /> // Can be inserted in your root component to add our global styles **NOT REQUIRED**
+  }
+}
+```
 
 ## License
 

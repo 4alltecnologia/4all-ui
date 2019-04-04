@@ -35,6 +35,9 @@ const styles = {
     RADIUS_1: '3px',
     RADIUS_ROUND: '50%',
   },
+  input: {
+    DEFAULT_HEIGHT: '40px',
+  },
 };
 
 export default styles;

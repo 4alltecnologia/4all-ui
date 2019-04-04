@@ -23,6 +23,14 @@ const OPTIONS_EXAMPLE = [
   },
 ];
 
+const OPTIONS_EXAMPLE_2 = [
+  { value: '4', label: 'Value 041231121' },
+  { value: '5', label: '05' },
+  { value: '6', label: '06' },
+  { value: '1', label: 'Value 01' },
+  { value: '2', label: 'Value 02' },
+  { value: '3', label: 'Value 03' },
+];
 const formatLabelValue = (currOption, options) => {
   const currPosition = options.findIndex(opt => opt.value === currOption.value);
   const barStyle = {
@@ -113,6 +121,8 @@ storiesOf('Select', module)
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
       valueBgColor="transparent"
+      height="50px"
+      optionHeight="30px"
     />
   )))
   .add('custom styles', customWithInfo()(state => (
@@ -120,7 +130,7 @@ storiesOf('Select', module)
       value={state.selected}
       isMultiple
       onChange={value => store.set({ selected: value })}
-      options={OPTIONS_EXAMPLE}
+      options={OPTIONS_EXAMPLE_2}
       valueBgColor={styles.colors.DANGER_COLOR}
       iconColor={styles.colors.INFO_COLOR}
     />
