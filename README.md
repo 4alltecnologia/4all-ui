@@ -229,6 +229,10 @@ ProductImage props
 - `backgroundColor` - background color (`type: string`)
 - `fontColor` - font color (`type: string`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `fontSize` - text font size (`type: string`)
+- `iconSize` - icon size (`type: string`)
+- `iconColor` - icon color (`type: string`)
+- `emptyText` - custom text to show when there is no image (`type: string`)
 
 ## License
 

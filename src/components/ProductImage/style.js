@@ -23,7 +23,9 @@ export const EmptyImage = styled.div`
 
 export const Text = styled.p`
   color: ${({ fontColor }) => fontColor};
-  font-size: 10px;
+  font-size: ${({ fontSize }) => fontSize};
   line-height: 1;
-  margin: 3px 0 0;
+  margin: 0;
+  padding: 0 5px;
+  text-align: center;
 `;
