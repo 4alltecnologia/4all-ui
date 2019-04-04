@@ -46,6 +46,8 @@ class Select extends PureComponent {
       valueColor,
       multiRemoveBgColor,
       iconColor,
+      height,
+      optionHeight,
     } = this.props;
     const style = {
       valueBgColor,
@@ -53,6 +55,8 @@ class Select extends PureComponent {
       multiRemoveBgColor,
       customValueStyles,
       iconColor,
+      height,
+      optionHeight,
     };
     return (
       <Fragment>
@@ -108,6 +112,8 @@ Select.propTypes = {
   valueColor: PropTypes.string,
   multiRemoveBgColor: PropTypes.string,
   iconColor: PropTypes.string,
+  height: PropTypes.string,
+  optionHeight: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -126,6 +132,8 @@ Select.defaultProps = {
   valueColor: null,
   multiRemoveBgColor: null,
   iconColor: styles.colors.MAIN_COLOR,
+  height: styles.input.DEFAULT_HEIGHT,
+  optionHeight: styles.input.DEFAULT_HEIGHT,
 };
 
 export default Select;

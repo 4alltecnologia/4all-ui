@@ -218,6 +218,8 @@ Select props
 - `valueBgColor` - background color of the selected option label (`type: string`)
 - `valueColor` - color color of the selected option label (`type: string`)
 - `iconColor` - color of the icons (`type: string`)
+- `height` - height of the select input (`type: string`)
+- `optionHeight` - height of the options (`type: string`)
 
 ## Theme
 
