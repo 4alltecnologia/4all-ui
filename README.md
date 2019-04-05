@@ -291,6 +291,21 @@ const theme = {
 }
 ```
 
+## ProductImage
+ProductImage props
+- `image` - image path (`type: string`)
+- `small` - removes the empty image text (`type: boolean`)
+- `alt` - image alt text (`type: string`)
+- `title` - image title text (`type: string`)
+- `size` - image size (`type: string`)
+- `backgroundColor` - background color (`type: string`)
+- `fontColor` - font color (`type: string`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `fontSize` - text font size (`type: string`)
+- `iconSize` - icon size (`type: string`)
+- `iconColor` - icon color (`type: string`)
+- `emptyText` - custom text to show when there is no image (`type: string`)
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)
