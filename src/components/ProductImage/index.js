@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import PhotoIcon from '../Icons/Photo';
-import { theme } from '../..';
+import theme from '../../styles/variables';
 
 const ProductImage = ({
   id,
@@ -83,9 +83,9 @@ ProductImage.defaultProps = {
   alt: '',
   title: '',
   size: '68px',
-  backgroundColor: theme.styles.colors.GRAY_LIGHT_2,
-  fontColor: theme.styles.colors.GRAY_MEDIUM,
-  iconColor: theme.styles.colors.GRAY_MEDIUM,
+  backgroundColor: theme.colors.GRAY_LIGHT_2,
+  fontColor: theme.colors.GRAY_MEDIUM,
+  iconColor: theme.colors.GRAY_MEDIUM,
   fontSize: '10px',
   customStyles: {},
   iconSize: '30px',
