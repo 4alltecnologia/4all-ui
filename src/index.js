@@ -15,6 +15,7 @@ import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
 import Tooltip from './components/Tooltip';
+import Pagination from './components/Pagination';
 
 const theme = {
   styles,
@@ -40,4 +41,5 @@ export {
   Checkbox,
   Radio,
   Tooltip,
+  Pagination,
 };

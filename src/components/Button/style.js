@@ -19,9 +19,13 @@ const secondaryButton = css`
 
 const hoverButton = css`
   &:hover {
-    background-color: ${({ bgColor }) => bgColor === '#000000'
-    ? lightenDarkenColor(bgColor, 30)
-    : lightenDarkenColor(bgColor, -30)};
+    background-color: ${({ bgColor, customStyles }) => customStyles.backgroundColor   // eslint-disable-line
+    ? customStyles.backgroundColor === '#000000'
+      ? lightenDarkenColor(customStyles.backgroundColor, 30)
+      : lightenDarkenColor(customStyles.backgroundColor, -30)
+    : bgColor === '#000000'
+      ? lightenDarkenColor(bgColor, 30)
+      : lightenDarkenColor(bgColor, -30)};
   }
 `;
 
