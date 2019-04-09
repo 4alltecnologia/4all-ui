@@ -52,6 +52,7 @@ export const Label = styled.span`
     theme.fontSizes.SIZE_7,
     theme.fontWeights.NORMAL,
   )}
+
 `;
 
 export const Input = styled.input`
@@ -105,6 +106,7 @@ export const Checkbox = styled.span`
 
 export const InputContainer = styled.span`
   margin-right: 8px;
+  position: relative;
 `;
 
 export const CheckboxContainer = styled.label`
