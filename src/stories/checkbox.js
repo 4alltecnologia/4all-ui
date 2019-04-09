@@ -27,12 +27,20 @@ storiesOf('Checkbox', module)
       label="Primary style"
     />
   )))
-  .add('Disabled style', customWithInfo()(state => (
+  .add('Disabled style', customWithInfo()(() => (
     <Checkbox
       onChange={handleChange}
-      checked={state.inputDisabled}
       name="inputDisabled"
       label="Disabled"
+      disabled
+    />
+  )))
+  .add('Checked disabled style', customWithInfo()(() => (
+    <Checkbox
+      onChange={handleChange}
+      name="inputDisabled"
+      label="Disabled"
+      checked
       disabled
     />
   )))
@@ -45,10 +53,10 @@ storiesOf('Checkbox', module)
       mixed
     />
   )))
-  .add('Mixed disabled style', customWithInfo()(state => (
+  .add('Mixed disabled style', customWithInfo()(() => (
     <Checkbox
       onChange={handleChange}
-      checked={state.mixedDisabled}
+      checked
       name="mixedDisabled"
       label="Mixed disabled"
       mixed

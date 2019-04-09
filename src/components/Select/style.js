@@ -27,7 +27,7 @@ export const customStyles = ({ error, customStyle = {}, canRemove }) => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: isFocused ? theme.colors.GRAY_LIGHT : '#FFF',
-    height: 40,
+    height: customStyle.optionHeight || theme.input.DEFAULT_HEIGHT,
     ':active': {
       backgroundColor: theme.colors.GRAY_LIGHT_2,
     },
@@ -38,7 +38,7 @@ export const customStyles = ({ error, customStyle = {}, canRemove }) => ({
   }),
   control: () => ({
     width: '100%',
-    height: 40,
+    height: customStyle.height || 40,
     display: 'flex',
     border: `1px solid ${error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2}`,
     borderRadius: theme.borders.RADIUS_1,

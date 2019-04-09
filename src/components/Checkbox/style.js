@@ -23,7 +23,28 @@ const getIcon = (mixed, checked) => {
   return null;
 };
 
-const getColor = disabled => disabled ? theme.colors.GRAY_LIGHT_2 : theme.colors.MAIN_COLOR;
+const getColor = (disabled, checked) => {
+  const borderStyle = `border-color: ${theme.colors.GRAY_LIGHT_2};`;
+
+  if (disabled) {
+    return `
+      ${borderStyle}
+      background-color: ${theme.colors.GRAY_LIGHT_2};
+    `;
+  }
+
+  if (checked) {
+    return `
+      border-color: ${theme.colors.MAIN_COLOR};
+      background-color: ${theme.colors.MAIN_COLOR};
+    `;
+  }
+
+  return `
+    ${borderStyle}
+    background-color: ${theme.colors.WHITE};
+  `;
+};
 
 export const Label = styled.span`
   ${fontStyle(
@@ -31,6 +52,7 @@ export const Label = styled.span`
     theme.fontSizes.SIZE_7,
     theme.fontWeights.NORMAL,
   )}
+
 `;
 
 export const Input = styled.input`
@@ -84,19 +106,18 @@ export const Checkbox = styled.span`
 
 export const InputContainer = styled.span`
   margin-right: 8px;
+  position: relative;
 `;
 
 export const CheckboxContainer = styled.label`
   ${flexPosition({ align: 'center' })}
 
-  &.checkbox--checked {
+  ${({ disabled, mixed, checked }) => `
     ${Checkbox} {
-      border-color: ${({ disabled }) => getColor(disabled)};
-      background-color: ${({ disabled }) => getColor(disabled)};
-      
-      ${({ mixed, checked }) => getIcon(mixed, checked)}
+      ${getColor(disabled, checked)}
+      ${getIcon(mixed, checked)}
     }
-  }
+  `}    
 
   ${({ customStyles }) => customStyles}
 `;
