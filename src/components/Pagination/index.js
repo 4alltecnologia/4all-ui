@@ -14,6 +14,8 @@ const buttonCustomStyles = defaultStyles => ({
   minHeight: 'unset',
   minWidth: 'unset',
   border: 'none',
+  width: defaultStyles.itemWidth,
+  height: defaultStyles.itemHeight,
   outline: 'none',
   backgroundColor: defaultStyles.active
     ? defaultStyles.activeBgColor || theme.colors.MAIN_COLOR
@@ -46,8 +48,6 @@ const renderItem = ({
         active: current === currentPage,
       })}
       secondary={current !== currentPage}
-      itemWidth="35px"
-      itemHeight="35px"
       tabIndex="-1"
     >
       {current}
