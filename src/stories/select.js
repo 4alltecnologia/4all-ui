@@ -9,7 +9,7 @@ import styles from '../styles/variables';
 const OPTIONS_EXAMPLE = [
   {
     options: [
-      { value: '4', label: 'Value 041231121' },
+      { value: '4', label: 'Value 041231121', disabled: true },
       { value: '5', label: '05' },
       { value: '6', label: '06' },
     ],
@@ -133,5 +133,22 @@ storiesOf('Select', module)
       options={OPTIONS_EXAMPLE_2}
       valueBgColor={styles.colors.DANGER_COLOR}
       iconColor={styles.colors.INFO_COLOR}
+    />
+  )))
+  .add('custom option disabled styles', customWithInfo()(state => (
+    <Select
+      value={state.selected}
+      isMultiple
+      onChange={value => store.set({ selected: value })}
+      options={OPTIONS_EXAMPLE}
+      optionCustomDisabledStyles={{
+        opacity: '0.5',
+        fontStyle: 'italic',
+        color: styles.colors.HIGHLIGHT_COLOR,
+        ':hover, :active, :focus': {
+          backgroundColor: 'transparent',
+        },
+        cursor: 'not-allowed',
+      }}
     />
   )));

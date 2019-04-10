@@ -16,7 +16,17 @@ export const GroupLabel = {
   textTransform: 'initial',
 };
 
-export const customStyles = ({ error, customStyle = {}, canRemove }) => ({
+export const customStyles = ({
+  error,
+  customStyle = {},
+  canRemove,
+  optionCustomDisabledStyles,
+  containerCustomStyles,
+}) => ({
+  container: styles => ({
+    ...styles,
+    ...containerCustomStyles,
+  }),
   option: (stylesProvided, { isFocused, isDisabled }) => ({
     ...stylesProvided,
     fontFamily: theme.fontFamily,
@@ -35,6 +45,9 @@ export const customStyles = ({ error, customStyle = {}, canRemove }) => ({
       fontSize: theme.fontSizes.SIZE_6,
       fontWeight: 'normal',
     },
+    ...isDisabled
+      ? optionCustomDisabledStyles
+      : {},
   }),
   control: () => ({
     width: '100%',
