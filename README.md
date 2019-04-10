@@ -306,6 +306,26 @@ ProductImage props
 - `iconColor` - icon color (`type: string`)
 - `emptyText` - custom text to show when there is no image (`type: string`)
 
+## Pagination
+_For this component we are using `rc-pagination` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/rc-pagination)_
+
+Select props
+- `id` - id of the pagination (`type: String`)
+- `className` - class of the pagination (`type: String`)
+- `pages` - number of pages (`type: Number`)
+- `secondary` - apply secondary style (`type: boolean`)
+- `currentPage` - current page with active style of the pagination component (`type: Number`)
+- `onChangePage` - function triggered when some page or next/prev/jump is clicked  (`type: function`)
+- `itemWidth` - width of every page button (`type: string`)
+- `itemHeight` - height of every page button (`type: string`)
+- `activeBgColor` - background-color of active page (`type: string`)
+- `itemBgColor` - background-color of page not selected (`type: string`)
+- `customActiveItemStyles` - object with custom styles to be applied active page (`type: object`)
+- `customInactiveItemStyles` - object with custom styles to be applied page not active (`type: object`)
+- `iconColor` - color of the icons (`type: string`)
+- `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
+
+
 ## License
 
 MIT © [4all Tecnologia](https://github.com/4alltecnologia)

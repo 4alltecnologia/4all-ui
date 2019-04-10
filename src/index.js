@@ -15,6 +15,7 @@ import Textarea from './components/Textarea';
 import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
 import Tooltip from './components/Tooltip';
+import Pagination from './components/Pagination';
 import ProductImage from './components/ProductImage';
 
 const theme = {
@@ -41,5 +42,6 @@ export {
   Checkbox,
   Radio,
   Tooltip,
+  Pagination,
   ProductImage,
 };
