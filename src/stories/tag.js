@@ -7,67 +7,50 @@ import customWithInfo from './helpers/customWithInfo';
 
 storiesOf('Tag', module)
   .addDecorator(customWithInfo())
+  .addDecorator(storyFn => <div style={{ display: 'flex' }}>{storyFn()}</div>)
   .add('Primary', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag onHoverTag={action('On Hover Tag')} onBlurTag={action('On Blur Tag')}>Label</Tag>
-    </div>
+    <Tag onHoverTag={action('On Hover Tag')} onBlurTag={action('On Blur Tag')}>
+      Label
+    </Tag>
   ))
-  .add('Error', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag error>Label</Tag>
-    </div>
-  ))
-  .add('Secondary', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag secondary>Label</Tag>
-    </div>
-  ))
-  .add('Disabled', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag disabled>Label</Tag>
-    </div>
-  ))
-  .add('With Close Button', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag onRemoveTag={action('With onRemoveTag Function ')}>Label</Tag>
-    </div>
-  ))
+  .add('Error', () => <Tag error>Label</Tag>)
+  .add('Secondary', () => <Tag secondary>Label</Tag>)
+  .add('Disabled', () => <Tag disabled>Label</Tag>)
   .add('Custom Style', () => (
-    <div style={{ display: 'flex' }}>
-      <Tag
-        bgColor={theme.colors.WHITE}
-        color={theme.colors.INFO_COLOR}
-        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
-      >
-        Label
-      </Tag>
-      <Tag
-        bgColor={theme.colors.WHITE}
-        color={theme.colors.MAIN_COLOR}
-        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
-      >
-        Label
-      </Tag>
-      <Tag
-        bgColor={theme.colors.WHITE}
-        color="black"
-        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
-      >
-        Label
-      </Tag>
-      <Tag
-        bgColor={theme.colors.WHITE}
-        color={theme.colors.HIGHLIGHT_COLOR}
-        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
-      >
-        Label
-      </Tag>
-      <Tag
-        bgColor={theme.colors.WHITE}
-        color={theme.colors.DANGER_COLOR}
-        border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
-      >
-        Label
-      </Tag>
-    </div>
+    <Tag
+      bgColor={theme.colors.WHITE}
+      color={theme.colors.INFO_COLOR}
+      border={`1px solid ${theme.colors.GRAY_LIGHT_2}`}
+    >
+      Label
+    </Tag>
+  ))
+  .add('Primary with Close Button', () => (
+    <Tag onRemoveTag={action('With onRemoveTag Function')}>Label</Tag>
+  ))
+  .add('Error with Close Button', () => (
+    <Tag onRemoveTag={action('With onRemoveTag Function')} error>
+      Label
+    </Tag>
+  ))
+  .add('Secondary with Close Button', () => (
+    <Tag onRemoveTag={action('With onRemoveTag Function')} secondary>
+      Label
+    </Tag>
+  ))
+  .add('Disabled with Close Button', () => (
+    <Tag onRemoveTag={action('With onRemoveTag Function')} disabled>
+      Label
+    </Tag>
+  ))
+  .add('Custom Style with Close Button', () => (
+    <Tag
+      bgColor={theme.colors.WHITE}
+      color={theme.colors.INFO_COLOR}
+      border={`1px solid ${theme.colors.INFO_COLOR}`}
+      iconColor={theme.colors.INFO_COLOR}
+      onRemoveTag={action('With onRemoveTag Function')}
+    >
+      Label
+    </Tag>
   ));

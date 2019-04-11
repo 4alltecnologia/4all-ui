@@ -2,8 +2,20 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
-import closeIcon from '../../images/close.svg';
+import CloseIcon from '../Icons/Close';
 import { GlobalStyle } from '../../styles/mixins';
+
+const getIconColor = ({ iconColor, disabled, secondary }) => {
+  if (iconColor) {
+    return iconColor;
+  }
+
+  if (disabled || secondary) {
+    return theme.colors.GRAY_MEDIUM_3;
+  }
+
+  return theme.colors.white;
+};
 
 const Tag = ({
   id,
@@ -23,12 +35,13 @@ const Tag = ({
   children,
   secondary,
   error,
+  iconColor,
 }) => (
   <Fragment>
     <GlobalStyle />
     <styles.CustomTag
       id={id}
-      className={`tag-4all ${className}`}
+      className={`tag-item ${className}`}
       color={color}
       height={height}
       width={width}
@@ -40,15 +53,18 @@ const Tag = ({
       onMouseOver={onHoverTag ? () => onHoverTag(tag) : null}
       onFocus={onHoverTag ? () => onHoverTag(tag) : null}
       onClick={onClick}
-      onRemoveTag={!!onRemoveTag}
+      removeTag={!!onRemoveTag}
       secondary={secondary}
       error={error}
     >
       {children}
       {!!onRemoveTag && (
-        <styles.CloseIcon
-          src={closeIcon}
-          alt="Icone 4all"
+        <CloseIcon
+          color={getIconColor({
+            iconColor,
+            disabled,
+            secondary,
+          })}
           onClick={onRemoveTag}
         />
       )}
@@ -74,26 +90,27 @@ Tag.propTypes = {
   children: PropTypes.any.isRequired,
   secondary: PropTypes.bool,
   error: PropTypes.bool,
+  iconColor: PropTypes.string,
 };
 
 Tag.defaultProps = {
   id: null,
   tag: {},
   className: '',
-  color: '#FFF',
+  color: theme.colors.white,
   height: 'auto',
   width: 'auto',
   bgColor: theme.colors.MAIN_COLOR,
   disabled: false,
-  border: 'none',
+  border: `1px solid ${theme.colors.MAIN_COLOR}`,
   onHoverTag: null,
   onBlurTag: null,
   onClick: null,
   onRemoveTag: null,
-  customStyles: null,
+  customStyles: {},
   secondary: false,
   error: false,
+  iconColor: theme.colors.white,
 };
-
 
 export default Tag;
