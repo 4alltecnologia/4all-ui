@@ -49,6 +49,7 @@ class Select extends PureComponent {
       height,
       optionCustomDisabledStyles,
       optionHeight,
+      disabled,
       containerCustomStyles,
     } = this.props;
     const style = {
@@ -86,6 +87,7 @@ class Select extends PureComponent {
           closeMenuOnSelect={closeMenuOnSelect}
           formatGroupLabel={formatGroupLabel}
           isOptionDisabled={opt => opt.disabled}
+          isDisabled={disabled}
           components={{
             Option: props => Option(props, style),
             DropdownIndicator: props => DropdownIndicator(props, style),
@@ -120,6 +122,7 @@ Select.propTypes = {
   optionHeight: PropTypes.string,
   optionCustomDisabledStyles: PropTypes.object,
   containerCustomStyles: PropTypes.object,
+  disabled: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -142,6 +145,7 @@ Select.defaultProps = {
   optionHeight: styles.input.DEFAULT_HEIGHT,
   optionCustomDisabledStyles: {},
   containerCustomStyles: {},
+  disabled: false,
 };
 
 export default Select;
