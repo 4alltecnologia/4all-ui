@@ -18,11 +18,10 @@ const Radio = ({
 
   return (
     <styles.RadioContainer
-      customDescStyles={!!customDescStyles}
       className={`radio radio-${checked ? 'checked' : 'unchecked'} ${className}`}
     >
       <styles.LabelContainer htmlFor={idFormatted}>
-        <styles.InputContainer customDescStyles={!!customDescStyles}>
+        <styles.InputContainer>
           <styles.RadioInput
             id={idFormatted}
             type="radio"

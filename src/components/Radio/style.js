@@ -4,10 +4,6 @@ import theme from '../../styles/variables';
 
 export const RadioContainer = styled.div`
   ${flexPosition({ align: 'flex-start', justify: 'flex-start' })};
-  margin-top: ${({ customDescStyles }) => (customDescStyles ? '28px' : '0px')};
-  label {
-    margin-bottom: ${({ customDescStyles }) => (customDescStyles ? '0px' : '')};
-  }
 `;
 
 export const RadioInput = styled.input`
@@ -62,7 +58,6 @@ export const CustomRadio = styled.span`
 export const InputContainer = styled.span`
   ${flexPosition({})}
   margin-right: 8px;
-  margin-top: ${({ customDescStyles }) => (customDescStyles ? '0px' : '2px')};
   position: relative;
 
   > ${RadioInput}:focus ~ ${CustomRadio} {

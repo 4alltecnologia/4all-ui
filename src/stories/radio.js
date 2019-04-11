@@ -34,7 +34,7 @@ storiesOf('Radio', module)
   .add('primary style with description', state => (
     <Radio
       onChange={onChange}
-      name="primary"
+      name="selected"
       checked={state.selected}
       label="Primary style"
       value="1"
