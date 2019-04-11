@@ -5,8 +5,12 @@ import { fontStyle } from '../../styles/mixins';
 export const Tooltip = styled.div`
   background-color: ${({ secondary, backgroundColor }) => secondary ? theme.colors.GRAY_DARKER : backgroundColor};
   border-radius: ${theme.borders.RADIUS_1};
-  ${({ secondary, fontColor }) => fontStyle(secondary ? theme.colors.WHITE : fontColor, theme.fontSizes.SIZE_6, theme.fontWeights.NORMAL)};
-  line-height: 1.5;
+  ${({ secondary, fontColor }) => fontStyle(
+    secondary ? theme.colors.WHITE : fontColor,
+    theme.fontSizes.SIZE_7,
+    theme.fontWeights.SEMIBOLD,
+  )};
+  line-height: 17px;
   opacity: 0;
   outline: none;
   padding: 10px 15px;
