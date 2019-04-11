@@ -57,7 +57,7 @@ Alert.defaultProps = {
   iconColor: theme.colors.WHITE,
   secondary: false,
   customStyles: {},
-  width: '300px',
+  width: '250px',
 };
 
 export default Alert;
