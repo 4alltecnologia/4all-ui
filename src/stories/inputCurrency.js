@@ -15,12 +15,11 @@ const store = new Store({
 const handleChange = (e, value) => store.set({ [e.target.name]: value });
 
 storiesOf('InputCurrency', module)
+  .addDecorator(customWithInfo())
   .addDecorator(storyFn => (
-    <State store={store}>
-      {state => (storyFn(state))}
-    </State>
+    <State store={store}>{state => storyFn(state)}</State>
   ))
-  .add('Primary style', customWithInfo()(state => (
+  .add('Primary style', state => (
     <InputCurrency
       name="primary"
       onChange={handleChange}
@@ -28,8 +27,8 @@ storiesOf('InputCurrency', module)
       placeholder="Primary style"
       width="250px"
     />
-  )))
-  .add('Disabled style', customWithInfo()(state => (
+  ))
+  .add('Disabled style', state => (
     <InputCurrency
       name="disabled"
       onChange={handleChange}
@@ -38,8 +37,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       disabled
     />
-  )))
-  .add('Error style', customWithInfo()(state => (
+  ))
+  .add('Error style', state => (
     <InputCurrency
       name="error"
       onChange={handleChange}
@@ -48,8 +47,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       error
     />
-  )))
-  .add('Checked style', customWithInfo()(state => (
+  ))
+  .add('Checked style', state => (
     <InputCurrency
       name="checked"
       onChange={handleChange}
@@ -58,8 +57,8 @@ storiesOf('InputCurrency', module)
       width="250px"
       checked
     />
-  )))
-  .add('Disabled checked style', customWithInfo()(state => (
+  ))
+  .add('Disabled checked style', state => (
     <InputCurrency
       name="disabledChecked"
       onChange={handleChange}
@@ -69,8 +68,8 @@ storiesOf('InputCurrency', module)
       disabled
       checked
     />
-  )))
-  .add('Custom style', customWithInfo()(state => (
+  ))
+  .add('Custom style', state => (
     <InputCurrency
       name="custom"
       onChange={handleChange}
@@ -83,4 +82,4 @@ storiesOf('InputCurrency', module)
         border: '1px dashed #118473',
       }}
     />
-  )));
+  ));

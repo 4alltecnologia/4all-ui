@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
-import checkIcon from '../../images/check.svg';
-import searchIcon from '../../images/search.svg';
+import CheckIcon from '../Icons/Check';
+import SearchIcon from '../Icons/Search';
 import { GlobalStyle } from '../../styles/mixins';
 
 const Input = ({
@@ -43,8 +43,8 @@ const Input = ({
 
       {hasIcon && (
         <styles.IconContainer>
-          {(search && !checked) && <styles.Icon src={searchIcon} alt="Search Icon" />}
-          {checked && <styles.Icon src={checkIcon} alt="Check Icon" />}
+          {search && !checked && <SearchIcon />}
+          {checked && <CheckIcon size="30px" />}
         </styles.IconContainer>
       )}
       <GlobalStyle />
