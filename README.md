@@ -46,18 +46,21 @@ Component Button Props
 - `secondary` - secondary style (`type: boolean`)
 - `border` - border of the button (`type: string`, e.g.  `1px solid #ccc`)
 - `link` - link style (`type: boolean`)
+<br /><br />
 
 ## Loader
 Loader props
 - `size` - size of the Loader (`type: String`)
 - `width` - border width of the Loader (`type: String`)
 - `color` - color of the Loader (`type: String`)
+<br /><br />
 
 ## NavTabs
 Component Button Props
 - `secondary` - secondary styles for NavTab (`type: boolean`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
 - `children` - the component [NavTab](#NavTab) (type: jsx)
+<br /><br />
 
 ## NavTab
 Component Button Props
@@ -72,12 +75,14 @@ Component Button Props
 - `noOutline` - remove default outline style when tab is focused (`type: boolean`)
 - `children` - anything, but normally just a string (`type: jsx`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+<br /><br />
 
 ## Tabs
 Component Button Props
 - `secondary` - secondary styles for NavTab (`type: boolean`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
 - `children` - the component [Tab](#Tab) (`type: jsx`)
+<br /><br />
 
 ## Tab
 Component Button Props
@@ -92,6 +97,7 @@ Component Button Props
 - `noOutline` - remove default outline style when tab is focused (`type: boolean`)
 - `children` - anything, but normally just a string (`type: jsx`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
+<br /><br />
 
 ## Tag
 Tag props
@@ -107,6 +113,7 @@ Tag props
 - `color` - font color of the tag (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
+<br /><br />
 
 ## Input
 Input props
@@ -120,6 +127,7 @@ Input props
 - `maxLength` - set a maximum length (`type: string`)
 - `checked` - checked style (`type: bool`)
 - `search` - search style (`type: bool`)
+<br /><br />
 
 ## InputCurrency
 InputCurrency props
@@ -131,6 +139,7 @@ InputCurrency props
 - `value` - input value (`type: any`)
 - `placeholder` - default input placeholder (`type: string`)
 - `checked` - checked style (`type: bool`)
+<br /><br />
 
 ## Switch
 Switch props
@@ -140,6 +149,7 @@ Switch props
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `sliderStyles` - custom styles for the circle inside the switch (`type: default style object`)
 - `labelStyles`- custom styles for the text next to the switch (`type: default style object`)
+<br /><br />
 
 ## Alert
 Alert props
@@ -149,6 +159,7 @@ Alert props
 - `iconColor` - custom icon color (`type: string`)
 - `width`- component width (`type: string`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+<br /><br />
 
 ## ProgressBar
 ProgressBar props
@@ -158,6 +169,7 @@ ProgressBar props
 - `width` - component's width (`type: string`)
 - `roundness`- component's roundness/border-radius (`type: string`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+<br /><br />
 
 ## Textarea
 Textarea props
@@ -169,6 +181,7 @@ Textarea props
 - `height` - component height (`type: string`)
 - `width` - component width (`type: string`)
 - `placeholder` - default input placeholder (`type: string`)
+<br /><br />
 
 ## Radio
 Radio props
@@ -179,6 +192,7 @@ Radio props
 - `value` - input value (`type: any`)
 - `label` - radio label text (`type: string`)
 - `desc` - radio description (`type: string`)
+<br /><br />
 
 ## Checkbox
 Checkbox props
@@ -188,6 +202,7 @@ Checkbox props
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
 - `label` - checkbox label text (`type: string`)
 - `mixed`- mixed style (`type: boolean`)
+<br /><br />
 
 ## Tooltip
 Tooltip props
@@ -199,6 +214,7 @@ Tooltip props
 - `width` - tooltip width (`type: string`)
 - `buttonSize` - button width/height (`type: number`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+<br /><br />
 
 ## Select
 _For this component we are using `react-select` and customizing it, if you want to see its [docs](https://react-select.com/)_
@@ -220,6 +236,45 @@ Select props
 - `iconColor` - color of the icons (`type: string`)
 - `height` - height of the select input (`type: string`)
 - `optionHeight` - height of the options (`type: string`)
+- `disabled` - disabled select (`type boolean`)
+- `containerCustomStyles` - object with custom styles to be applied to the select container element (`type: object`)
+<br /><br />
+
+## ProductImage
+ProductImage props
+- `image` - image path (`type: string`)
+- `small` - removes the empty image text (`type: boolean`)
+- `alt` - image alt text (`type: string`)
+- `title` - image title text (`type: string`)
+- `size` - image size (`type: string`)
+- `backgroundColor` - background color (`type: string`)
+- `fontColor` - font color (`type: string`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `fontSize` - text font size (`type: string`)
+- `iconSize` - icon size (`type: string`)
+- `iconColor` - icon color (`type: string`)
+- `emptyText` - custom text to show when there is no image (`type: string`)
+<br /><br />
+
+## Pagination
+_For this component we are using `rc-pagination` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/rc-pagination)_
+
+Select props
+- `id` - id of the pagination (`type: String`)
+- `className` - class of the pagination (`type: String`)
+- `pages` - number of pages (`type: Number`)
+- `secondary` - apply secondary style (`type: boolean`)
+- `currentPage` - current page with active style of the pagination component (`type: Number`)
+- `onChangePage` - function triggered when some page or next/prev/jump is clicked  (`type: function`)
+- `itemWidth` - width of every page button (`type: string`)
+- `itemHeight` - height of every page button (`type: string`)
+- `activeBgColor` - background-color of active page (`type: string`)
+- `itemBgColor` - background-color of page not selected (`type: string`)
+- `customActiveItemStyles` - object with custom styles to be applied active page (`type: object`)
+- `customInactiveItemStyles` - object with custom styles to be applied page not active (`type: object`)
+- `iconColor` - color of the icons (`type: string`)
+- `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
+<br /><br />
 
 ## Theme
 
@@ -290,41 +345,7 @@ const theme = {
   }
 }
 ```
-
-## ProductImage
-ProductImage props
-- `image` - image path (`type: string`)
-- `small` - removes the empty image text (`type: boolean`)
-- `alt` - image alt text (`type: string`)
-- `title` - image title text (`type: string`)
-- `size` - image size (`type: string`)
-- `backgroundColor` - background color (`type: string`)
-- `fontColor` - font color (`type: string`)
-- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-- `fontSize` - text font size (`type: string`)
-- `iconSize` - icon size (`type: string`)
-- `iconColor` - icon color (`type: string`)
-- `emptyText` - custom text to show when there is no image (`type: string`)
-
-## Pagination
-_For this component we are using `rc-pagination` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/rc-pagination)_
-
-Select props
-- `id` - id of the pagination (`type: String`)
-- `className` - class of the pagination (`type: String`)
-- `pages` - number of pages (`type: Number`)
-- `secondary` - apply secondary style (`type: boolean`)
-- `currentPage` - current page with active style of the pagination component (`type: Number`)
-- `onChangePage` - function triggered when some page or next/prev/jump is clicked  (`type: function`)
-- `itemWidth` - width of every page button (`type: string`)
-- `itemHeight` - height of every page button (`type: string`)
-- `activeBgColor` - background-color of active page (`type: string`)
-- `itemBgColor` - background-color of page not selected (`type: string`)
-- `customActiveItemStyles` - object with custom styles to be applied active page (`type: object`)
-- `customInactiveItemStyles` - object with custom styles to be applied page not active (`type: object`)
-- `iconColor` - color of the icons (`type: string`)
-- `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
-
+<br /><br />
 
 ## License
 
