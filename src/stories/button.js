@@ -16,6 +16,9 @@ storiesOf('Button', module)
   .add('disabled style', () => (
     <Button onClick={action('Disabled Style Click')} disabled>Hello Button</Button>
   ))
+  .add('disabled secondary style', () => (
+    <Button onClick={action('Link Style Click')} secondary disabled>Hello Button</Button>
+  ))
   .add('link style', () => (
     <Button onClick={action('Link Style Click')} link>Hello Button</Button>
   ))
