@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import { GlobalStyle } from '../../styles/mixins';
@@ -13,34 +13,28 @@ const Switch = ({
   sliderStyles,
   labelStyles,
   children,
-}) => {
-  return (
-    <Fragment>
-      <styles.Switch>
-        <GlobalStyle />
-        <styles.SwitchBlock>
-          <styles.SwitchInput
-            id={id}
-            className={`switch-4all ${className}`}
-            checked={checked}
-            type="checkbox"
-            onChange={onChange}
-            disabled={disabled}
-          />
-          <styles.Slider
-            checked={checked}
-            customStyles={customStyles}
-            sliderStyles={sliderStyles}
-            disabled={disabled}
-          />
-        </styles.SwitchBlock>
-        <styles.SwitchText labelStyles={labelStyles}>
-          {children}
-        </styles.SwitchText>
-      </styles.Switch>
-    </Fragment>
-  );
-};
+}) => (
+  <styles.Switch>
+    <GlobalStyle />
+    <styles.SwitchBlock>
+      <styles.SwitchInput
+        id={id}
+        className={`switch-4all ${className}`}
+        checked={checked}
+        type="checkbox"
+        onChange={onChange}
+        disabled={disabled}
+      />
+      <styles.Slider
+        checked={checked}
+        customStyles={customStyles}
+        sliderStyles={sliderStyles}
+        disabled={disabled}
+      />
+    </styles.SwitchBlock>
+    <styles.SwitchText labelStyles={labelStyles}>{children}</styles.SwitchText>
+  </styles.Switch>
+);
 
 Switch.propTypes = {
   id: PropTypes.string,
@@ -60,11 +54,10 @@ Switch.defaultProps = {
   checked: false,
   disabled: false,
   onChange: null,
-  customStyles: null,
-  sliderStyles: null,
-  labelStyles: null,
+  customStyles: {},
+  sliderStyles: {},
+  labelStyles: {},
   children: '',
 };
-
 
 export default Switch;
