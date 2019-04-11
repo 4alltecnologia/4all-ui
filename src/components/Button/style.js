@@ -19,7 +19,7 @@ const secondaryButton = css`
 
 const hoverButton = css`
   &:hover {
-    background-color: ${({ bgColor, customStyles }) => customStyles.backgroundColor   // eslint-disable-line
+    background-color: ${({ bgColor, customStyles }) => customStyles && customStyles.backgroundColor   // eslint-disable-line
     ? customStyles.backgroundColor === '#000000'
       ? lightenDarkenColor(customStyles.backgroundColor, 30)
       : lightenDarkenColor(customStyles.backgroundColor, -30)
