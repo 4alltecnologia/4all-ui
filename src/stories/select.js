@@ -151,4 +151,18 @@ storiesOf('Select', module)
         cursor: 'not-allowed',
       }}
     />
+  )))
+  .add('custom container styles', customWithInfo()(state => (
+    <Select
+      value={state.selected}
+      isMultiple
+      onChange={value => store.set({ selected: value })}
+      options={[]}
+      placeholder="Carregando..."
+      disabled
+      containerCustomStyles={{
+        cursor: 'progress',
+        pointerEvents: 'initial',
+      }}
+    />
   )));
