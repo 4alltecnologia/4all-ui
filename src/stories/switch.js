@@ -10,25 +10,22 @@ const store = new Store({
 });
 
 storiesOf('Switch', module)
+  .addDecorator(customWithInfo())
   .addDecorator(storyFn => (
-    <State store={store}>
-      {state => [storyFn(state)]}
-    </State>
+    <State store={store}>{state => [storyFn(state)]}</State>
   ))
-  .add('Primary', customWithInfo()(state => (
+  .add('Primary', state => (
     <Switch
       checked={state.primary}
       onChange={() => store.set({ primary: !state.primary })}
     />
-  )))
-  .add('With Label', customWithInfo()(state => (
+  ))
+  .add('With Label', state => (
     <Switch
       checked={state.withLabel}
       onChange={() => store.set({ withLabel: !state.withLabel })}
     >
       {state.withLabel ? 'On' : 'Off'}
     </Switch>
-  )))
-  .add('Disabled', customWithInfo()(() => (
-    <Switch disabled />
-  )));
+  ))
+  .add('Disabled', () => <Switch disabled />);

@@ -5,7 +5,6 @@ import Select from '../components/Select';
 import customWithInfo from './helpers/customWithInfo';
 import styles from '../styles/variables';
 
-
 const OPTIONS_EXAMPLE = [
   {
     options: [
@@ -13,7 +12,8 @@ const OPTIONS_EXAMPLE = [
       { value: '5', label: '05' },
       { value: '6', label: '06' },
     ],
-  }, {
+  },
+  {
     label: 'Example',
     options: [
       { value: '1', label: 'Value 01' },
@@ -33,6 +33,7 @@ const OPTIONS_EXAMPLE_2 = [
 ];
 const formatLabelValue = (currOption, options) => {
   const currPosition = options.findIndex(opt => opt.value === currOption.value);
+
   const barStyle = {
     marginRight: '10px',
     /* fontSize: styles.fontSizes.SIZE_5, */
@@ -46,64 +47,53 @@ const formatLabelValue = (currOption, options) => {
   if (currOption.value === 'delivery') {
     return (
       <Fragment>
-        {currPosition >= 1 && (
-          <span style={barStyle}>/</span>
-        )}
+        {currPosition >= 1 && <span style={barStyle}>/</span>}
         <span style={labelStyle}>{currOption.label}</span>
-
       </Fragment>
     );
   }
   return (
     <Fragment>
-      {currPosition >= 1 && (
-        <span style={barStyle}>/</span>
-      )}
+      {currPosition >= 1 && <span style={barStyle}>/</span>}
       <span style={labelStyle}>{currOption.label}</span>
     </Fragment>
   );
 };
-
 
 const store = new Store({
   selected: null,
 });
 
 storiesOf('Select', module)
+  .addDecorator(customWithInfo())
   .addDecorator(storyFn => (
-    <State store={store}>
-      {state => [storyFn(state)]}
-    </State>
+    <State store={store}>{state => [storyFn(state)]}</State>
   ))
-  .addDecorator(storyFn => (
-    <div style={{ width: '350px' }}>
-      {storyFn()}
-    </div>
-  ))
-  .add('single select primary', customWithInfo()(state => (
+  .addDecorator(storyFn => <div style={{ width: '350px' }}>{storyFn()}</div>)
+  .add('single select primary', state => (
     <Select
       value={state.selected}
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
     />
-  )))
-  .add('single select custom', customWithInfo()(state => (
+  ))
+  .add('single select custom', state => (
     <Select
       value={state.selected}
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
       valueColor={styles.colors.DANGER_COLOR}
     />
-  )))
-  .add('multi select primary', customWithInfo()(state => (
+  ))
+  .add('multi select primary', state => (
     <Select
       value={state.selected}
       isMultiple
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
     />
-  )))
-  .add('error style', customWithInfo()(state => (
+  ))
+  .add('error style', state => (
     <Select
       value={state.selected}
       isMultiple
@@ -111,8 +101,8 @@ storiesOf('Select', module)
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
     />
-  )))
-  .add('custom select label', customWithInfo()(state => (
+  ))
+  .add('custom select label', state => (
     <Select
       value={state.selected}
       isMultiple
@@ -124,8 +114,8 @@ storiesOf('Select', module)
       height="50px"
       optionHeight="30px"
     />
-  )))
-  .add('custom styles', customWithInfo()(state => (
+  ))
+  .add('custom styles', state => (
     <Select
       value={state.selected}
       isMultiple
@@ -134,4 +124,4 @@ storiesOf('Select', module)
       valueBgColor={styles.colors.DANGER_COLOR}
       iconColor={styles.colors.INFO_COLOR}
     />
-  )));
+  ));

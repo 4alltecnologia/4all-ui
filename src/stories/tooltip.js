@@ -45,7 +45,7 @@ storiesOf('Tooltip', module)
   .add('custom style', () => (
     <Tooltip
       customStyles={{
-        '.tooltip-text': {
+        '.tooltip-4all-text': {
           fontStyle: 'italic',
         },
       }}

@@ -60,10 +60,10 @@ storiesOf('Radio', module)
       value="3"
       desc="Primary style description"
       customDescStyles={{
-        '.radio-label': {
+        '.radio-4all-label': {
           fontWeight: 'bold',
         },
-        '.radio-description': {
+        '.radio-4all-description': {
           fontStyle: 'italic',
         },
       }}

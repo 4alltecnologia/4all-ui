@@ -112,7 +112,7 @@ const Pagination = ({
     <styles.PaginationContainer itemSpacing={itemSpacing}>
       <CustomPagination
         id={id}
-        className={`4all-pagination ${className}`}
+        className={`pagination-4all ${className}`}
         locale={localeInfo}
         current={currentPage}
         onChange={onChangePage}
@@ -152,7 +152,7 @@ Pagination.propTypes = {
 };
 
 Pagination.defaultProps = {
-  id: '4all-pagination',
+  id: 'pagination-4all',
   className: '',
   secondary: false,
   pages: 10,

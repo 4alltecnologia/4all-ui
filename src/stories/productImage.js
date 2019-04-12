@@ -47,7 +47,7 @@ storiesOf('ProductImage', module)
       customStyles={{
         fontStyle: 'italic',
         position: 'relative',
-        '> .product-image__text': {
+        '> .product-image-4all__text': {
           position: 'absolute',
           top: '50%',
           left: '50%',

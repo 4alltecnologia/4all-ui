@@ -20,7 +20,7 @@ const Tooltip = ({
 }) => (
   <styles.Container
     id={id}
-    className={`tooltip ${className}`}
+    className={`tooltip-4all ${className}`}
     buttonSize={buttonSize}
     tabIndex="0"
     customStyles={customStyles}
@@ -30,10 +30,10 @@ const Tooltip = ({
       fontColor={fontColor}
       secondary={secondary}
       buttonSize={buttonSize}
-      className="tooltip-button"
+      className="tooltip-4all-button"
     >
       <InfoIcon
-        className="tooltip-icon"
+        className="tooltip-4all-icon"
         color={secondary ? theme.colors.GRAY_DARKER : backgroundColor}
         width={`${buttonSize}px`}
         height={`${buttonSize}px`}
@@ -47,7 +47,7 @@ const Tooltip = ({
       secondary={secondary}
       width={width}
       buttonSize={buttonSize}
-      className="tooltip-text"
+      className="tooltip-4all-text"
     >
       {children}
     </styles.Tooltip>

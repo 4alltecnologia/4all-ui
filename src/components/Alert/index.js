@@ -19,7 +19,7 @@ const Alert = ({
   <Fragment>
     <styles.Alert
       id={id}
-      className={`alert ${className}`}
+      className={`alert-4all ${className}`}
       backgroundColor={backgroundColor}
       fontColor={fontColor}
       customStyles={customStyles}

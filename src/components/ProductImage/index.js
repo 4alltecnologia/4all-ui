@@ -23,7 +23,7 @@ const ProductImage = ({
   image ? (
     <styles.Image
       backgroundColor={backgroundColor}
-      className={`product-image ${className}`}
+      className={`product-image-4all ${className}`}
       id={id}
       small={small}
       src={image}
@@ -35,21 +35,21 @@ const ProductImage = ({
   ) : (
     <styles.EmptyImage
       backgroundColor={backgroundColor}
-      className={`product-image product-image--empty ${className}`}
+      className={`product-image-4all product-image-4all--empty ${className}`}
       id={id}
       small={small}
       size={small ? '40px' : size}
       customStyles={customStyles}
     >
       <PhotoIcon
-        className="product-image__icon"
+        className="product-image-4all__icon"
         color={iconColor}
         size={small ? '25px' : iconSize}
       />
       {!small && (
         <styles.Text
           fontSize={fontSize}
-          className="product-image__text"
+          className="product-image-4all__text"
           fontColor={fontColor}
         >
           {emptyText}

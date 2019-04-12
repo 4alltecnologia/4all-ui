@@ -41,7 +41,7 @@ const Tag = ({
     <GlobalStyle />
     <styles.CustomTag
       id={id}
-      className={`tag-item ${className}`}
+      className={`tag-4all ${className}`}
       color={color}
       height={height}
       width={width}

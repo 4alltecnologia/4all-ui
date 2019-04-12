@@ -20,7 +20,7 @@ const Textarea = ({
     <styles.Textarea
       id={id}
       name={name}
-      className={className}
+      className={`textarea-4all ${className}`}
       value={value}
       customStyles={customStyles}
       width={width}

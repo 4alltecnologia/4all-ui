@@ -19,7 +19,7 @@ const Checkbox = ({
     <styles.Container>
       <styles.CheckboxContainer
         htmlFor={formattedId}
-        className={`checkbox checkbox--${!checked ? 'unchecked' : 'checked'} ${className}`}
+        className={`checkbox-4all checkbox--${!checked ? 'unchecked' : 'checked'} ${className}`}
         customStyles={customStyles}
         disabled={disabled}
         mixed={mixed}

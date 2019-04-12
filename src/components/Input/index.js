@@ -37,7 +37,7 @@ const Input = ({
         error={error}
         hasIcon={hasIcon}
         customStyles={customStyles}
-        className={className}
+        className={`input-4all ${className}`}
         width={width}
       />
 

@@ -32,7 +32,7 @@ const InputCurrency = ({
     error={error}
     customStyles={customStyles}
     checked={checked}
-    className={className}
+    className={`input-currency-4all ${className}`}
     width={width}
   />
 );
