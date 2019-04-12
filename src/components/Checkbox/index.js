@@ -50,7 +50,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.string,
+  disabled: PropTypes.bool,
   customStyles: PropTypes.object,
 };
 
@@ -61,7 +61,7 @@ Checkbox.defaultProps = {
   mixed: false,
   className: '',
   label: '',
-  disabled: '',
+  disabled: false,
   customStyles: {},
 };
 

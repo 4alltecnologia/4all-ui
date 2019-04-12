@@ -14,28 +14,27 @@ const store = new Store({
 const handleChange = e => store.set({ [e.target.name]: !store.get(e.target.name) });
 
 storiesOf('Checkbox', module)
+  .addDecorator(customWithInfo())
   .addDecorator(storyFn => (
-    <State store={store}>
-      {state => (storyFn(state))}
-    </State>
+    <State store={store}>{state => storyFn(state)}</State>
   ))
-  .add('Primary style', customWithInfo()(state => (
+  .add('Primary style', state => (
     <Checkbox
       onChange={handleChange}
       checked={state.input}
       name="input"
       label="Primary style"
     />
-  )))
-  .add('Disabled style', customWithInfo()(() => (
+  ))
+  .add('Disabled style', () => (
     <Checkbox
       onChange={handleChange}
       name="inputDisabled"
       label="Disabled"
       disabled
     />
-  )))
-  .add('Checked disabled style', customWithInfo()(() => (
+  ))
+  .add('Checked disabled style', () => (
     <Checkbox
       onChange={handleChange}
       name="inputDisabled"
@@ -43,8 +42,8 @@ storiesOf('Checkbox', module)
       checked
       disabled
     />
-  )))
-  .add('Mixed style', customWithInfo()(state => (
+  ))
+  .add('Mixed style', state => (
     <Checkbox
       onChange={handleChange}
       checked={state.mixed}
@@ -52,8 +51,8 @@ storiesOf('Checkbox', module)
       label="Mixed"
       mixed
     />
-  )))
-  .add('Mixed disabled style', customWithInfo()(() => (
+  ))
+  .add('Mixed disabled style', () => (
     <Checkbox
       onChange={handleChange}
       checked
@@ -62,8 +61,8 @@ storiesOf('Checkbox', module)
       mixed
       disabled
     />
-  )))
-  .add('Custom style', customWithInfo()(state => (
+  ))
+  .add('Custom style', state => (
     <Checkbox
       onChange={handleChange}
       checked={state.customStyle}
@@ -82,4 +81,4 @@ storiesOf('Checkbox', module)
         },
       }}
     />
-  )));
+  ));
