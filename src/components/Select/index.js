@@ -47,7 +47,10 @@ class Select extends PureComponent {
       multiRemoveBgColor,
       iconColor,
       height,
+      optionCustomDisabledStyles,
       optionHeight,
+      disabled,
+      containerCustomStyles,
     } = this.props;
     const style = {
       valueBgColor,
@@ -72,6 +75,8 @@ class Select extends PureComponent {
             error,
             customStyle: style,
             canRemove,
+            optionCustomDisabledStyles,
+            containerCustomStyles,
           })}
           className="react-dropdown-multiselect"
           placeholder={placeholder}
@@ -82,6 +87,7 @@ class Select extends PureComponent {
           closeMenuOnSelect={closeMenuOnSelect}
           formatGroupLabel={formatGroupLabel}
           isOptionDisabled={opt => opt.disabled}
+          isDisabled={disabled}
           components={{
             Option: props => Option(props, style),
             DropdownIndicator: props => DropdownIndicator(props, style),
@@ -114,6 +120,9 @@ Select.propTypes = {
   iconColor: PropTypes.string,
   height: PropTypes.string,
   optionHeight: PropTypes.string,
+  optionCustomDisabledStyles: PropTypes.object,
+  containerCustomStyles: PropTypes.object,
+  disabled: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -134,6 +143,9 @@ Select.defaultProps = {
   iconColor: styles.colors.MAIN_COLOR,
   height: styles.input.DEFAULT_HEIGHT,
   optionHeight: styles.input.DEFAULT_HEIGHT,
+  optionCustomDisabledStyles: {},
+  containerCustomStyles: {},
+  disabled: false,
 };
 
 export default Select;
