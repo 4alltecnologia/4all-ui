@@ -62,7 +62,7 @@ const ProductImage = ({
 ProductImage.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
-  image: PropTypes.any.isRequired,
+  image: PropTypes.any,
   small: PropTypes.bool,
   alt: PropTypes.string,
   title: PropTypes.string,
@@ -79,6 +79,7 @@ ProductImage.propTypes = {
 ProductImage.defaultProps = {
   id: '',
   className: '',
+  image: null,
   small: false,
   alt: '',
   title: '',
