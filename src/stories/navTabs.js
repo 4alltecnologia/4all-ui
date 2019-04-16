@@ -17,26 +17,27 @@ export const RouterMock = ({ children }) => (  // eslint-disable-line
 );
 
 storiesOf('NavTabs (current location)', module)
+  .addDecorator(customWithInfo())
   .addDecorator(storyFn => (
     <RouterMock>
       {storyFn()}
     </RouterMock>
   ))
-  .add('primary style', customWithInfo()(() => (
+  .add('primary style', () => (
     <NavTabs>
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
     </NavTabs>
-  )))
-  .add('secondary style', customWithInfo()(() => (
+  ))
+  .add('secondary style', () => (
     <NavTabs secondary>
       <NavTab path="/1" exact>Tab 1</NavTab>
       <NavTab path="/2" exact>Tab 2</NavTab>
       <NavTab path="/3" exact>Tab 3</NavTab>
     </NavTabs>
-  )))
-  .add('custom style', customWithInfo()(() => (
+  ))
+  .add('custom style', () => (
     <NavTabs>
       <NavTab
         path="/1"
@@ -81,4 +82,4 @@ storiesOf('NavTabs (current location)', module)
         Tab 3
       </NavTab>
     </NavTabs>
-  )));
+  ));

@@ -7,12 +7,12 @@ export const Input = styled.input`
   border-radius: 3px;
   ${fontStyle(
     theme.colors.GRAY_DARKER,
-    theme.fontSizes.SIZE_6,
+    theme.fontSizes.SIZE_7,
     theme.fontWeights.SEMIBOLD,
   )};
   height: 40px;
   max-width: 100%;
-  padding: 10px;
+  padding: 10px 15px;
   ${({ hasIcon }) => hasIcon && 'padding-right: 47px;'}
   width: 100%;
 

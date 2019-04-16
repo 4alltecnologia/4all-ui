@@ -34,7 +34,7 @@ storiesOf('Radio', module)
   .add('primary style with description', state => (
     <Radio
       onChange={onChange}
-      name="primary"
+      name="selected"
       checked={state.selected}
       label="Primary style"
       value="1"
@@ -60,10 +60,10 @@ storiesOf('Radio', module)
       value="3"
       desc="Primary style description"
       customDescStyles={{
-        '.radio-label': {
+        '.radio-4all-label': {
           fontWeight: 'bold',
         },
-        '.radio-description': {
+        '.radio-4all-description': {
           fontStyle: 'italic',
         },
       }}

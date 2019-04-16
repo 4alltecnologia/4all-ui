@@ -19,7 +19,7 @@ const Checkbox = ({
     <styles.Container>
       <styles.CheckboxContainer
         htmlFor={formattedId}
-        className={`checkbox checkbox--${!checked ? 'unchecked' : 'checked'} ${className}`}
+        className={`checkbox-4all checkbox--${!checked ? 'unchecked' : 'checked'} ${className}`}
         customStyles={customStyles}
         disabled={disabled}
         mixed={mixed}
@@ -50,7 +50,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   label: PropTypes.string,
   onChange: PropTypes.func.isRequired,
-  disabled: PropTypes.string,
+  disabled: PropTypes.bool,
   customStyles: PropTypes.object,
 };
 
@@ -61,7 +61,7 @@ Checkbox.defaultProps = {
   mixed: false,
   className: '',
   label: '',
-  disabled: '',
+  disabled: false,
   customStyles: {},
 };
 

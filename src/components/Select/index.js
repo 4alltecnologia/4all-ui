@@ -78,7 +78,7 @@ class Select extends PureComponent {
             optionCustomDisabledStyles,
             containerCustomStyles,
           })}
-          className="react-dropdown-multiselect"
+          className="select-4all react-dropdown-multiselect"
           placeholder={placeholder}
           classNamePrefix="select"
           isClearable={false}

@@ -7,7 +7,7 @@ const secondaryButton = css`
   ${fontStyle(
     theme.colors.GRAY_DARKER,
     theme.fontSizes.SIZE_6,
-    theme.fontWeights.BOLD,
+    theme.fontWeights.SEMIBOLD,
   )}
   border: 1px solid ${theme.colors.GRAY_LIGHT_2};
   background-color: transparent;
@@ -31,7 +31,9 @@ const hoverButton = css`
 
 const linkButton = css`
   background-color: transparent;
+  border: none;
   color: ${theme.colors.INFO_COLOR};
+  font-size: ${theme.fontSizes.SIZE_7};
   min-height: auto;
   min-width: auto;
   padding: 0;
@@ -44,15 +46,17 @@ const linkButton = css`
 export const CustomButton = styled.button`
   position: relative;
   ${flexPosition({ align: 'center', justify: 'center' })}
-  color: ${({ color }) => color || theme.colors.WHITE};
-  font-size: ${({ fontSize }) => fontSize || theme.fontSizes.SIZE_6};
-  font-weight: ${({ fontWeight }) => fontWeight || theme.fontWeights.SEMIBOLD};
+  ${({ color, fontSize, fontWeight }) => fontStyle(
+    color || theme.colors.WHITE,
+    fontSize || theme.fontSizes.SIZE_6,
+    fontWeight || theme.fontWeights.SEMIBOLD,
+  )}
   min-width: 40px;
   min-height: 40px;
   height: ${({ height }) => height || 'auto'};
   width: ${({ width }) => width || 'auto'};
   background-color: ${({ bgColor }) => bgColor || theme.colors.MAIN_COLOR};
-  border: ${({ border }) => border || 'none'};
+  border: ${({ border, bgColor }) => border || `1px solid ${bgColor || theme.colors.MAIN_COLOR}`};
   border-radius: ${theme.borders.RADIUS_1};
   padding: 0 10px;
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
@@ -60,17 +64,17 @@ export const CustomButton = styled.button`
   i {
     margin-right: ${({ isLoading }) => isLoading ? '10px' : '0px'};
   }
-  ${({ noHover }) => !noHover ? hoverButton : null}
-  ${({ secondary }) => secondary ? secondaryButton : null};
-  ${({ disabled }) => disabled ? `
-    border: none;
-    background-color: ${theme.colors.GRAY_LIGHT_2};
-    color: ${theme.colors.WHITE};
+  ${({ noHover }) => !noHover ? hoverButton : {}}
+  ${({ secondary }) => secondary ? secondaryButton : {}};
+  ${({ disabled, secondary }) => disabled ? `
+    border: 1px solid ${theme.colors.GRAY_LIGHT_2};
+    background-color: ${secondary ? theme.colors.WHITE : theme.colors.GRAY_LIGHT_2};
+    color: ${secondary ? 'rgba(51, 51, 51, 0.30)' : theme.colors.WHITE};
 
     &:hover {
-      background-color: ${theme.colors.GRAY_LIGHT_2};
+      background-color: ${secondary ? theme.colors.WHITE : theme.colors.GRAY_LIGHT_2};
     }
-    ` : null};
+    ` : {}};
   ${({ link }) => link && linkButton};
   ${({ customStyles }) => customStyles};
 `;

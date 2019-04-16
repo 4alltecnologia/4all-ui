@@ -17,7 +17,7 @@ const ProgressBar = ({
   <Fragment>
     <styles.Container
       id={id}
-      className={`progress-bar ${className}`}
+      className={`progress-bar-4all ${className}`}
       height={height}
       width={width}
       customStyles={customStyles}

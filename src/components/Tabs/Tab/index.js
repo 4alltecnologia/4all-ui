@@ -1,4 +1,3 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from '../../../styles/sharedComponents/tabs';
@@ -17,25 +16,24 @@ const Tab = ({
   hoverColor,
   activeBorderColor,
   noOutline,
-}) => {
-  return (
-    <styles.CustomButtonTab
-      id={id}
-      className={active ? `active ${className}` : className}
-      customStyles={customStyles}
-      activeStyle={activeStyle}
-      hoverStyle={hoverStyle}
-      width={width}
-      height={height}
-      hoverColor={hoverColor}
-      activeBorderColor={activeBorderColor}
-      onClick={onClick}
-      noOutline={noOutline}
-    >
-      {children}
-    </styles.CustomButtonTab>
-  );
-};
+}) => (
+  <styles.CustomButtonTab
+    key={id}
+    id={id}
+    className={active ? `active ${className}` : className}
+    customStyles={customStyles}
+    activeStyle={activeStyle}
+    hoverstyle={hoverStyle || undefined}
+    width={width}
+    height={height}
+    hovercolor={hoverColor || undefined}
+    activebordercolor={activeBorderColor || undefined}
+    onClick={onClick}
+    nooutline={noOutline || undefined}
+  >
+    {children}
+  </styles.CustomButtonTab>
+);
 
 Tab.propTypes = {
   customStyles: PropTypes.object,
@@ -56,7 +54,7 @@ Tab.propTypes = {
 Tab.defaultProps = {
   id: '',
   className: '',
-  customStyles: null,
+  customStyles: {},
   activeStyle: null,
   hoverStyle: null,
   width: null,

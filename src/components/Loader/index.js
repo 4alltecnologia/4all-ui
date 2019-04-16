@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
 
-const Loader = ({ size, color, width }) => {
-  return (
-    <styles.Loading color={color} size={size} width={width} />
-  );
-};
+const Loader = ({ size, color, width }) => (
+  <styles.Loading color={color} size={size} width={width} />
+);
 
 Loader.propTypes = {
   size: PropTypes.string,

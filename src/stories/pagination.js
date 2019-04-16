@@ -10,38 +10,35 @@ const store = new Store({
 });
 
 storiesOf('Pagination', module)
+  .addDecorator(customWithInfo())
   .addDecorator((storyFn) => {
     store.set({ currentPage: 1 });
-    return (
-      <State store={store}>
-        {state => [storyFn(state)]}
-      </State>
-    );
+    return <State store={store}>{state => [storyFn(state)]}</State>;
   })
-  .add('primary style', customWithInfo()(state => (
+  .add('primary style', state => (
     <Pagination
       pages={10}
       onChangePage={page => store.set({ currentPage: page })}
       currentPage={state.currentPage}
     />
-  )))
-  .add('secondary style', customWithInfo()(state => (
+  ))
+  .add('secondary style', state => (
     <Pagination
       pages={10}
       secondary
       onChangePage={page => store.set({ currentPage: page })}
       currentPage={state.currentPage}
     />
-  )))
-  .add('show less items', customWithInfo()(state => (
+  ))
+  .add('show less items', state => (
     <Pagination
       pages={10}
       showLessItems
       onChangePage={page => store.set({ currentPage: page })}
       currentPage={state.currentPage}
     />
-  )))
-  .add('customStyles', customWithInfo()(state => (
+  ))
+  .add('customStyles', state => (
     <Pagination
       pages={10}
       onChangePage={page => store.set({ currentPage: page })}
@@ -59,4 +56,4 @@ storiesOf('Pagination', module)
       }}
       iconColor={styles.colors.HIGHLIGHT_COLOR}
     />
-  )));
+  ));

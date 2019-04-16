@@ -18,24 +18,22 @@ const tabStyle = css`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || '64px'};
   text-decoration: none;
-  ${({ noOutline }) => noOutline ? `
-    outline: none;
-  ` : null}
+  ${({ nooutline }) => nooutline ? 'outline: none;' : {}}
   &.active {
-    border-bottom: 4px solid ${({ activeBorderColor }) => activeBorderColor || styles.colors.MAIN_COLOR};
+    border-bottom: 4px solid ${({ activebordercolor }) => activebordercolor || styles.colors.MAIN_COLOR};
     padding-bottom: 1px;
     color: ${styles.colors.GRAY_DARKER};
-    ${({ activeStyle }) => activeStyle}
+    ${({ activestyle }) => activestyle}
   }
   &:hover {
     text-decoration: none;
-    color: ${({ hoverColor }) => hoverColor || styles.colors.GRAY_DARKER};
-    ${({ hoverStyle }) => hoverStyle}
+    color: ${({ hovercolor }) => hovercolor || styles.colors.GRAY_DARKER};
+    ${({ hoverstyle }) => hoverstyle}
   }
   &:focus {
-    color: ${({ hoverColor }) => hoverColor || styles.colors.GRAY_DARKER};
+    color: ${({ hovercolor }) => hovercolor || styles.colors.GRAY_DARKER};
   }
-  ${({ customStyles }) => customStyles}
+  ${({ customstyles }) => customstyles}
 `;
 
 export const CustomNavLink = styled(NavLink)`
@@ -63,5 +61,5 @@ const secondaryStyle = css`
 
 export const TabsContainer = styled.div`
   ${flexPosition({ align: 'flex-end', justify: 'flex-start' })}
-  ${({ secondary }) => secondary ? secondaryStyle : null}
+  ${({ secondary }) => secondary ? secondaryStyle : {}}
 `;

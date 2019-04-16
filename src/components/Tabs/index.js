@@ -4,18 +4,12 @@ import * as styles from '../../styles/sharedComponents/tabs';
 import { GlobalStyle } from '../../styles/mixins';
 import Tab from './Tab';
 
-const Tabs = ({
-  children,
-  customStyles,
-  secondary,
-}) => {
-  return (
-    <styles.TabsContainer customStyles={customStyles} secondary={secondary}>
-      <GlobalStyle />
-      {children}
-    </styles.TabsContainer>
-  );
-};
+const Tabs = ({ children, customStyles, secondary }) => (
+  <styles.TabsContainer customStyles={customStyles} secondary={secondary}>
+    <GlobalStyle />
+    {children}
+  </styles.TabsContainer>
+);
 
 Tabs.propTypes = {
   customStyles: PropTypes.object,
@@ -24,7 +18,7 @@ Tabs.propTypes = {
 };
 
 Tabs.defaultProps = {
-  customStyles: null,
+  customStyles: {},
   secondary: false,
 };
 

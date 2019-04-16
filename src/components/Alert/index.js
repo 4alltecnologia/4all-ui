@@ -19,7 +19,7 @@ const Alert = ({
   <Fragment>
     <styles.Alert
       id={id}
-      className={`alert ${className}`}
+      className={`alert-4all ${className}`}
       backgroundColor={backgroundColor}
       fontColor={fontColor}
       customStyles={customStyles}
@@ -57,7 +57,7 @@ Alert.defaultProps = {
   iconColor: theme.colors.WHITE,
   secondary: false,
   customStyles: {},
-  width: '300px',
+  width: '250px',
 };
 
 export default Alert;
