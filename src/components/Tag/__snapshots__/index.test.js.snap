@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should render the component 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Tag
+    bgColor="#4FA444"
+    border="none"
+    className="tag-item"
+    color="#FFF"
+    customStyles={null}
+    disabled={false}
+    error={false}
+    height="auto"
+    id={null}
+    onBlurTag={null}
+    onClick={[Function]}
+    onHoverTag={null}
+    onRemoveTag={null}
+    secondary={false}
+    tag={
+        Object {
+            "id": 1,
+            "label": "Tag1",
+          }
+    }
+    width="auto"
+>
+    Tag1
+</Tag>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <GlobalStyleComponent />,
+        <Unknown
+          bgColor="#4FA444"
+          border="none"
+          className="tag-4all tag-item"
+          color="#FFF"
+          customStyles={null}
+          disabled={false}
+          error={false}
+          height="auto"
+          id={null}
+          onClick={[Function]}
+          onFocus={null}
+          onMouseLeave={null}
+          onMouseOver={null}
+          onRemoveTag={false}
+          secondary={false}
+          width="auto"
+>
+          Tag1
+</Unknown>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "bgColor": "#4FA444",
+          "border": "none",
+          "children": Array [
+            "Tag1",
+            false,
+          ],
+          "className": "tag-4all tag-item",
+          "color": "#FFF",
+          "customStyles": null,
+          "disabled": false,
+          "error": false,
+          "height": "auto",
+          "id": null,
+          "onClick": [Function],
+          "onFocus": null,
+          "onMouseLeave": null,
+          "onMouseOver": null,
+          "onRemoveTag": false,
+          "secondary": false,
+          "width": "auto",
+        },
+        "ref": null,
+        "rendered": Array [
+          "Tag1",
+          false,
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": false,
+            "rules": Array [
+              "
+  position: relative;
+  ",
+              "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+",
+              "
+  ",
+              "
+  color: props => props.color;
+  font-size: 14px;
+  font-weight: 700;
+",
+              "
+  min-width: 50px;
+  border-radius: 20px;
+  padding: ",
+              [Function],
+              ";
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: ",
+              [Function],
+              ";
+  color: ",
+              [Function],
+              ";
+  height: ",
+              [Function],
+              ";
+  width: ",
+              [Function],
+              ";
+  border: ",
+              [Function],
+              ";
+  &:hover {
+    ",
+              [Function],
+              ";
+  }
+  ",
+              [Function],
+              "
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+  ",
+              [Function],
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <GlobalStyleComponent />,
+          <Unknown
+            bgColor="#4FA444"
+            border="none"
+            className="tag-4all tag-item"
+            color="#FFF"
+            customStyles={null}
+            disabled={false}
+            error={false}
+            height="auto"
+            id={null}
+            onClick={[Function]}
+            onFocus={null}
+            onMouseLeave={null}
+            onMouseOver={null}
+            onRemoveTag={false}
+            secondary={false}
+            width="auto"
+>
+            Tag1
+</Unknown>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "bgColor": "#4FA444",
+            "border": "none",
+            "children": Array [
+              "Tag1",
+              false,
+            ],
+            "className": "tag-4all tag-item",
+            "color": "#FFF",
+            "customStyles": null,
+            "disabled": false,
+            "error": false,
+            "height": "auto",
+            "id": null,
+            "onClick": [Function],
+            "onFocus": null,
+            "onMouseLeave": null,
+            "onMouseOver": null,
+            "onRemoveTag": false,
+            "secondary": false,
+            "width": "auto",
+          },
+          "ref": null,
+          "rendered": Array [
+            "Tag1",
+            false,
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bdVaJa",
+              "isStatic": false,
+              "rules": Array [
+                "
+  position: relative;
+  ",
+                "
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+",
+                "
+  ",
+                "
+  color: props => props.color;
+  font-size: 14px;
+  font-weight: 700;
+",
+                "
+  min-width: 50px;
+  border-radius: 20px;
+  padding: ",
+                [Function],
+                ";
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: ",
+                [Function],
+                ";
+  color: ",
+                [Function],
+                ";
+  height: ",
+                [Function],
+                ";
+  width: ",
+                [Function],
+                ";
+  border: ",
+                [Function],
+                ";
+  &:hover {
+    ",
+                [Function],
+                ";
+  }
+  ",
+                [Function],
+                "
+  ",
+                [Function],
+                ";
+  ",
+                [Function],
+                ";
+  ",
+                [Function],
+                ";
+  ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.div",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bdVaJa",
+            "target": "div",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

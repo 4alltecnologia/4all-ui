@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> should render the component correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Select
+    canRemove={true}
+    closeMenuOnSelect={false}
+    customValueStyles={Object {}}
+    error={false}
+    formatLabel={null}
+    height="40px"
+    iconColor="#4FA444"
+    id="test"
+    isMultiple={false}
+    multiRemoveBgColor={null}
+    name="test"
+    onChange={[Function]}
+    optionHeight="40px"
+    options={
+        Array [
+            Object {
+              "id": 4864,
+              "label": "Promoções",
+              "value": 4864,
+            },
+            Object {
+              "id": 4865,
+              "label": "Sabores de Inverno",
+              "value": 4865,
+            },
+            Object {
+              "id": 4866,
+              "label": "Combinados",
+              "value": 4866,
+            },
+          ]
+    }
+    placeholder="Selecione"
+    value={null}
+    valueBgColor={null}
+    valueColor={null}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <GlobalStyleComponent />,
+        <StateManager
+          className="react-dropdown-multiselect"
+          classNamePrefix="select"
+          clearable={false}
+          closeMenuOnSelect={false}
+          components={
+                    Object {
+                              "DropdownIndicator": [Function],
+                              "IndicatorSeparator": [Function],
+                              "MultiValueLabel": [Function],
+                              "Option": [Function],
+                              "ValueContainer": [Function],
+                            }
+          }
+          defaultInputValue=""
+          defaultMenuIsOpen={false}
+          defaultValue={null}
+          formatGroupLabel={[Function]}
+          hideSelectedOptions={false}
+          id="select-test"
+          isClearable={false}
+          isMulti={false}
+          isOptionDisabled={[Function]}
+          name="test-test"
+          onChange={[Function]}
+          options={
+                    Array [
+                              Object {
+                                "id": 4864,
+                                "label": "Promoções",
+                                "value": 4864,
+                              },
+                              Object {
+                                "id": 4865,
+                                "label": "Sabores de Inverno",
+                                "value": 4865,
+                              },
+                              Object {
+                                "id": 4866,
+                                "label": "Combinados",
+                                "value": 4866,
+                              },
+                            ]
+          }
+          placeholder="Selecione"
+          styles={
+                    Object {
+                              "control": [Function],
+                              "multiValue": [Function],
+                              "multiValueLabel": [Function],
+                              "multiValueRemove": [Function],
+                              "option": [Function],
+                              "placeholder": [Function],
+                              "valueContainer": [Function],
+                            }
+          }
+          value={null}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {},
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "className": "react-dropdown-multiselect",
+          "classNamePrefix": "select",
+          "clearable": false,
+          "closeMenuOnSelect": false,
+          "components": Object {
+            "DropdownIndicator": [Function],
+            "IndicatorSeparator": [Function],
+            "MultiValueLabel": [Function],
+            "Option": [Function],
+            "ValueContainer": [Function],
+          },
+          "defaultInputValue": "",
+          "defaultMenuIsOpen": false,
+          "defaultValue": null,
+          "formatGroupLabel": [Function],
+          "hideSelectedOptions": false,
+          "id": "select-test",
+          "isClearable": false,
+          "isMulti": false,
+          "isOptionDisabled": [Function],
+          "name": "test-test",
+          "onChange": [Function],
+          "options": Array [
+            Object {
+              "id": 4864,
+              "label": "Promoções",
+              "value": 4864,
+            },
+            Object {
+              "id": 4865,
+              "label": "Sabores de Inverno",
+              "value": 4865,
+            },
+            Object {
+              "id": 4866,
+              "label": "Combinados",
+              "value": 4866,
+            },
+          ],
+          "placeholder": "Selecione",
+          "styles": Object {
+            "control": [Function],
+            "multiValue": [Function],
+            "multiValueLabel": [Function],
+            "multiValueRemove": [Function],
+            "option": [Function],
+            "placeholder": [Function],
+            "valueContainer": [Function],
+          },
+          "value": null,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <GlobalStyleComponent />,
+          <StateManager
+            className="react-dropdown-multiselect"
+            classNamePrefix="select"
+            clearable={false}
+            closeMenuOnSelect={false}
+            components={
+                        Object {
+                                    "DropdownIndicator": [Function],
+                                    "IndicatorSeparator": [Function],
+                                    "MultiValueLabel": [Function],
+                                    "Option": [Function],
+                                    "ValueContainer": [Function],
+                                  }
+            }
+            defaultInputValue=""
+            defaultMenuIsOpen={false}
+            defaultValue={null}
+            formatGroupLabel={[Function]}
+            hideSelectedOptions={false}
+            id="select-test"
+            isClearable={false}
+            isMulti={false}
+            isOptionDisabled={[Function]}
+            name="test-test"
+            onChange={[Function]}
+            options={
+                        Array [
+                                    Object {
+                                      "id": 4864,
+                                      "label": "Promoções",
+                                      "value": 4864,
+                                    },
+                                    Object {
+                                      "id": 4865,
+                                      "label": "Sabores de Inverno",
+                                      "value": 4865,
+                                    },
+                                    Object {
+                                      "id": 4866,
+                                      "label": "Combinados",
+                                      "value": 4866,
+                                    },
+                                  ]
+            }
+            placeholder="Selecione"
+            styles={
+                        Object {
+                                    "control": [Function],
+                                    "multiValue": [Function],
+                                    "multiValueLabel": [Function],
+                                    "multiValueRemove": [Function],
+                                    "option": [Function],
+                                    "placeholder": [Function],
+                                    "valueContainer": [Function],
+                                  }
+            }
+            value={null}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "className": "react-dropdown-multiselect",
+            "classNamePrefix": "select",
+            "clearable": false,
+            "closeMenuOnSelect": false,
+            "components": Object {
+              "DropdownIndicator": [Function],
+              "IndicatorSeparator": [Function],
+              "MultiValueLabel": [Function],
+              "Option": [Function],
+              "ValueContainer": [Function],
+            },
+            "defaultInputValue": "",
+            "defaultMenuIsOpen": false,
+            "defaultValue": null,
+            "formatGroupLabel": [Function],
+            "hideSelectedOptions": false,
+            "id": "select-test",
+            "isClearable": false,
+            "isMulti": false,
+            "isOptionDisabled": [Function],
+            "name": "test-test",
+            "onChange": [Function],
+            "options": Array [
+              Object {
+                "id": 4864,
+                "label": "Promoções",
+                "value": 4864,
+              },
+              Object {
+                "id": 4865,
+                "label": "Sabores de Inverno",
+                "value": 4865,
+              },
+              Object {
+                "id": 4866,
+                "label": "Combinados",
+                "value": 4866,
+              },
+            ],
+            "placeholder": "Selecione",
+            "styles": Object {
+              "control": [Function],
+              "multiValue": [Function],
+              "multiValueLabel": [Function],
+              "multiValueRemove": [Function],
+              "option": [Function],
+              "placeholder": [Function],
+              "valueContainer": [Function],
+            },
+            "value": null,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;

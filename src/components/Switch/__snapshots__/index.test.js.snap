@@ -1,0 +1,682 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> should render the component correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Switch
+    checked={true}
+    className="test"
+    customStyles={null}
+    disabled={false}
+    id="test"
+    labelStyles={null}
+    onChange={[Function]}
+    sliderStyles={null}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Unknown>
+        <GlobalStyleComponent />
+        <Unknown>
+                <Unknown
+                        checked={true}
+                        className="switch-4all test"
+                        disabled={false}
+                        id="test"
+                        onChange={[Function]}
+                        type="checkbox"
+                />
+                <Unknown
+                        checked={true}
+                        customStyles={null}
+                        disabled={false}
+                        sliderStyles={null}
+                />
+        </Unknown>
+        <Unknown
+                labelStyles={null}
+        />
+</Unknown>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <GlobalStyleComponent />,
+          <Unknown>
+            <Unknown
+                        checked={true}
+                        className="switch-4all test"
+                        disabled={false}
+                        id="test"
+                        onChange={[Function]}
+                        type="checkbox"
+            />
+            <Unknown
+                        checked={true}
+                        customStyles={null}
+                        disabled={false}
+                        sliderStyles={null}
+            />
+</Unknown>,
+          <Unknown
+            labelStyles={null}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <Unknown
+                checked={true}
+                className="switch-4all test"
+                disabled={false}
+                id="test"
+                onChange={[Function]}
+                type="checkbox"
+/>,
+              <Unknown
+                checked={true}
+                customStyles={null}
+                disabled={false}
+                sliderStyles={null}
+/>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "checked": true,
+                "className": "switch-4all test",
+                "disabled": false,
+                "id": "test",
+                "onChange": [Function],
+                "type": "checkbox",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-bxivhb",
+                  "isStatic": true,
+                  "rules": Array [
+                    "
+  position: absolute;
+  opacity: 0;
+  :focus {
+    ~ span {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+    }
+  }
+",
+                  ],
+                },
+                "displayName": "styled.input",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-bxivhb",
+                "target": "input",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "checked": true,
+                "customStyles": null,
+                "disabled": false,
+                "sliderStyles": null,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "sc-ifAKCX",
+                  "isStatic": false,
+                  "rules": Array [
+                    "
+  position: absolute;
+  cursor: ",
+                    [Function],
+                    ";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ",
+                    "#E4E4E4",
+                    ";
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
+  border-radius: 34px;
+  background-color: ",
+                    [Function],
+                    ";
+  ",
+                    [Function],
+                    ";
+  
+  :before{
+    position: absolute;
+    content: \\"\\";
+    height: 16px;
+    width: 16px;
+    bottom: 4px;
+    background-color: ",
+                    "#FFFFFF",
+                    ";
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    background-color: ",
+                    [Function],
+                    ";
+    transform: ",
+                    [Function],
+                    ";
+    -webkit-transform: ",
+                    [Function],
+                    ";
+    -ms-transform: ",
+                    [Function],
+                    ";
+    ",
+                    [Function],
+                    ";
+  }
+",
+                  ],
+                },
+                "displayName": "styled.span",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "sc-ifAKCX",
+                "target": "span",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              },
+            },
+          ],
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-bwzfXH",
+              "isStatic": true,
+              "rules": Array [
+                "
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  min-width: 41px;
+  height: 24px;
+  margin: 0;
+",
+              ],
+            },
+            "displayName": "styled.label",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-bwzfXH",
+            "target": "label",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "",
+            "labelStyles": null,
+          },
+          "ref": null,
+          "rendered": "",
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "attrs": Array [],
+            "componentStyle": ComponentStyle {
+              "componentId": "sc-htpNat",
+              "isStatic": false,
+              "rules": Array [
+                "
+  position: relative;
+  margin-left: 10px;
+  ",
+                [Function],
+                ";
+",
+              ],
+            },
+            "displayName": "styled.span",
+            "foldedComponentIds": Array [],
+            "render": [Function],
+            "styledComponentId": "sc-htpNat",
+            "target": "span",
+            "toString": [Function],
+            "warnTooManyClasses": [Function],
+            "withComponent": [Function],
+          },
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "sc-bdVaJa",
+          "isStatic": true,
+          "rules": Array [
+            "
+  ",
+            "
+  display: flex;
+  align-items: center;
+  
+  
+",
+            ";
+",
+          ],
+        },
+        "displayName": "styled.div",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "sc-bdVaJa",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      },
+    },
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Unknown>
+          <GlobalStyleComponent />
+          <Unknown>
+                    <Unknown
+                              checked={true}
+                              className="switch-4all test"
+                              disabled={false}
+                              id="test"
+                              onChange={[Function]}
+                              type="checkbox"
+                    />
+                    <Unknown
+                              checked={true}
+                              customStyles={null}
+                              disabled={false}
+                              sliderStyles={null}
+                    />
+          </Unknown>
+          <Unknown
+                    labelStyles={null}
+          />
+</Unknown>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <GlobalStyleComponent />,
+            <Unknown>
+              <Unknown
+                            checked={true}
+                            className="switch-4all test"
+                            disabled={false}
+                            id="test"
+                            onChange={[Function]}
+                            type="checkbox"
+              />
+              <Unknown
+                            checked={true}
+                            customStyles={null}
+                            disabled={false}
+                            sliderStyles={null}
+              />
+</Unknown>,
+            <Unknown
+              labelStyles={null}
+/>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Unknown
+                  checked={true}
+                  className="switch-4all test"
+                  disabled={false}
+                  id="test"
+                  onChange={[Function]}
+                  type="checkbox"
+/>,
+                <Unknown
+                  checked={true}
+                  customStyles={null}
+                  disabled={false}
+                  sliderStyles={null}
+/>,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "checked": true,
+                  "className": "switch-4all test",
+                  "disabled": false,
+                  "id": "test",
+                  "onChange": [Function],
+                  "type": "checkbox",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-bxivhb",
+                    "isStatic": true,
+                    "rules": Array [
+                      "
+  position: absolute;
+  opacity: 0;
+  :focus {
+    ~ span {
+      outline-width: 2px;
+      outline-style: solid;
+      outline-color: Highlight;
+    }
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.input",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-bxivhb",
+                  "target": "input",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "checked": true,
+                  "customStyles": null,
+                  "disabled": false,
+                  "sliderStyles": null,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": Object {
+                  "$$typeof": Symbol(react.forward_ref),
+                  "attrs": Array [],
+                  "componentStyle": ComponentStyle {
+                    "componentId": "sc-ifAKCX",
+                    "isStatic": false,
+                    "rules": Array [
+                      "
+  position: absolute;
+  cursor: ",
+                      [Function],
+                      ";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ",
+                      "#E4E4E4",
+                      ";
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
+  border-radius: 34px;
+  background-color: ",
+                      [Function],
+                      ";
+  ",
+                      [Function],
+                      ";
+  
+  :before{
+    position: absolute;
+    content: \\"\\";
+    height: 16px;
+    width: 16px;
+    bottom: 4px;
+    background-color: ",
+                      "#FFFFFF",
+                      ";
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.24), 0 0 1px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 50%;
+    background-color: ",
+                      [Function],
+                      ";
+    transform: ",
+                      [Function],
+                      ";
+    -webkit-transform: ",
+                      [Function],
+                      ";
+    -ms-transform: ",
+                      [Function],
+                      ";
+    ",
+                      [Function],
+                      ";
+  }
+",
+                    ],
+                  },
+                  "displayName": "styled.span",
+                  "foldedComponentIds": Array [],
+                  "render": [Function],
+                  "styledComponentId": "sc-ifAKCX",
+                  "target": "span",
+                  "toString": [Function],
+                  "warnTooManyClasses": [Function],
+                  "withComponent": [Function],
+                },
+              },
+            ],
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-bwzfXH",
+                "isStatic": true,
+                "rules": Array [
+                  "
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  min-width: 41px;
+  height: 24px;
+  margin: 0;
+",
+                ],
+              },
+              "displayName": "styled.label",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-bwzfXH",
+              "target": "label",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "",
+              "labelStyles": null,
+            },
+            "ref": null,
+            "rendered": "",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "attrs": Array [],
+              "componentStyle": ComponentStyle {
+                "componentId": "sc-htpNat",
+                "isStatic": false,
+                "rules": Array [
+                  "
+  position: relative;
+  margin-left: 10px;
+  ",
+                  [Function],
+                  ";
+",
+                ],
+              },
+              "displayName": "styled.span",
+              "foldedComponentIds": Array [],
+              "render": [Function],
+              "styledComponentId": "sc-htpNat",
+              "target": "span",
+              "toString": [Function],
+              "warnTooManyClasses": [Function],
+              "withComponent": [Function],
+            },
+          },
+        ],
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "sc-bdVaJa",
+            "isStatic": true,
+            "rules": Array [
+              "
+  ",
+              "
+  display: flex;
+  align-items: center;
+  
+  
+",
+              ";
+",
+            ],
+          },
+          "displayName": "styled.div",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "sc-bdVaJa",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        },
+      },
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
