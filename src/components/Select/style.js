@@ -1,5 +1,5 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { default as theme } from '../../styles/variables';
+import styled from 'styled-components';
+import theme from '../../styles/variables';
 import { flexPosition, fontStyle } from '../../styles/mixins';
 import { lightenDarkenColor } from '../../helpers/helpers';
 
@@ -26,6 +26,7 @@ export const customStyles = ({
   container: styles => ({
     ...styles,
     ...containerCustomStyles,
+    width: '100%',
   }),
   option: (stylesProvided, { isFocused, isDisabled }) => ({
     ...stylesProvided,
@@ -125,10 +126,4 @@ export const QtdOptions = styled.span`
   border-radius: 100%;
   padding: 0px 4px;
   height: 20px;
-`;
-
-export const GlobalSelectStyle = createGlobalStyle`
-  .react-dropdown-multiselect {
-    width: 100%;
-  }
 `;

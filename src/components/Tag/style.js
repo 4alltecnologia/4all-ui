@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { fontStyle, flexPosition } from '../../styles/mixins';
+import { fontStyle, flexPosition, globalStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 import { Icon } from '../Icons/Close';
 
@@ -30,6 +30,7 @@ const disabledStyle = css`
 `;
 
 export const CustomTag = styled.div`
+  ${globalStyle()}
   background-color: ${({ bgColor }) => bgColor};
   border: ${({ border }) => border};
   border-radius: 20px;

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../styles/variables';
-import { fontStyle, flexPosition } from '../../styles/mixins';
+import { fontStyle, flexPosition, globalStyle } from '../../styles/mixins';
 
 export const Alert = styled.div`
+  ${globalStyle()}
   background-color: ${({ secondary, backgroundColor }) => secondary ? theme.colors.WHITE : backgroundColor};
   border-radius: ${theme.borders.RADIUS_1};
   ${flexPosition({ align: 'center' })}

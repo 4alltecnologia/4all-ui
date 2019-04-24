@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropType from 'prop-types';
 import * as styles from './style';
-import { GlobalStyle } from '../../styles/mixins';
 
 const Textarea = ({
   id,
@@ -16,22 +15,19 @@ const Textarea = ({
   disabled,
   error,
 }) => (
-  <Fragment>
-    <styles.Textarea
-      id={id}
-      name={name}
-      className={`textarea-4all ${className}`}
-      value={value}
-      customStyles={customStyles}
-      width={width}
-      onChange={onChange}
-      height={height}
-      placeholder={placeholder}
-      disabled={disabled}
-      error={error}
-    />
-    <GlobalStyle />
-  </Fragment>
+  <styles.Textarea
+    id={id}
+    name={name}
+    className={`textarea-4all ${className}`}
+    value={value}
+    customStyles={customStyles}
+    width={width}
+    onChange={onChange}
+    height={height}
+    placeholder={placeholder}
+    disabled={disabled}
+    error={error}
+  />
 );
 
 Textarea.propTypes = {

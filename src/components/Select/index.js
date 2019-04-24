@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import ReactSelect from 'react-select';
 import PropTypes from 'prop-types';
 import * as stylesSelect from './style';
@@ -26,7 +26,7 @@ class Select extends PureComponent {
     if (isMultiple) {
       formatSelectValues();
     }
-  }
+  };
 
   render() {
     const {
@@ -62,41 +62,38 @@ class Select extends PureComponent {
       optionHeight,
     };
     return (
-      <Fragment>
-        <stylesSelect.GlobalSelectStyle />
-        <ReactSelect
-          id={`select-${id}`}
-          name={`${name}-${id}`}
-          onChange={onChange}
-          options={options}
-          value={value}
-          isMulti={isMultiple}
-          styles={stylesSelect.customStyles({
-            error,
-            customStyle: style,
-            canRemove,
-            optionCustomDisabledStyles,
-            containerCustomStyles,
-          })}
-          className="select-4all react-dropdown-multiselect"
-          placeholder={placeholder}
-          classNamePrefix="select"
-          isClearable={false}
-          clearable={false}
-          hideSelectedOptions={false}
-          closeMenuOnSelect={closeMenuOnSelect}
-          formatGroupLabel={formatGroupLabel}
-          isOptionDisabled={opt => opt.disabled}
-          isDisabled={disabled}
-          components={{
-            Option: props => Option(props, style),
-            DropdownIndicator: props => DropdownIndicator(props, style),
-            IndicatorSeparator: () => null,
-            ValueContainer,
-            MultiValueLabel: props => MultiValueLabel(props, formatLabel),
-          }}
-        />
-      </Fragment>
+      <ReactSelect
+        id={`select-${id}`}
+        name={`${name}-${id}`}
+        onChange={onChange}
+        options={options}
+        value={value}
+        isMulti={isMultiple}
+        styles={stylesSelect.customStyles({
+          error,
+          customStyle: style,
+          canRemove,
+          optionCustomDisabledStyles,
+          containerCustomStyles,
+        })}
+        className="select-4all react-dropdown-multiselect"
+        placeholder={placeholder}
+        classNamePrefix="select"
+        isClearable={false}
+        clearable={false}
+        hideSelectedOptions={false}
+        closeMenuOnSelect={closeMenuOnSelect}
+        formatGroupLabel={formatGroupLabel}
+        isOptionDisabled={opt => opt.disabled}
+        isDisabled={disabled}
+        components={{
+          Option: props => Option(props, style),
+          DropdownIndicator: props => DropdownIndicator(props, style),
+          IndicatorSeparator: () => null,
+          ValueContainer,
+          MultiValueLabel: props => MultiValueLabel(props, formatLabel),
+        }}
+      />
     );
   }
 }

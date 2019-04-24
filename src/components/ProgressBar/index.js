@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropType from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
-import { GlobalStyle } from '../../styles/mixins';
 
 const ProgressBar = ({
   id,
@@ -14,25 +13,22 @@ const ProgressBar = ({
   customStyles,
   roundness,
 }) => (
-  <Fragment>
-    <styles.Container
-      id={id}
-      className={`progress-bar-4all ${className}`}
+  <styles.Container
+    id={id}
+    className={`progress-bar-4all ${className}`}
+    height={height}
+    width={width}
+    customStyles={customStyles}
+    roundness={roundness}
+  >
+    <styles.Bar
+      className="progress-bar-fill"
+      barColor={barColor}
+      progress={progress}
       height={height}
-      width={width}
-      customStyles={customStyles}
       roundness={roundness}
-    >
-      <styles.Bar
-        className="progress-bar-fill"
-        barColor={barColor}
-        progress={progress}
-        height={height}
-        roundness={roundness}
-      />
-    </styles.Container>
-    <GlobalStyle />
-  </Fragment>
+    />
+  </styles.Container>
 );
 
 ProgressBar.propTypes = {

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import theme from '../../styles/variables';
-import { fontStyle } from '../../styles/mixins';
+import { fontStyle, globalStyle } from '../../styles/mixins';
 
 export const Textarea = styled.textarea`
+  ${globalStyle()}
   background-color: ${theme.colors.WHITE};
   border: 1px solid ${({ error }) => error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2};
   border-radius: ${theme.borders.RADIUS_1};

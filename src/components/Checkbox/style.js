@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../styles/variables';
-import { fontStyle, flexPosition } from '../../styles/mixins';
+import { fontStyle, flexPosition, globalStyle } from '../../styles/mixins';
 
 const getIcon = (mixed, checked) => {
   if (checked && mixed) {
@@ -123,5 +123,6 @@ export const CheckboxContainer = styled.label`
 `;
 
 export const Container = styled.div`
+  ${globalStyle()}
   display: inline-block;
 `;

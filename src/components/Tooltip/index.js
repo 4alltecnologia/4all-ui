@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
-import { GlobalStyle } from '../../styles/mixins';
 import InfoIcon from '../Icons/Info';
 
 const Tooltip = ({
@@ -51,7 +50,6 @@ const Tooltip = ({
     >
       {children}
     </styles.Tooltip>
-    <GlobalStyle />
   </styles.Container>
 );
 

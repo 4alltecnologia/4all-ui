@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
-import { GlobalStyle } from '../../styles/mixins';
 
 const Switch = ({
   id,
@@ -15,7 +14,6 @@ const Switch = ({
   children,
 }) => (
   <styles.Switch>
-    <GlobalStyle />
     <styles.SwitchBlock>
       <styles.SwitchInput
         id={id}

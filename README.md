@@ -243,7 +243,7 @@ Select props
 ## ProductImage
 ProductImage props
 - `image` - image path (`type: string`)
-- `small` - removes the empty image text (`type: boolean`)
+- `small` - set the size to small (`type: boolean`)
 - `alt` - image alt text (`type: string`)
 - `title` - image title text (`type: string`)
 - `size` - image size (`type: string`)
@@ -254,6 +254,7 @@ ProductImage props
 - `iconSize` - icon size (`type: string`)
 - `iconColor` - icon color (`type: string`)
 - `emptyText` - custom text to show when there is no image (`type: string`)
+- `iconOnly` - hides the empty text (`type: boolean`)
 <br /><br />
 
 ## Pagination
@@ -341,7 +342,9 @@ const theme = {
     customScrollbar: function() {
       /* return string to be inserted into your styled-component */
     },
-    GlobalStyle: <GlobalStyle /> // Can be inserted in your root component to add our global styles **NOT REQUIRED**
+    globalStyle: function() {
+      /* return string to be inserted into your styled-component */
+    }
   }
 }
 ```

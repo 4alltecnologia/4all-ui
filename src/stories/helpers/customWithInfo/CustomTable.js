@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 import styles from '../../../styles/variables';
-import { GlobalStyle } from '../../../styles/mixins';
+import { globalStyle } from '../../../styles/mixins';
 
 
 const CustomTable = styled.table`
+  ${globalStyle()}
   border-collapse: collapse;
   width: 100%;
   max-width: 500px;
@@ -66,7 +67,6 @@ const CustomTableProps = ({ propDefinitions }) => {
   return (
     <Fragment>
       <InfoGlobalStyle />
-      <GlobalStyle />
       <CustomTable>
         <thead>
           <tr>

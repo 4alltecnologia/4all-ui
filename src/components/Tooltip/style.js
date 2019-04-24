@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import theme from '../../styles/variables';
-import { fontStyle } from '../../styles/mixins';
+import { fontStyle, globalStyle } from '../../styles/mixins';
 
 export const Tooltip = styled.div`
   background-color: ${({ secondary, backgroundColor }) => secondary ? theme.colors.GRAY_DARKER : backgroundColor};
@@ -30,6 +30,7 @@ export const Tooltip = styled.div`
 `;
 
 export const Container = styled.div`
+  ${globalStyle()}
   display: block;
   ${({ buttonSize }) => `
     height: ${buttonSize}px;
