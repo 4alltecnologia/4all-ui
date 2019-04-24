@@ -254,7 +254,7 @@ ProductImage props
 - `iconSize` - icon size (`type: string`)
 - `iconColor` - icon color (`type: string`)
 - `emptyText` - custom text to show when there is no image (`type: string`)
-- `iconOnly` - hides the empty text (`type: boolean`)
+- `iconOnly` - hides the empty image text (`type: boolean`)
 <br /><br />
 
 ## Pagination
