@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
 import CloseIcon from '../Icons/Close';
-import { GlobalStyle } from '../../styles/mixins';
 
 const getIconColor = ({ iconColor, disabled, secondary }) => {
   if (iconColor) {
@@ -37,39 +36,36 @@ const Tag = ({
   error,
   iconColor,
 }) => (
-  <Fragment>
-    <GlobalStyle />
-    <styles.CustomTag
-      id={id}
-      className={`tag-4all ${className}`}
-      color={color}
-      height={height}
-      width={width}
-      bgColor={bgColor}
-      disabled={disabled}
-      customStyles={customStyles}
-      border={border}
-      onMouseLeave={onBlurTag ? () => onBlurTag(tag) : null}
-      onMouseOver={onHoverTag ? () => onHoverTag(tag) : null}
-      onFocus={onHoverTag ? () => onHoverTag(tag) : null}
-      onClick={onClick}
-      removeTag={!!onRemoveTag}
-      secondary={secondary}
-      error={error}
-    >
-      {children}
-      {!!onRemoveTag && (
-        <CloseIcon
-          color={getIconColor({
-            iconColor,
-            disabled,
-            secondary,
-          })}
-          onClick={onRemoveTag}
-        />
-      )}
-    </styles.CustomTag>
-  </Fragment>
+  <styles.CustomTag
+    id={id}
+    className={`tag-4all ${className}`}
+    color={color}
+    height={height}
+    width={width}
+    bgColor={bgColor}
+    disabled={disabled}
+    customStyles={customStyles}
+    border={border}
+    onMouseLeave={onBlurTag ? () => onBlurTag(tag) : null}
+    onMouseOver={onHoverTag ? () => onHoverTag(tag) : null}
+    onFocus={onHoverTag ? () => onHoverTag(tag) : null}
+    onClick={onClick}
+    removeTag={!!onRemoveTag}
+    secondary={secondary}
+    error={error}
+  >
+    {children}
+    {!!onRemoveTag && (
+      <CloseIcon
+        color={getIconColor({
+          iconColor,
+          disabled,
+          secondary,
+        })}
+        onClick={onRemoveTag}
+      />
+    )}
+  </styles.CustomTag>
 );
 
 Tag.propTypes = {

@@ -3,7 +3,7 @@ import styles from '../../../styles/variables';
 const withInfoStyles = {
   button: {
     base: {
-      animation: 'highlight 4s infinite',
+      boxShadow: '0px 0px 20px 0px rgba(0, 0, 0, 0.2)',
       backgroundColor: styles.colors.INFO_COLOR,
       fontWeight: 'bold',
       fontSize: '14px',

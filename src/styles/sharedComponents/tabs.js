@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import { flexPosition, fontStyle } from '../mixins';
+import { flexPosition, fontStyle, globalStyle } from '../mixins';
 import styles from '../variables';
 
 const removeLinkEffects = css`
@@ -60,6 +60,7 @@ const secondaryStyle = css`
 `;
 
 export const TabsContainer = styled.div`
+  ${globalStyle()}
   ${flexPosition({ align: 'flex-end', justify: 'flex-start' })}
   ${({ secondary }) => secondary ? secondaryStyle : {}}
 `;

@@ -13,7 +13,7 @@ storiesOf('ProductImage', module)
   ))
   .add('Empty image style', () => <ProductImage image={null} />)
   .add('Empty small style', () => (
-    <ProductImage image={null} small />
+    <ProductImage image={null} small iconOnly />
   ))
   .add('Custom colors style', () => (
     <ProductImage

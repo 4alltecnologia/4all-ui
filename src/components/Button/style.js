@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { flexPosition, fontStyle } from '../../styles/mixins';
+import { flexPosition, fontStyle, globalStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 import { lightenDarkenColor } from '../../helpers/helpers';
 
@@ -44,6 +44,7 @@ const linkButton = css`
 `;
 
 export const CustomButton = styled.button`
+  ${globalStyle()}
   position: relative;
   ${flexPosition({ align: 'center', justify: 'center' })}
   ${({ color, fontSize, fontWeight }) => fontStyle(

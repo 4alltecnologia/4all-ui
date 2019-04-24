@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
 import theme from '../../styles/variables';
-import { flexPosition } from '../../styles/mixins';
+import { flexPosition, globalStyle } from '../../styles/mixins';
 
 const sharedStyles = (size, backgroundColor, customStyles) => css`
+  ${globalStyle()}
   background-color: ${backgroundColor};
   border-radius: ${theme.borders.RADIUS_1};
   height: ${size};

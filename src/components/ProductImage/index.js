@@ -19,6 +19,7 @@ const ProductImage = ({
   iconColor,
   customStyles,
   emptyText,
+  iconOnly,
 }) => (
   image ? (
     <styles.Image
@@ -39,6 +40,7 @@ const ProductImage = ({
       id={id}
       small={small}
       size={small ? '40px' : size}
+      iconOnly={iconOnly}
       customStyles={customStyles}
     >
       <PhotoIcon
@@ -46,7 +48,7 @@ const ProductImage = ({
         color={iconColor}
         size={small ? '25px' : iconSize}
       />
-      {!small && (
+      {!iconOnly && (
         <styles.Text
           fontSize={fontSize}
           className="product-image-4all__text"
@@ -74,6 +76,7 @@ ProductImage.propTypes = {
   customStyles: PropTypes.object,
   iconSize: PropTypes.string,
   emptyText: PropTypes.string,
+  iconOnly: PropTypes.bool,
 };
 
 ProductImage.defaultProps = {
@@ -91,6 +94,7 @@ ProductImage.defaultProps = {
   customStyles: {},
   iconSize: '30px',
   emptyText: 'Sem foto',
+  iconOnly: false,
 };
 
 export default ProductImage;

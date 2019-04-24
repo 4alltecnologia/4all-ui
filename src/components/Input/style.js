@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { fontStyle, flexPosition } from '../../styles/mixins';
+import { fontStyle, flexPosition, globalStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 
 export const Input = styled.input`
@@ -28,6 +28,7 @@ export const Input = styled.input`
 `;
 
 export const Container = styled.div`
+  ${globalStyle()}
   position: relative;
   width: ${({ width }) => width};
 `;

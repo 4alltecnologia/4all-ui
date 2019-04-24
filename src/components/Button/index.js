@@ -1,8 +1,7 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
-import { GlobalStyle } from '../../styles/mixins';
 import Loader from '../Loader';
 
 const Button = ({
@@ -26,34 +25,31 @@ const Button = ({
   link,
   tabIndex,
 }) => (
-  <Fragment>
-    <GlobalStyle />
-    <styles.CustomButton
-      id={id}
-      className={`btn-4all ${className}`}
-      color={color}
-      width={width}
-      height={height}
-      borderColor={borderColor}
-      bgColor={bgColor}
-      border={border}
-      isLoading={isLoading}
-      disabled={disabled}
-      customStyles={customStyles}
-      onClick={onClick}
-      secondary={secondary}
-      loaderSize={loaderSize}
-      loaderWidth={loaderWidth}
-      noHover={noHover}
-      link={link}
-      tabIndex={tabIndex}
-    >
-      {isLoading && (
-        <Loader size={loaderSize} color={color} width={loaderWidth} />
-      )}
-      {children}
-    </styles.CustomButton>
-  </Fragment>
+  <styles.CustomButton
+    id={id}
+    className={`btn-4all ${className}`}
+    color={color}
+    width={width}
+    height={height}
+    borderColor={borderColor}
+    bgColor={bgColor}
+    border={border}
+    isLoading={isLoading}
+    disabled={disabled}
+    customStyles={customStyles}
+    onClick={onClick}
+    secondary={secondary}
+    loaderSize={loaderSize}
+    loaderWidth={loaderWidth}
+    noHover={noHover}
+    link={link}
+    tabIndex={tabIndex}
+  >
+    {isLoading && (
+      <Loader size={loaderSize} color={color} width={loaderWidth} />
+    )}
+    {children}
+  </styles.CustomButton>
 );
 
 Button.propTypes = {
@@ -97,6 +93,5 @@ Button.defaultProps = {
   link: false,
   tabIndex: '0',
 };
-
 
 export default Button;

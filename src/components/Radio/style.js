@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { flexPosition, fontStyle } from '../../styles/mixins';
+import { flexPosition, fontStyle, globalStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 
 export const RadioContainer = styled.div`
+  ${globalStyle()}
   ${flexPosition({ align: 'flex-start', justify: 'flex-start' })};
 `;
 

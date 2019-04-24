@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
 import theme from '../../styles/variables';
 import AlertIcon from '../Icons/Alert';
-import { GlobalStyle } from '../../styles/mixins';
 
 const Alert = ({
   id,
@@ -16,25 +15,22 @@ const Alert = ({
   children,
   width,
 }) => (
-  <Fragment>
-    <styles.Alert
-      id={id}
-      className={`alert-4all ${className}`}
-      backgroundColor={backgroundColor}
-      fontColor={fontColor}
-      customStyles={customStyles}
-      secondary={secondary}
-      width={width}
-    >
-      <AlertIcon
-        className="alert-icon"
-        color={secondary ? theme.colors.DANGER_COLOR : iconColor}
-      />
+  <styles.Alert
+    id={id}
+    className={`alert-4all ${className}`}
+    backgroundColor={backgroundColor}
+    fontColor={fontColor}
+    customStyles={customStyles}
+    secondary={secondary}
+    width={width}
+  >
+    <AlertIcon
+      className="alert-icon"
+      color={secondary ? theme.colors.DANGER_COLOR : iconColor}
+    />
 
-      {children}
-    </styles.Alert>
-    <GlobalStyle />
-  </Fragment>
+    {children}
+  </styles.Alert>
 );
 
 Alert.propTypes = {

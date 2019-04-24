@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as styles from './style';
 import CheckIcon from '../Icons/Check';
 import SearchIcon from '../Icons/Search';
-import { GlobalStyle } from '../../styles/mixins';
 
 const Input = ({
   id,
@@ -47,7 +46,6 @@ const Input = ({
           {checked && <CheckIcon size="30px" />}
         </styles.IconContainer>
       )}
-      <GlobalStyle />
     </styles.Container>
   );
 };
