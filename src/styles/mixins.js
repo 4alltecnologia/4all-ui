@@ -32,6 +32,7 @@ export const customScrollbar = () => css`
 `;
 
 export const globalStyle = () => css`
+  &,
   * {
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
