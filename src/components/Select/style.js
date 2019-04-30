@@ -10,7 +10,7 @@ export const groupStyles = {
 
 export const GroupLabel = {
   fontFamily: theme.fontFamily,
-  fontSize: theme.fontSizes.SIZE_6,
+  fontSize: theme.fontSizes.SIZE_7,
   fontWeight: theme.fontWeights.SEMIBOLD,
   color: theme.colors.GRAY_MEDIUM,
   textTransform: 'initial',
@@ -28,6 +28,10 @@ export const customStyles = ({
     ...containerCustomStyles,
     width: '100%',
   }),
+  group: styles => ({
+    ...styles,
+    padding: '4px 0',
+  }),
   option: (stylesProvided, { isFocused, isDisabled }) => ({
     ...stylesProvided,
     fontFamily: theme.fontFamily,
@@ -38,12 +42,13 @@ export const customStyles = ({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: isFocused ? theme.colors.GRAY_LIGHT : '#FFF',
+    padding: '4px 12px',
     height: customStyle.optionHeight || theme.input.DEFAULT_HEIGHT,
     ':active': {
       backgroundColor: theme.colors.GRAY_LIGHT_2,
     },
     label: {
-      fontSize: theme.fontSizes.SIZE_6,
+      fontSize: theme.fontSizes.SIZE_7,
       fontWeight: 'normal',
     },
     ...isDisabled
@@ -77,6 +82,12 @@ export const customStyles = ({
     padding: 5,
     paddingRight: 0,
     paddingLeft: '2px',
+  }),
+  noOptionsMessage: styles => ({
+    ...styles,
+    fontFamily: theme.fontFamily,
+    fontSize: theme.fontSizes.SIZE_7,
+    fontWeight: theme.fontWeights.SEMIBOLD,
   }),
   multiValueRemove: styles => !canRemove
     ? ({
