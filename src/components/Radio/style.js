@@ -38,7 +38,7 @@ export const CustomRadio = styled.span`
     let color = 'transparent';
 
     if (disabled) {
-      color = theme.colors.GRAY_LIGHT;
+      color = theme.colors.GRAY_LIGHT_2;
     } else if (checked) {
       color = theme.colors.MAIN_COLOR;
     }

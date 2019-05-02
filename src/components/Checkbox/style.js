@@ -20,7 +20,7 @@ const getIcon = (mixed, checked) => {
     `;
   }
 
-  return null;
+  return '';
 };
 
 const getColor = (disabled, checked) => {
@@ -75,7 +75,6 @@ export const Checkbox = styled.span`
     border-radius: 0;
     box-sizing: border-box;
     content: '';
-    cursor: pointer;
     position: absolute;
   }
 
@@ -116,6 +115,7 @@ export const CheckboxContainer = styled.label`
     ${Checkbox} {
       ${getColor(disabled, checked)}
       ${getIcon(mixed, checked)}
+      cursor: ${disabled ? 'default' : 'pointer'};
     }
   `}    
 
