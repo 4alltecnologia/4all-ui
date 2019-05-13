@@ -36,6 +36,7 @@ class Example extends Component {
 Component Button Props
 - `width` - width of the button (`type: String`)
 - `height` - height of the button (`type: String`)
+- `type` - type of the button (`type: String`, e.g.   `submit, reset`)
 - `borderColor` - color of the button border (`type: String`)
 - `bgColor` - background-color of the button (`type: String`)
 - `disabled` - disabled style (`type: boolean`)
@@ -44,7 +45,7 @@ Component Button Props
 - `color` - font color of the button (`type: String`)
 - `border` - border of the button (e.g.  `1px solid #ccc`)
 - `secondary` - secondary style (`type: boolean`)
-- `border` - border of the button (`type: string`, e.g.  `1px solid #ccc`)
+- `border` - border of the button (`type: String`, e.g.  `1px solid #ccc`)
 - `link` - link style (`type: boolean`)
 <br /><br />
 
@@ -121,10 +122,10 @@ Input props
 - `error` - error style (`type: boolean`)
 - `onChange` - function for input change event (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-- `type` - input type (`type: string`)
+- `type` - input type (`type: String`)
 - `value` - input value (`type: any`)
-- `placeholder` - default input placeholder (`type: string`)
-- `maxLength` - set a maximum length (`type: string`)
+- `placeholder` - default input placeholder (`type: String`)
+- `maxLength` - set a maximum length (`type: String`)
 - `checked` - checked style (`type: bool`)
 - `search` - search style (`type: bool`)
 <br /><br />
@@ -135,9 +136,9 @@ InputCurrency props
 - `error` - error style (`type: boolean`)
 - `onChange` - function for input change event (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-- `type` - input type (`type: string`)
+- `type` - input type (`type: String`)
 - `value` - input value (`type: any`)
-- `placeholder` - default input placeholder (`type: string`)
+- `placeholder` - default input placeholder (`type: String`)
 - `checked` - checked style (`type: bool`)
 <br /><br />
 
@@ -154,20 +155,20 @@ Switch props
 ## Alert
 Alert props
 - `secondary` - secondary style (`type: bool`)
-- `fontColor` - custom font color (`type: string`)
-- `backgroundColor` - custom background color (`type: string`)
-- `iconColor` - custom icon color (`type: string`)
-- `width`- component width (`type: string`)
+- `fontColor` - custom font color (`type: String`)
+- `backgroundColor` - custom background color (`type: String`)
+- `iconColor` - custom icon color (`type: String`)
+- `width`- component width (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 <br /><br />
 
 ## ProgressBar
 ProgressBar props
-- `progress` - current progress (`type: string`)
-- `barColor` - progress bar's bar color (`type: string`)
-- `height` - component's height (`type: string`)
-- `width` - component's width (`type: string`)
-- `roundness`- component's roundness/border-radius (`type: string`)
+- `progress` - current progress (`type: String`)
+- `barColor` - progress bar's bar color (`type: String`)
+- `height` - component's height (`type: String`)
+- `width` - component's width (`type: String`)
+- `roundness`- component's roundness/border-radius (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 <br /><br />
 
@@ -178,9 +179,9 @@ Textarea props
 - `onChange` - function for state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `error` - error style (`type: boolean`)
-- `height` - component height (`type: string`)
-- `width` - component width (`type: string`)
-- `placeholder` - default input placeholder (`type: string`)
+- `height` - component height (`type: String`)
+- `width` - component width (`type: String`)
+- `placeholder` - default input placeholder (`type: String`)
 <br /><br />
 
 ## Radio
@@ -190,8 +191,8 @@ Radio props
 - `onChange` - function for radio change (`type: function`)
 - `customDescStyles` - custom styles to be inserted into the styled-components with high prority type (`type: default style object`)
 - `value` - input value (`type: any`)
-- `label` - radio label text (`type: string`)
-- `desc` - radio description (`type: string`)
+- `label` - radio label text (`type: String`)
+- `desc` - radio description (`type: String`)
 <br /><br />
 
 ## Checkbox
@@ -200,7 +201,7 @@ Checkbox props
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
-- `label` - checkbox label text (`type: string`)
+- `label` - checkbox label text (`type: String`)
 - `mixed`- mixed style (`type: boolean`)
 <br /><br />
 
@@ -209,10 +210,10 @@ Tooltip props
 - `top` - tooltip above the button flag (`type: boolean`)
 - `right` - tooltip at the right of the button flag (`type: boolean`)
 - `secondary` - secondary style (`type: boolean`)
-- `backgroundColor` - background color (`type: string`)
-- `fontColor` - font color (`type: string`)
-- `width` - tooltip width (`type: string`)
-- `buttonSize` - button width/height (`type: number`)
+- `backgroundColor` - background color (`type: String`)
+- `fontColor` - font color (`type: String`)
+- `width` - tooltip width (`type: String`)
+- `buttonSize` - button width/height (`type: Number`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 <br /><br />
 
@@ -231,29 +232,29 @@ Select props
 - `closeMenuOnSelect` - should close menu when select after select an option (`type: boolean`)
 - `customValueStyles` - object with custom styles to be applied to the value label (`type: object`)
 - `canRemove` - in multiselect show button to remove selected option (`type: boolean`)
-- `valueBgColor` - background color of the selected option label (`type: string`)
-- `valueColor` - color color of the selected option label (`type: string`)
-- `iconColor` - color of the icons (`type: string`)
-- `height` - height of the select input (`type: string`)
-- `optionHeight` - height of the options (`type: string`)
+- `valueBgColor` - background color of the selected option label (`type: String`)
+- `valueColor` - color color of the selected option label (`type: String`)
+- `iconColor` - color of the icons (`type: String`)
+- `height` - height of the select input (`type: String`)
+- `optionHeight` - height of the options (`type: String`)
 - `disabled` - disabled select (`type boolean`)
 - `containerCustomStyles` - object with custom styles to be applied to the select container element (`type: object`)
 <br /><br />
 
 ## ProductImage
 ProductImage props
-- `image` - image path (`type: string`)
+- `image` - image path (`type: String`)
 - `small` - set the size to small (`type: boolean`)
-- `alt` - image alt text (`type: string`)
-- `title` - image title text (`type: string`)
-- `size` - image size (`type: string`)
-- `backgroundColor` - background color (`type: string`)
-- `fontColor` - font color (`type: string`)
+- `alt` - image alt text (`type: String`)
+- `title` - image title text (`type: String`)
+- `size` - image size (`type: String`)
+- `backgroundColor` - background color (`type: String`)
+- `fontColor` - font color (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-- `fontSize` - text font size (`type: string`)
-- `iconSize` - icon size (`type: string`)
-- `iconColor` - icon color (`type: string`)
-- `emptyText` - custom text to show when there is no image (`type: string`)
+- `fontSize` - text font size (`type: String`)
+- `iconSize` - icon size (`type: String`)
+- `iconColor` - icon color (`type: String`)
+- `emptyText` - custom text to show when there is no image (`type: String`)
 - `iconOnly` - hides the empty image text (`type: boolean`)
 <br /><br />
 
@@ -267,13 +268,13 @@ Select props
 - `secondary` - apply secondary style (`type: boolean`)
 - `currentPage` - current page with active style of the pagination component (`type: Number`)
 - `onChangePage` - function triggered when some page or next/prev/jump is clicked  (`type: function`)
-- `itemWidth` - width of every page button (`type: string`)
-- `itemHeight` - height of every page button (`type: string`)
-- `activeBgColor` - background-color of active page (`type: string`)
-- `itemBgColor` - background-color of page not selected (`type: string`)
+- `itemWidth` - width of every page button (`type: String`)
+- `itemHeight` - height of every page button (`type: String`)
+- `activeBgColor` - background-color of active page (`type: String`)
+- `itemBgColor` - background-color of page not selected (`type: String`)
 - `customActiveItemStyles` - object with custom styles to be applied active page (`type: object`)
 - `customInactiveItemStyles` - object with custom styles to be applied page not active (`type: object`)
-- `iconColor` - color of the icons (`type: string`)
+- `iconColor` - color of the icons (`type: String`)
 - `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
 <br /><br />
 
