@@ -13,7 +13,7 @@ export const formatPriceOnKeyPress = (e, symbol) => {
   const regex = /^[0-9,.\s]*$/;
 
   if (!value || !regex.test(value) || value === '.' || value === ',') 
-    return value.replace(/[a-z]/gi, '');
+    return value.replace(/[a-z,.]/gi, '');
 
   let val = value.replace(/[^\d]/g, '');
   if (val.length === 1) {
