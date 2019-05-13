@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Tag } from '4all-ui'
+import Tag from '4all-ui/dist/components/Tag';
 
 export default class App extends Component {
   render () {

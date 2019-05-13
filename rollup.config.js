@@ -1,25 +1,29 @@
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
-import external from 'rollup-plugin-peer-deps-external'
-import postcss from 'rollup-plugin-postcss'
-import resolve from 'rollup-plugin-node-resolve'
-import url from 'rollup-plugin-url'
-import svgr from '@svgr/rollup'
+import babel from 'rollup-plugin-babel';
+import commonjs from 'rollup-plugin-commonjs';
+import external from 'rollup-plugin-peer-deps-external';
+import postcss from 'rollup-plugin-postcss';
+import resolve from 'rollup-plugin-node-resolve';
+import url from 'rollup-plugin-url';
+import multiInput from 'rollup-plugin-multi-input';
+import svgr from '@svgr/rollup';
 
 import pkg from './package.json'
 
 export default {
-  input: 'src/index.js',
+  input: ['src/components/**/index.js'],
   output: [
     {
-      file: pkg.main,
+      /* file: pkg.main, */
       format: 'cjs',
-      sourcemap: true
+      dir: 'dist',
+      sourcemap: true,
+      exports: 'named',
     },
     {
-      file: pkg.module,
+      dir: 'dist',
       format: 'es',
-      sourcemap: true
+      sourcemap: true,
+      exports: 'named',
     }
   ],
   plugins: [
@@ -34,6 +38,7 @@ export default {
       plugins: [ 'external-helpers' ]
     }),
     resolve(),
-    commonjs()
+    commonjs(),
+    multiInput(),
   ]
 }
