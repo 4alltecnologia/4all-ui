@@ -20,7 +20,7 @@ npm install --save 4all-ui
 ```jsx
 import React, { Component } from 'react'
 
-import { Button } from '4all-ui'
+import Button from '4all-ui/components/Button';
 
 class Example extends Component {
   render () {
@@ -282,11 +282,11 @@ Select props
 ### Usage
 ```javascript
 import styled from 'styled-components';
-import { theme } from '4all-ui';
+import { styles, mixins } from '4all-ui/styles';
 
 const ContainerDiv = styled.div`
-  background-color: ${theme.styles.colors.MAIN_COLOR};
-  ${theme.mixins.flexPosition({ align: 'center', justify: 'space-between', direction: 'column' })}
+  background-color: ${styles.colors.MAIN_COLOR};
+  ${mixins.flexPosition({ align: 'center', justify: 'space-between', direction: 'column' })}
 `;
 
 ```
