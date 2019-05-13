@@ -12,7 +12,8 @@ export const formatPriceOnKeyPress = (e, symbol) => {
   const value = e.target.value.replace('R$', '');
   const regex = /^[0-9,.\s]*$/;
 
-  if (!value || !regex.test(value) || value === '.' || value === ',') return '';
+  if (!value || !regex.test(value) || value === '.' || value === ',') 
+    return value.replace(/[a-z]/gi, '');
 
   let val = value.replace(/[^\d]/g, '');
   if (val.length === 1) {
@@ -43,7 +44,7 @@ export const priceToInt = price => {
     str = String(price);
   }
 
-  let res = str.replace('R$', '');
+  let res = str.replace(/[a-zR$]/gi, '');
   res = res.replace('.', '');
   res = res.replace(',', '');
   res = parseInt(res, 10);
