@@ -20,10 +20,6 @@ jobs:
           tags: true
     - stage: npm release
       if: tag IS present
-      after_success:
-        - npm run build
-      before_deploy:
-        - cd dist
       deploy:
         provider: npm
         skip_cleanup: true
