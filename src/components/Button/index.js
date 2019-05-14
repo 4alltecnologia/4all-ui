@@ -8,6 +8,7 @@ const Button = ({
   id,
   className,
   isLoading,
+  type,
   width,
   height,
   borderColor,
@@ -29,6 +30,7 @@ const Button = ({
     id={id}
     className={`btn-4all ${className}`}
     color={color}
+    type={type}
     width={width}
     height={height}
     borderColor={borderColor}
@@ -56,6 +58,7 @@ Button.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   color: PropTypes.string,
+  type: PropTypes.string,
   width: PropTypes.string,
   height: PropTypes.string,
   borderColor: PropTypes.string,
@@ -78,6 +81,7 @@ Button.defaultProps = {
   id: null,
   className: null,
   color: '#FFF',
+  type: 'button',
   width: 'auto',
   height: 'auto',
   borderColor: '',
