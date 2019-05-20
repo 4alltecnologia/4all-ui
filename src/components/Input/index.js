@@ -75,7 +75,7 @@ Input.defaultProps = {
   name: '',
   type: 'text',
   value: '',
-  onFocus: {},
+  onFocus: null,
   placeholder: '',
   maxLength: '',
   disabled: false,

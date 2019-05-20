@@ -22,6 +22,7 @@ export default class InputCurrency extends Component {
     const value = this.props;
     const { caretPosition, event } = this.state;
     if (prevProps.value !== value && !!caretPosition) {
+      debugger;
       event.target.setSelectionRange(caretPosition, caretPosition);
     }
   }
@@ -29,8 +30,9 @@ export default class InputCurrency extends Component {
   onChangePrice = (e, onChange) => {
     e.persist();
     const targetInputParams = getTargetInputParams(e);
-    const hasLetters = e.target.value.match(/[a-z]/i);
+    const hasLetters = e.target.value.replace('R$', '').match(/[a-z]/i);
     const formattedValue = getFormattedValue(e);
+    debugger;
     if (!hasLetters) {
       this.setState({
         event: e,
@@ -98,7 +100,7 @@ InputCurrency.defaultProps = {
   name: '',
   type: 'text',
   value: '',
-  onFocus: {},
+  onFocus: null,
   placeholder: 'R$',
   disabled: false,
   error: false,
