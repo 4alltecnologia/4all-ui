@@ -48,6 +48,7 @@ export default class InputCurrency extends Component {
       type,
       value,
       onChange,
+      onFocus,
       placeholder,
       disabled,
       error,
@@ -63,6 +64,7 @@ export default class InputCurrency extends Component {
         type={type}
         value={formatPrice(priceToInt(value) / 100)}
         onChange={e => this.onChangePrice(e, onChange)}
+        onFocus={onFocus}
         placeholder={placeholder}
         disabled={disabled}
         error={error}
@@ -81,6 +83,7 @@ InputCurrency.propTypes = {
   type: PropTypes.string,
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   error: PropTypes.bool,
@@ -95,6 +98,7 @@ InputCurrency.defaultProps = {
   name: '',
   type: 'text',
   value: '',
+  onFocus: {},
   placeholder: 'R$',
   disabled: false,
   error: false,
