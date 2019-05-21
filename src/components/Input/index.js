@@ -10,6 +10,7 @@ const Input = ({
   type,
   value,
   onChange,
+  onFocus,
   placeholder,
   maxLength,
   disabled,
@@ -30,6 +31,7 @@ const Input = ({
         type={type}
         value={value}
         onChange={onChange}
+        onFocus={onFocus}
         placeholder={placeholder}
         maxLength={maxLength}
         disabled={disabled}
@@ -56,6 +58,7 @@ Input.propTypes = {
   type: PropTypes.string,
   value: PropTypes.any,
   onChange: PropTypes.func.isRequired,
+  onFocus: PropTypes.func,
   placeholder: PropTypes.string,
   maxLength: PropTypes.string,
   disabled: PropTypes.bool,
@@ -72,6 +75,7 @@ Input.defaultProps = {
   name: '',
   type: 'text',
   value: '',
+  onFocus: null,
   placeholder: '',
   maxLength: '',
   disabled: false,
