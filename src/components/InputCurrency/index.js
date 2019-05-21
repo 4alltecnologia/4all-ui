@@ -10,19 +10,12 @@ import {
 } from '../../helpers/price';
 
 export default class InputCurrency extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      caretPosition: null,
-      event: null,
-    };
-  }
+  state = { caretPosition: null, event: null };
 
   componentDidUpdate(prevProps) {
     const value = this.props;
     const { caretPosition, event } = this.state;
     if (prevProps.value !== value && !!caretPosition) {
-      debugger;
       event.target.setSelectionRange(caretPosition, caretPosition);
     }
   }
@@ -32,7 +25,6 @@ export default class InputCurrency extends Component {
     const targetInputParams = getTargetInputParams(e);
     const hasLetters = e.target.value.replace('R$', '').match(/[a-z]/i);
     const formattedValue = getFormattedValue(e);
-    debugger;
     if (!hasLetters) {
       this.setState({
         event: e,
