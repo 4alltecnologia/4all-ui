@@ -36,7 +36,7 @@ export const customStyles = ({
     ...stylesProvided,
     fontFamily: theme.fontFamily,
     color: isDisabled ? theme.colors.GRAY_MEDIUM_3 : theme.colors.GRAY_DARKER,
-    cursor: isDisabled ? 'not-allowed' : 'pointer',
+    cursor: isDisabled ? 'default' : 'pointer',
     textDecoration: isDisabled ? 'line-through' : '',
     display: 'flex',
     justifyContent: 'space-between',
@@ -50,16 +50,18 @@ export const customStyles = ({
     label: {
       fontSize: theme.fontSizes.SIZE_7,
       fontWeight: 'normal',
+      marginBottom: 0,
+      cursor: isDisabled ? 'default' : 'pointer',
     },
-    ...isDisabled
-      ? optionCustomDisabledStyles
-      : {},
+    ...(isDisabled ? optionCustomDisabledStyles : {}),
   }),
   control: () => ({
     width: '100%',
     height: customStyle.height || 40,
     display: 'flex',
-    border: `1px solid ${error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2}`,
+    border: `1px solid ${
+      error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2
+    }`,
     borderRadius: theme.borders.RADIUS_1,
   }),
   multiValue: styles => ({
@@ -89,24 +91,25 @@ export const customStyles = ({
     fontSize: theme.fontSizes.SIZE_7,
     fontWeight: theme.fontWeights.SEMIBOLD,
   }),
-  multiValueRemove: styles => !canRemove
-    ? ({
-      display: 'none',
-    }) : ({
-      ...styles,
-      color: customStyle.multiRemoveBgColor || '#FFF',
-      borderTopRightRadius: '15px',
-      borderBottomRightRadius: '15px',
-      cursor: 'pointer',
-      paddingLeft: '2px',
-      marginLeft: '2px',
-      ':hover': {
-        backgroundColor: lightenDarkenColor(
-          customStyle.valueBgColor
-          || theme.colors.MAIN_COLOR,
-        ),
-      },
-    }),
+  multiValueRemove: styles =>
+    !canRemove
+      ? {
+          display: 'none',
+        }
+      : {
+          ...styles,
+          color: customStyle.multiRemoveBgColor || '#FFF',
+          borderTopRightRadius: '15px',
+          borderBottomRightRadius: '15px',
+          cursor: 'pointer',
+          paddingLeft: '2px',
+          marginLeft: '2px',
+          ':hover': {
+            backgroundColor: lightenDarkenColor(
+              customStyle.valueBgColor || theme.colors.MAIN_COLOR
+            ),
+          },
+        },
   placeholder: styles => ({
     ...styles,
     fontSize: theme.fontSizes.SIZE_7,
@@ -125,13 +128,17 @@ export const customStyles = ({
       backgroundColor: customStyle.valueBgColor || 'transparent',
       fontFamily: theme.fontFamily,
       ...customStyle.customValueStyles,
-    }
+    },
   }),
 });
 
 export const QtdOptions = styled.span`
   ${flexPosition({ align: 'center', justify: 'center' })}
-  ${fontStyle(theme.colors.GRAY_DARKER, theme.fontSizes.SIZE_7, theme.fontWeights.SEMIBOLD)}
+  ${fontStyle(
+    theme.colors.GRAY_DARKER,
+    theme.fontSizes.SIZE_7,
+    theme.fontWeights.SEMIBOLD
+  )}
   position: absolute;
   right: 0px;
   border-radius: 100%;
