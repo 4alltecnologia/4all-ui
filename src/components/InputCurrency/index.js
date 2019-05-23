@@ -25,6 +25,7 @@ export default class InputCurrency extends Component {
     const targetInputParams = getTargetInputParams(e);
     const hasLetters = e.target.value.replace('R$', '').match(/[a-z]/i);
     const formattedValue = getFormattedValue(e);
+
     if (!hasLetters) {
       this.setState({
         event: e,
@@ -32,7 +33,7 @@ export default class InputCurrency extends Component {
       });
     }
 
-    return onChange(e, formattedValue);
+    return onChange(e, hasLetters ? e.target.defaultValue : formattedValue);
   };
 
   render() {
