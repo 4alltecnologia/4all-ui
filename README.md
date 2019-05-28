@@ -280,6 +280,13 @@ Select props
 - `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
 <br /><br />
 
+## Box
+Box Props
+- `colSize` - number between 1 and 12 to identify the size of the box (`type: Number`)
+- `colSpacing` - Number in px to put spacing between boxes (`margin-right`) (`type: Number`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+<br /><br />
+
 ## Theme
 
 ### Usage
