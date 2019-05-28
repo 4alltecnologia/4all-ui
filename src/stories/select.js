@@ -75,6 +75,7 @@ storiesOf('Select', module)
       value={state.selected}
       onChange={value => store.set({ selected: value })}
       options={OPTIONS_EXAMPLE}
+      optionsListHeight="200px"
     />
   ))
   .add('single select custom', state => (

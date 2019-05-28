@@ -38,3 +38,10 @@ export const globalStyle = () => css`
     box-sizing: border-box;
   }
 `;
+
+export const getColSize = (colSize = 1) => {
+  let col = colSize < 0 ? 1 : colSize;
+  col = colSize > 12 ? 12 : colSize;
+  const spacing = colSize === 1 ? styles.grid.COL_SPACING : styles.grid.COL_SPACING * (colSize - 1);
+  return `${col * styles.grid.COL_SIZE + spacing}px`;
+};

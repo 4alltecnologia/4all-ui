@@ -38,6 +38,11 @@ const styles = {
   input: {
     DEFAULT_HEIGHT: '40px',
   },
+  grid: {
+    COL_SIZE: 67.5,
+    COL_SPACING: 30,
+    SCREEN_MAX_WIDTH: 1170,
+  },
 };
 
 export default styles;
