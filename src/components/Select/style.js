@@ -4,17 +4,35 @@ import { flexPosition, fontStyle } from '../../styles/mixins';
 import { lightenDarkenColor } from '../../helpers/helpers';
 
 export const groupStyles = {
-  display: 'flex',
   alignItems: 'center',
+  display: 'flex',
 };
 
 export const GroupLabel = {
+  color: theme.colors.GRAY_MEDIUM,
   fontFamily: theme.fontFamily,
   fontSize: theme.fontSizes.SIZE_7,
   fontWeight: theme.fontWeights.SEMIBOLD,
-  color: theme.colors.GRAY_MEDIUM,
   textTransform: 'initial',
 };
+
+const dotLabel = options =>
+  options && {
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'flex-start',
+
+    ':before': {
+      backgroundColor: options.color,
+      border: `1px solid ${options.borderColor || options.color}`,
+      borderRadius: '50%',
+      content: '""',
+      display: 'block',
+      marginRight: options.margin || 10,
+      height: options.size || 10,
+      width: options.size || 10,
+    },
+  };
 
 export const customStyles = ({
   error,
@@ -22,17 +40,20 @@ export const customStyles = ({
   canRemove,
   optionCustomDisabledStyles,
   containerCustomStyles,
+  dotOptions = {
+    singleValueDot: true,
+  },
 }) => ({
   container: styles => ({
     ...styles,
     ...containerCustomStyles,
-    width: '100%',
+    width: customStyle.width || '100%',
   }),
   group: styles => ({
     ...styles,
     padding: '4px 0',
   }),
-  option: (stylesProvided, { isFocused, isDisabled }) => ({
+  option: (stylesProvided, { data, isFocused, isDisabled }) => ({
     ...stylesProvided,
     fontFamily: theme.fontFamily,
     color: isDisabled ? theme.colors.GRAY_MEDIUM_3 : theme.colors.GRAY_DARKER,
@@ -52,15 +73,16 @@ export const customStyles = ({
       fontWeight: 'normal',
       marginBottom: 0,
       cursor: isDisabled ? 'default' : 'pointer',
+      ...dotLabel(data && data.dot),
     },
     ...(isDisabled ? optionCustomDisabledStyles : {}),
   }),
   control: () => ({
-    width: '100%',
+    width: `${customStyle.width ? `${parseInt(customStyle.width) - 2}px` : '100%'}`,
     height: customStyle.height || 40,
     display: 'flex',
     border: `1px solid ${
-      error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2
+      error ? theme.colors.DANGER_COLOR : customStyle.borderColor || theme.colors.GRAY_LIGHT_2
     }`,
     borderRadius: theme.borders.RADIUS_1,
   }),
@@ -116,10 +138,12 @@ export const customStyles = ({
     color: theme.colors.GRAY_MEDIUM,
     fontFamily: theme.fontFamily,
     fontWeight: theme.fontWeights.SEMIBOLD,
+    ...customStyle.customPlaceholderStyles,
   }),
   valueContainer: styles => ({
     ...styles,
     paddingRight: '20px',
+    ...customStyle.customValueContainerStyles,
     /* flexWrap: 'nowrap', */
     '.select__single-value': {
       fontSize: theme.fontSizes.SIZE_7,
@@ -129,6 +153,19 @@ export const customStyles = ({
       fontFamily: theme.fontFamily,
       ...customStyle.customValueStyles,
     },
+  }),
+  singleValue: (styles, { data }) => {
+    let newStyle = { ...styles };
+
+    if (dotOptions.singleValueDot) {
+      newStyle = { ...newStyle, ...dotLabel(data && data.dot) };
+    }
+
+    return newStyle;
+  },
+  dropdownIndicator: styles => ({
+    ...styles,
+    ...customStyle.customDropdownIndicatorStyles,
   }),
 });
 

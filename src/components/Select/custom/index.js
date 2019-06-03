@@ -9,7 +9,7 @@ export const Option = (option, customStyle) => {
     <components.Option {...option}>
       <label>{option.label}</label>
       {(option.isSelected) ? (
-        <IconCheck color={customStyle.iconColor} />
+        <IconCheck color={customStyle.optionIconColor} />
       ) : null }
     </components.Option>
   );

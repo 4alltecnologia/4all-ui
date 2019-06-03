@@ -241,6 +241,14 @@ Select props
 - `optionHeight` - height of the options (`type: String`)
 - `disabled` - disabled select (`type boolean`)
 - `containerCustomStyles` - object with custom styles to be applied to the select container element (`type: object`)
+- `optionIconColor` - option check icon's color (`type: string`)
+- `dotOptions` - dot configuration object (`type: object`)
+- `width` - component's width (`type: string`)
+- `borderColor` - component's border color (`type: string`)
+- `customPlaceholderStyles` - placeholder custom styles (`type: object`)
+- `customValueContainerStyles` - value container custom styles (`type: object`)
+- `customDropdownIndicatorStyles` - dropdown indicator custom styles (`type: object`)
+- `isSearchable` - disables the search behavior (`type: boolean`)
 <br /><br />
 
 ## ProductImage
