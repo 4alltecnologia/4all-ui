@@ -46,11 +46,19 @@ class Select extends PureComponent {
       valueColor,
       multiRemoveBgColor,
       iconColor,
+      optionIconColor,
       height,
       optionCustomDisabledStyles,
       optionHeight,
       disabled,
       containerCustomStyles,
+      dotOptions,
+      width,
+      borderColor,
+      customPlaceholderStyles,
+      customValueContainerStyles,
+      customDropdownIndicatorStyles,
+      isSearchable,
     } = this.props;
     const style = {
       valueBgColor,
@@ -58,9 +66,16 @@ class Select extends PureComponent {
       multiRemoveBgColor,
       customValueStyles,
       iconColor,
+      optionIconColor,
       height,
       optionHeight,
+      width,
+      borderColor,
+      customPlaceholderStyles,
+      customValueContainerStyles,
+      customDropdownIndicatorStyles,
     };
+
     return (
       <ReactSelect
         id={`select-${id}`}
@@ -75,6 +90,7 @@ class Select extends PureComponent {
           canRemove,
           optionCustomDisabledStyles,
           containerCustomStyles,
+          dotOptions,
         })}
         className="select-4all react-dropdown-multiselect"
         placeholder={placeholder}
@@ -93,6 +109,7 @@ class Select extends PureComponent {
           ValueContainer,
           MultiValueLabel: props => MultiValueLabel(props, formatLabel),
         }}
+        isSearchable={isSearchable}
       />
     );
   }
@@ -119,7 +136,12 @@ Select.propTypes = {
   optionHeight: PropTypes.string,
   optionCustomDisabledStyles: PropTypes.object,
   containerCustomStyles: PropTypes.object,
+  customValueContainerStyles: PropTypes.object,
+  customDropdownIndicatorStyles: PropTypes.object,
+  customPlaceholderStyles: PropTypes.object,
   disabled: PropTypes.bool,
+  optionIconColor: PropTypes.string,
+  isSearchable: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -138,11 +160,16 @@ Select.defaultProps = {
   valueColor: null,
   multiRemoveBgColor: null,
   iconColor: styles.colors.MAIN_COLOR,
+  optionIconColor: styles.colors.MAIN_COLOR,
   height: styles.input.DEFAULT_HEIGHT,
   optionHeight: styles.input.DEFAULT_HEIGHT,
   optionCustomDisabledStyles: {},
+  customValueContainerStyles: {},
+  customDropdownIndicatorStyles: {},
+  customPlaceholderStyles: {},
   containerCustomStyles: {},
   disabled: false,
+  isSearchable: true,
 };
 
 export default Select;
