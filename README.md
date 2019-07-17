@@ -144,6 +144,24 @@ InputCurrency props
 - `checked` - checked style (`type: bool`)
 <br /><br />
 
+## SearchInput
+_For this component we are using `react-debounce-input` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/react-debounce-input)_
+
+Search Input props
+- `disabled` - disabled style (`type: boolean`)
+- `error` - error style (`type: boolean`)
+- `onChange` - function for input change event (`type: function`)
+- `onFocus` - function for input focus event (`type: function`)
+- `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
+- `type` - input type (`type: String`)
+- `value` - input value (`type: any`)
+- `placeholder` - default input placeholder (`type: String`)
+- `maxLength` - set a maximum length (`type: String`)
+- `checked` - checked style (`type: bool`)
+- `minLength` - min length of string typed to search (`type: number`, `default: 2`)
+- `debounceTimeout` - timeout to call onChange callback function of string typed to search (`type: number`, `default: 300`)
+<br /><br />
+
 ## Switch
 Switch props
 - `checked` - check/uncheck the switch (`type: boolean`)
