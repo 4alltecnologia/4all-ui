@@ -24,7 +24,7 @@ const Input = ({
   onIconClick,
 }) => {
   const hasIcon = checked || search || customIcon;
-
+  const hasClickFunction = !!onIconClick && typeof onIconClick === 'function';
   return (
     <styles.Container width={width}>
       <styles.Input
@@ -46,8 +46,9 @@ const Input = ({
 
       {hasIcon && (
         <styles.IconContainer
+          as={hasClickFunction ? 'button' : 'div'}
           onClick={onIconClick}
-          hasClickFunction={!!onIconClick && typeof onIconClick === 'function'}
+          hasClickFunction={hasClickFunction}
         >
           {search && !checked && <SearchIcon />}
           {checked && <CheckIcon size="30px" />}
