@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { State, Store } from '@sambego/storybook-state';
+import { action } from '@storybook/addon-actions';
 import Input from '../components/Input';
 import customWithInfo from './helpers/customWithInfo';
 
@@ -9,6 +10,7 @@ const store = new Store({
   disabled: '',
   error: '',
   checked: '',
+  customIcon: '',
   custom: '',
   disabledChecked: '',
   search: '',
@@ -17,9 +19,7 @@ const handleChange = e => store.set({ [e.target.name]: e.target.value });
 
 storiesOf('Input', module)
   .addDecorator(customWithInfo())
-  .addDecorator(storyFn => (
-    <State store={store}>{state => storyFn(state)}</State>
-  ))
+  .addDecorator(storyFn => <State store={store}>{state => storyFn(state)}</State>)
   .add('Primary style', state => (
     <Input
       name="primary"
@@ -89,6 +89,17 @@ storiesOf('Input', module)
       width="250px"
       search
       disabled
+    />
+  ))
+  .add('Custom icon', state => (
+    <Input
+      name="customIcon"
+      onChange={handleChange}
+      value={state.customIcon}
+      placeholder="Custom icon style"
+      width="250px"
+      customIcon="😀"
+      onIconClick={action('Custom icon clicked')}
     />
   ))
   .add('Custom style', state => (

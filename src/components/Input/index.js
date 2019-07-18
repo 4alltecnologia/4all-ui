@@ -20,9 +20,11 @@ const Input = ({
   className,
   width,
   search,
+  customIcon,
+  onIconClick,
 }) => {
-  const hasIcon = checked || search;
-
+  const hasIcon = checked || search || customIcon;
+  const hasClickFunction = !!onIconClick && typeof onIconClick === 'function';
   return (
     <styles.Container width={width}>
       <styles.Input
@@ -43,9 +45,14 @@ const Input = ({
       />
 
       {hasIcon && (
-        <styles.IconContainer>
+        <styles.IconContainer
+          as={hasClickFunction ? 'button' : 'div'}
+          onClick={onIconClick}
+          hasClickFunction={hasClickFunction}
+        >
           {search && !checked && <SearchIcon />}
           {checked && <CheckIcon size="30px" />}
+          {customIcon && customIcon}
         </styles.IconContainer>
       )}
     </styles.Container>
@@ -68,6 +75,8 @@ Input.propTypes = {
   className: PropTypes.string,
   width: PropTypes.string,
   search: PropTypes.bool,
+  customIcon: PropTypes.any,
+  onIconClick: PropTypes.func,
 };
 
 Input.defaultProps = {
@@ -85,6 +94,8 @@ Input.defaultProps = {
   className: '',
   width: '100%',
   search: false,
+  customIcon: null,
+  onIconClick: null,
 };
 
 export default Input;
