@@ -34,12 +34,15 @@ export const Icon = styled.img`
   display: block;
 `;
 
-export const IconContainer = styled.div`
+export const IconContainer = styled.button`
   ${flexPosition({ align: 'center', justify: 'center' })}
   height: 40px;
   position: absolute;
   right: 0;
   top: 0;
   width: 47px;
+  background: transparent;
+  border: none;
+  outline: none;
   ${({ hasClickFunction }) => hasClickFunction && 'cursor: pointer;'}
 `;
