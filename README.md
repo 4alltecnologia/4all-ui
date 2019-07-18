@@ -131,6 +131,7 @@ Input props
 - `search` - search style (`type: bool`)
 - `customIcon` - customIcon to be inserted inside the input  (`type: any`)
 - `onIconClick` - function for customIcon click event (`type: function`)
+- `iconColor` - color of the check and search icons (`type: string`)
 <br /><br />
 
 ## InputCurrency
@@ -162,6 +163,7 @@ Search Input props
 - `checked` - checked style (`type: bool`)
 - `minLength` - min length of string typed to search (`type: number`, `default: 2`)
 - `debounceTimeout` - timeout to call onChange callback function of string typed to search (`type: number`, `default: 300`)
+- `iconColor` - color of search icon (`type: string`)
 <br /><br />
 
 ## Switch

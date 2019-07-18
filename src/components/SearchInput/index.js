@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
+import { default as theme } from '../../styles/variables';
 import SearchIcon from '../Icons/Search';
 
 const SearchInput = ({
@@ -19,6 +20,7 @@ const SearchInput = ({
   width,
   debounceTimeout,
   minLength,
+  iconColor,
 }) => {
   return (
     <styles.Container width={width}>
@@ -41,7 +43,7 @@ const SearchInput = ({
       />
 
       <styles.IconContainer>
-        <SearchIcon />
+        <SearchIcon color={iconColor} />
       </styles.IconContainer>
     </styles.Container>
   );
@@ -63,6 +65,7 @@ SearchInput.propTypes = {
   width: PropTypes.string,
   minLength: PropTypes.number,
   debounceTimeout: PropTypes.number,
+  iconColor: PropTypes.string,
 };
 
 SearchInput.defaultProps = {
@@ -78,8 +81,9 @@ SearchInput.defaultProps = {
   customStyles: {},
   className: '',
   width: '100%',
-  minLength: 2,
+  minLength: 0,
   debounceTimeout: 300,
+  iconColor: theme.colors.MAIN_COLOR,
 };
 
 export default SearchInput;
