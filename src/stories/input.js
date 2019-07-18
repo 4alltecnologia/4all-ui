@@ -107,6 +107,8 @@ storiesOf('Input', module)
       name="custom"
       onChange={handleChange}
       value={state.custom}
+      search
+      iconColor="red"
       placeholder="Custom style"
       width="250px"
       customStyles={{

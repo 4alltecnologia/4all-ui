@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import * as styles from './style';
+import { default as theme } from '../../styles/variables';
 import CheckIcon from '../Icons/Check';
 import SearchIcon from '../Icons/Search';
 
@@ -22,6 +23,7 @@ const Input = ({
   search,
   customIcon,
   onIconClick,
+  iconColor,
 }) => {
   const hasIcon = checked || search || customIcon;
   const hasClickFunction = !!onIconClick && typeof onIconClick === 'function';
@@ -50,8 +52,8 @@ const Input = ({
           onClick={onIconClick}
           hasClickFunction={hasClickFunction}
         >
-          {search && !checked && <SearchIcon />}
-          {checked && <CheckIcon size="30px" />}
+          {search && !checked && <SearchIcon color={iconColor} />}
+          {checked && <CheckIcon size="30px" color={iconColor} />}
           {customIcon && customIcon}
         </styles.IconContainer>
       )}
@@ -77,6 +79,7 @@ Input.propTypes = {
   search: PropTypes.bool,
   customIcon: PropTypes.any,
   onIconClick: PropTypes.func,
+  iconColor: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -96,6 +99,7 @@ Input.defaultProps = {
   search: false,
   customIcon: null,
   onIconClick: null,
+  iconColor: theme.colors.MAIN_COLOR,
 };
 
 export default Input;

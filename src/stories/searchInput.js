@@ -60,6 +60,7 @@ storiesOf('SearchInput', module)
       value={state.custom}
       placeholder="Custom style"
       width="250px"
+      iconColor="blue"
       customStyles={{
         backgroundColor: '#f1f1f1',
         color: '#118473',
