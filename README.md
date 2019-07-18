@@ -129,6 +129,8 @@ Input props
 - `maxLength` - set a maximum length (`type: String`)
 - `checked` - checked style (`type: bool`)
 - `search` - search style (`type: bool`)
+- `customIcon` - customIcon to be inserted inside the input  (`type: any`)
+- `onIconClick` - function for customIcon click event (`type: function`)
 <br /><br />
 
 ## InputCurrency

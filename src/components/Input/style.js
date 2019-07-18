@@ -3,13 +3,10 @@ import { fontStyle, flexPosition, globalStyle } from '../../styles/mixins';
 import theme from '../../styles/variables';
 
 export const Input = styled.input`
-  border: 1px solid ${({ error }) => error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2};
+  border: 1px solid
+    ${({ error }) => (error ? theme.colors.DANGER_COLOR : theme.colors.GRAY_LIGHT_2)};
   border-radius: 3px;
-  ${fontStyle(
-    theme.colors.GRAY_DARKER,
-    theme.fontSizes.SIZE_7,
-    theme.fontWeights.SEMIBOLD,
-  )};
+  ${fontStyle(theme.colors.GRAY_DARKER, theme.fontSizes.SIZE_7, theme.fontWeights.SEMIBOLD)};
   height: 40px;
   max-width: 100%;
   padding: 10px 15px;
@@ -19,7 +16,7 @@ export const Input = styled.input`
   ${({ customStyles }) => customStyles}
 
   ::placeholder {
-    color: ${theme.colors.GRAY_MEDIUM}
+    color: ${theme.colors.GRAY_MEDIUM};
   }
 
   :disabled {
@@ -44,4 +41,5 @@ export const IconContainer = styled.div`
   right: 0;
   top: 0;
   width: 47px;
+  ${({ hasClickFunction }) => hasClickFunction && 'cursor: pointer;'}
 `;
