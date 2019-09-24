@@ -273,8 +273,8 @@ Select props
 - `isSearchable` - disables the search behavior (`type: boolean`)
 <br /><br />
 
-## ProductImage
-ProductImage props
+## ItemImage
+ItemImage props
 - `image` - image path (`type: String`)
 - `small` - set the size to small (`type: boolean`)
 - `alt` - image alt text (`type: String`)
@@ -288,6 +288,8 @@ ProductImage props
 - `iconColor` - icon color (`type: String`)
 - `emptyText` - custom text to show when there is no image (`type: String`)
 - `iconOnly` - hides the empty image text (`type: boolean`)
+- `noImage` - hide default image (`type: boolean`)
+- `customDefaultIcon` - Use your own default no photo icon (`type: JSX`)
 <br /><br />
 
 ## Pagination

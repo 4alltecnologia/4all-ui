@@ -4,7 +4,7 @@ import * as styles from './style';
 import PhotoIcon from '../Icons/Photo';
 import theme from '../../styles/variables';
 
-const ProductImage = ({
+const ItemImage = ({
   id,
   className,
   image,
@@ -20,7 +20,9 @@ const ProductImage = ({
   customStyles,
   emptyText,
   iconOnly,
-}) => (
+  noImage,
+  customDefaultIcon,
+}) =>
   image ? (
     <styles.Image
       backgroundColor={backgroundColor}
@@ -43,25 +45,23 @@ const ProductImage = ({
       iconOnly={iconOnly}
       customStyles={customStyles}
     >
-      <PhotoIcon
-        className="product-image-4all__icon"
-        color={iconColor}
-        size={small ? '25px' : iconSize}
-      />
+      {customDefaultIcon}
+      {!noImage && !customDefaultIcon ? (
+        <PhotoIcon
+          className="product-image-default-4all__icon"
+          color={iconColor}
+          size={small ? '25px' : iconSize}
+        />
+      ) : null}
       {!iconOnly && (
-        <styles.Text
-          fontSize={fontSize}
-          className="product-image-4all__text"
-          fontColor={fontColor}
-        >
+        <styles.Text fontSize={fontSize} className="product-image-4all__text" fontColor={fontColor}>
           {emptyText}
         </styles.Text>
       )}
     </styles.EmptyImage>
-  )
-);
+  );
 
-ProductImage.propTypes = {
+  ItemImage.propTypes = {
   id: PropTypes.string,
   className: PropTypes.string,
   image: PropTypes.any,
@@ -77,9 +77,11 @@ ProductImage.propTypes = {
   iconSize: PropTypes.string,
   emptyText: PropTypes.string,
   iconOnly: PropTypes.bool,
+  noImage: PropTypes.bool,
+  customDefaultIcon: PropTypes.any,
 };
 
-ProductImage.defaultProps = {
+ItemImage.defaultProps = {
   id: '',
   className: '',
   image: null,
@@ -95,6 +97,8 @@ ProductImage.defaultProps = {
   iconSize: '30px',
   emptyText: 'Sem foto',
   iconOnly: false,
+  noImage: false,
+  customDefaultIcon: null,
 };
 
-export default ProductImage;
+export default ItemImage;
