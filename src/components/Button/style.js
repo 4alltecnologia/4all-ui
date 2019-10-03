@@ -57,7 +57,7 @@ export const CustomButton = styled.button`
   height: ${({ height }) => height || 'auto'};
   width: ${({ width }) => width || 'auto'};
   background-color: ${({ bgColor }) => bgColor || theme.colors.MAIN_COLOR};
-  border: ${({ border, bgColor }) => border || `1px solid ${bgColor || theme.colors.MAIN_COLOR}`};
+  border: ${({ border, borderColor, bgColor }) => border || `1px solid ${borderColor || bgColor || theme.colors.MAIN_COLOR}`};
   border-radius: ${theme.borders.RADIUS_1};
   padding: 0 10px;
   cursor: ${({ disabled }) => disabled ? 'not-allowed' : 'pointer'};
