@@ -33,6 +33,8 @@ const Tag = ({
   onRemoveTag,
   children,
   secondary,
+  maxWidth,
+  withEllipsis,
   error,
   iconColor,
 }) => (
@@ -52,6 +54,8 @@ const Tag = ({
     onClick={onClick}
     removeTag={!!onRemoveTag}
     secondary={secondary}
+    maxWidth={maxWidth}
+    withEllipsis={withEllipsis}
     error={error}
   >
     {children}
@@ -85,6 +89,8 @@ Tag.propTypes = {
   onRemoveTag: PropTypes.func,
   children: PropTypes.any.isRequired,
   secondary: PropTypes.bool,
+  maxWidth: PropTypes.string,
+  withEllipsis: PropTypes.bool,
   error: PropTypes.bool,
   iconColor: PropTypes.string,
 };
@@ -105,6 +111,8 @@ Tag.defaultProps = {
   onRemoveTag: null,
   customStyles: {},
   secondary: false,
+  maxWidth: '',
+  withEllipsis: false,
   error: false,
   iconColor: theme.colors.white,
 };
