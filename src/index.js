@@ -16,7 +16,7 @@ import Checkbox from './components/Checkbox';
 import Radio from './components/Radio';
 import Tooltip from './components/Tooltip';
 import Pagination from './components/Pagination';
-import ProductImage from './components/ProductImage';
+import ItemImage from './components/ItemImage';
 
 const theme = {
   styles,
@@ -43,5 +43,5 @@ export {
   Radio,
   Tooltip,
   Pagination,
-  ProductImage,
+  ItemImage,
 };
