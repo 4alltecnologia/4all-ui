@@ -7,6 +7,7 @@ import customWithInfo from './helpers/customWithInfo';
 
 const store = new Store({
   primary: '',
+  clear: '',
   disabled: '',
   error: '',
   custom: '',
@@ -16,8 +17,6 @@ const handleChange = e => {
 };
 
 store.subscribe(state => {
-  console.log(state);
-
   action(JSON.stringify(state))();
 });
 
@@ -30,6 +29,16 @@ storiesOf('SearchInput', module)
       onChange={handleChange}
       value={state.primary}
       placeholder="Primary style"
+      width="250px"
+    />
+  ))
+  .add('Primary style with clear field', state => (
+    <SearchInput
+      name="clear"
+      onChange={handleChange}
+      onClearSearch={() => store.set({ clear: '' })}
+      value={state.clear}
+      placeholder="Primary w/ Clear style"
       width="250px"
     />
   ))

@@ -164,6 +164,7 @@ Search Input props
 - `minLength` - min length of string typed to search (`type: number`, `default: 2`)
 - `debounceTimeout` - timeout to call onChange callback function of string typed to search (`type: number`, `default: 300`)
 - `iconColor` - color of search icon (`type: string`)
+- `onClearSearch` - it will add clear icon btn for clearing field if clicked (`type: func`, `default: null`)
 <br /><br />
 
 ## Switch
