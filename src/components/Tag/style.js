@@ -29,6 +29,13 @@ const disabledStyle = css`
   }
 `;
 
+const ellipsisLimitation = css`
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+`;
+
 export const CustomTag = styled.div`
   ${globalStyle()}
   background-color: ${({ bgColor }) => bgColor};
@@ -36,13 +43,9 @@ export const CustomTag = styled.div`
   border-radius: 20px;
   color: ${({ color }) => color || theme.colors.WHITE};
   ${flexPosition({ align: 'center', justify: 'center' })}
-  ${fontStyle(
-    ({ color }) => color,
-    theme.fontSizes.SIZE_7,
-    theme.fontWeights.SEMIBOLD,
-  )}
+  ${fontStyle(({ color }) => color, theme.fontSizes.SIZE_7, theme.fontWeights.SEMIBOLD)}
   height: ${({ height }) => height || 'auto'};
-  line-height: 17px;
+  line-height: ${({ height }) => height || '17px'};
   margin-right: 10px;
   margin-bottom: 10px;
   min-width: 50px;
@@ -66,6 +69,8 @@ export const CustomTag = styled.div`
   ${({ removeTag }) => (removeTag ? 'justify-content: space-between' : {})}
   ${({ error }) => (error ? errorTag : {})};
   ${({ secondary }) => (secondary ? secondaryTag : {})};
+  ${({ withEllipsis }) => (withEllipsis ? ellipsisLimitation : {})}
+  max-width: ${({ maxWidth }) => maxWidth};
   ${({ disabled }) => (disabled ? disabledStyle : {})};
   ${({ customStyles }) => customStyles};
 `;

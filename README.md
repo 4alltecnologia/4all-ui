@@ -114,6 +114,8 @@ Tag props
 - `color` - font color of the tag (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
+- `maxWidth` - max width of the tag (`type: String`)
+- `withEllipsis` - add ellipsis if the content exceeds the maxWidth  (`type: boolean`)
 <br /><br />
 
 ## Input
