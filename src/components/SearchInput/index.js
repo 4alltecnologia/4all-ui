@@ -11,6 +11,7 @@ const SearchInput = ({
   type,
   value,
   onChange,
+  onChangeAccessible,
   onFocus,
   placeholder,
   maxLength,
@@ -26,7 +27,7 @@ const SearchInput = ({
 }) => {
   const handleChange = e => {
     if (e.keyCode === 13) {
-      onChange(e);
+      onChangeAccessible();
     }
   };
 
@@ -57,7 +58,7 @@ const SearchInput = ({
             <CloseIcon color={theme.colors.GRAY_MEDIUM} />
           </styles.BtnAction>
         ) : (
-          <styles.BtnAction onClick={() => onChange({ target: { name, value } })}>
+          <styles.BtnAction onClick={onChangeAccessible}>
             <SearchIcon color={iconColor} />
           </styles.BtnAction>
         )}
@@ -84,6 +85,7 @@ SearchInput.propTypes = {
   debounceTimeout: PropTypes.number,
   iconColor: PropTypes.string,
   onClearSearch: PropTypes.func,
+  onChangeAccessible: PropTypes.func,
 };
 
 SearchInput.defaultProps = {
@@ -103,6 +105,7 @@ SearchInput.defaultProps = {
   debounceTimeout: 300,
   iconColor: theme.colors.MAIN_COLOR,
   onClearSearch: null,
+  onChangeAccessible: () => {},
 };
 
 export default SearchInput;
