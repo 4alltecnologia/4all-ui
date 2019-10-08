@@ -167,6 +167,7 @@ Search Input props
 - `debounceTimeout` - timeout to call onChange callback function of string typed to search (`type: number`, `default: 300`)
 - `iconColor` - color of search icon (`type: string`)
 - `onClearSearch` - it will add clear icon btn for clearing field if clicked (`type: func`, `default: null`)
+- `onChangeAccessible` - when user click on search icon or press enter for cases where you dont want to search together with input control (`type: func`, `default: () => {}`)
 <br /><br />
 
 ## Switch
