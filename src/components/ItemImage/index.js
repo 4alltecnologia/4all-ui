@@ -22,6 +22,7 @@ const ItemImage = ({
   iconOnly,
   noImage,
   customDefaultIcon,
+  loading,
 }) =>
   image ? (
     <styles.Image
@@ -32,6 +33,7 @@ const ItemImage = ({
       src={image}
       alt={alt}
       title={title}
+      loading={loading}
       customStyles={customStyles}
       size={small ? '40px' : size}
     />
@@ -79,6 +81,7 @@ const ItemImage = ({
   iconOnly: PropTypes.bool,
   noImage: PropTypes.bool,
   customDefaultIcon: PropTypes.any,
+  loading: PropTypes.oneOfType(['eager', 'lazy', 'auto']),
 };
 
 ItemImage.defaultProps = {
@@ -99,6 +102,7 @@ ItemImage.defaultProps = {
   iconOnly: false,
   noImage: false,
   customDefaultIcon: null,
+  loading: 'auto',
 };
 
 export default ItemImage;

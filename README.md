@@ -291,6 +291,7 @@ ItemImage props
 - `iconSize` - icon size (`type: String`)
 - `iconColor` - icon color (`type: String`)
 - `emptyText` - custom text to show when there is no image (`type: String`)
+- `loading` - html img loading attribute (`type: String`)
 - `iconOnly` - hides the empty image text (`type: boolean`)
 - `noImage` - hide default image (`type: boolean`)
 - `customDefaultIcon` - Use your own default no photo icon (`type: JSX`)
