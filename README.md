@@ -7,6 +7,7 @@
 ![npm-badge](https://nodei.co/npm/4all-ui.png?downloads=true&stars=true)
 
 ## [Storybook](https://4alltecnologia.github.io/4all-ui)
+
 Use this link to see the library storybook and all components variations
 
 ## Install
@@ -18,53 +19,60 @@ npm install --save 4all-ui
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import Button from '4all-ui/components/Button';
 
 class Example extends Component {
-  render () {
-    return (
-      <Button onClick={() => console.log('Click')}>Button Text</Button>
-    )
+  render() {
+    return <Button onClick={() => console.log('Click')}>Button Text</Button>;
   }
 }
 ```
 
 # Components
+
 ## Button
+
 Component Button Props
+
 - `width` - width of the button (`type: String`)
 - `height` - height of the button (`type: String`)
-- `type` - type of the button (`type: String`, e.g.   `submit, reset`)
+- `type` - type of the button (`type: String`, e.g. `submit, reset`)
 - `borderColor` - color of the button border (`type: String`)
 - `bgColor` - background-color of the button (`type: String`)
 - `disabled` - disabled style (`type: boolean`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `onClick` - function for button click event (`type: function`)
 - `color` - font color of the button (`type: String`)
-- `border` - border of the button (e.g.  `1px solid #ccc`)
+- `border` - border of the button (e.g. `1px solid #ccc`)
 - `secondary` - secondary style (`type: boolean`)
-- `border` - border of the button (`type: String`, e.g.  `1px solid #ccc`)
+- `border` - border of the button (`type: String`, e.g. `1px solid #ccc`)
 - `link` - link style (`type: boolean`)
-<br /><br />
+  <br /><br />
 
 ## Loader
+
 Loader props
+
 - `size` - size of the Loader (`type: String`)
 - `width` - border width of the Loader (`type: String`)
 - `color` - color of the Loader (`type: String`)
-<br /><br />
+  <br /><br />
 
 ## NavTabs
+
 Component Button Props
+
 - `secondary` - secondary styles for NavTab (`type: boolean`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
 - `children` - the component [NavTab](#NavTab) (type: jsx)
-<br /><br />
+  <br /><br />
 
 ## NavTab
+
 Component Button Props
+
 - `path` - path to go when click in NavTab (`type: String`)
 - `exact` - active style will be applied only if location match exact as the path ([react router feature](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/NavLink.md#exact-bool)) (`type: boolean`)
 - `activeStyle` - custom styles to be inserted inside styled-components with high prority only for active tab (`type: default's react style object`)
@@ -76,17 +84,21 @@ Component Button Props
 - `noOutline` - remove default outline style when tab is focused (`type: boolean`)
 - `children` - anything, but normally just a string (`type: jsx`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
-<br /><br />
+  <br /><br />
 
 ## Tabs
+
 Component Button Props
+
 - `secondary` - secondary styles for NavTab (`type: boolean`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
 - `children` - the component [Tab](#Tab) (`type: jsx`)
-<br /><br />
+  <br /><br />
 
 ## Tab
+
 Component Button Props
+
 - `onClick` - function to be called when Tab is clicked (`type: function`)
 - `active` - true/false that indicates if the current Tab is active (`type: boolean`)
 - `activeStyle` - custom styles to be inserted inside styled-components with high prority only for active tab (`type: default's react style object`)
@@ -98,15 +110,17 @@ Component Button Props
 - `noOutline` - remove default outline style when tab is focused (`type: boolean`)
 - `children` - anything, but normally just a string (`type: jsx`)
 - `customStyles` - custom styles to be inserted inside styled-components with high prority (`type: default's react style object`)
-<br /><br />
+  <br /><br />
 
 ## Tag
+
 Tag props
+
 - `width` - width of the tag (`type: String`)
 - `height` - height of the tag (`type: String`)
 - `bgColor` - background-color of the tag (`type: String`)
 - `disabled` - disabled style (`type: boolean`)
-- `border` - border of the tag (e.g.  `1px solid #ccc`)
+- `border` - border of the tag (e.g. `1px solid #ccc`)
 - `onHoverTag` - function for tag hover event (`type: function`)
 - `onBlurTag` - function for tag blur event (`type: function`)
 - `onClick` - function for tag click event (`type: function`)
@@ -115,11 +129,13 @@ Tag props
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `secondary` - secondary style (`type: boolean`)
 - `maxWidth` - max width of the tag (`type: String`)
-- `withEllipsis` - add ellipsis if the content exceeds the maxWidth  (`type: boolean`)
-<br /><br />
+- `withEllipsis` - add ellipsis if the content exceeds the maxWidth (`type: boolean`)
+  <br /><br />
 
 ## Input
+
 Input props
+
 - `disabled` - disabled style (`type: boolean`)
 - `error` - error style (`type: boolean`)
 - `onChange` - function for input change event (`type: function`)
@@ -131,13 +147,15 @@ Input props
 - `maxLength` - set a maximum length (`type: String`)
 - `checked` - checked style (`type: bool`)
 - `search` - search style (`type: bool`)
-- `customIcon` - customIcon to be inserted inside the input  (`type: any`)
+- `customIcon` - customIcon to be inserted inside the input (`type: any`)
 - `onIconClick` - function for customIcon click event (`type: function`)
 - `iconColor` - color of the check and search icons (`type: string`)
-<br /><br />
+  <br /><br />
 
 ## InputCurrency
+
 InputCurrency props
+
 - `disabled` - disabled style (`type: boolean`)
 - `error` - error style (`type: boolean`)
 - `onChange` - function for input change event (`type: function`)
@@ -147,12 +165,14 @@ InputCurrency props
 - `value` - input value (`type: any`)
 - `placeholder` - default input placeholder (`type: String`)
 - `checked` - checked style (`type: bool`)
-<br /><br />
+  <br /><br />
 
 ## SearchInput
+
 _For this component we are using `react-debounce-input` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/react-debounce-input)_
 
 Search Input props
+
 - `disabled` - disabled style (`type: boolean`)
 - `error` - error style (`type: boolean`)
 - `onChange` - function for input change event (`type: function`)
@@ -168,40 +188,48 @@ Search Input props
 - `iconColor` - color of search icon (`type: string`)
 - `onClearSearch` - it will add clear icon btn for clearing field if clicked (`type: func`, `default: null`)
 - `onChangeAccessible` - when user click on search icon or press enter for cases where you dont want to search together with input control (`type: func`, `default: () => {}`)
-<br /><br />
+  <br /><br />
 
 ## Switch
+
 Switch props
+
 - `checked` - check/uncheck the switch (`type: boolean`)
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for switch state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
 - `sliderStyles` - custom styles for the circle inside the switch (`type: default style object`)
 - `labelStyles`- custom styles for the text next to the switch (`type: default style object`)
-<br /><br />
+  <br /><br />
 
 ## Alert
+
 Alert props
+
 - `secondary` - secondary style (`type: bool`)
 - `fontColor` - custom font color (`type: String`)
 - `backgroundColor` - custom background color (`type: String`)
 - `iconColor` - custom icon color (`type: String`)
 - `width`- component width (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-<br /><br />
+  <br /><br />
 
 ## ProgressBar
+
 ProgressBar props
+
 - `progress` - current progress (`type: String`)
 - `barColor` - progress bar's bar color (`type: String`)
 - `height` - component's height (`type: String`)
 - `width` - component's width (`type: String`)
 - `roundness`- component's roundness/border-radius (`type: String`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-<br /><br />
+  <br /><br />
 
 ## Textarea
+
 Textarea props
+
 - `value` - input value (`type: any`)
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for state change (`type: function`)
@@ -210,10 +238,12 @@ Textarea props
 - `height` - component height (`type: String`)
 - `width` - component width (`type: String`)
 - `placeholder` - default input placeholder (`type: String`)
-<br /><br />
+  <br /><br />
 
 ## Radio
+
 Radio props
+
 - `checked` - check/uncheck the radio (`type: boolean`)
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for radio change (`type: function`)
@@ -221,20 +251,24 @@ Radio props
 - `value` - input value (`type: any`)
 - `label` - radio label text (`type: String`)
 - `desc` - radio description (`type: String`)
-<br /><br />
+  <br /><br />
 
 ## Checkbox
+
 Checkbox props
+
 - `checked` - check/uncheck the checkbox (`type: boolean`)
 - `disabled` - disabled style (`type: boolean`)
 - `onChange` - function for state change (`type: function`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type(`type: default style object`)
 - `label` - checkbox label text (`type: String`)
 - `mixed`- mixed style (`type: boolean`)
-<br /><br />
+  <br /><br />
 
 ## Tooltip
+
 Tooltip props
+
 - `top` - tooltip above the button flag (`type: boolean`)
 - `right` - tooltip at the right of the button flag (`type: boolean`)
 - `secondary` - secondary style (`type: boolean`)
@@ -243,12 +277,14 @@ Tooltip props
 - `width` - tooltip width (`type: String`)
 - `buttonSize` - button width/height (`type: Number`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-<br /><br />
+  <br /><br />
 
 ## Select
+
 _For this component we are using `react-select` and customizing it, if you want to see its [docs](https://react-select.com/)_
 
 Select props
+
 - `id` - id of the select (`type: String`)
 - `value` - object passed as [option](https://react-select.com/props#select-props) (`type: object`)
 - `options` - array of options that can be selected [docs](https://react-select.com/props#select-props) (`type: array`)
@@ -275,10 +311,12 @@ Select props
 - `customValueContainerStyles` - value container custom styles (`type: object`)
 - `customDropdownIndicatorStyles` - dropdown indicator custom styles (`type: object`)
 - `isSearchable` - disables the search behavior (`type: boolean`)
-<br /><br />
+  <br /><br />
 
 ## ItemImage
+
 ItemImage props
+
 - `image` - image path (`type: String`)
 - `small` - set the size to small (`type: boolean`)
 - `alt` - image alt text (`type: String`)
@@ -295,18 +333,20 @@ ItemImage props
 - `iconOnly` - hides the empty image text (`type: boolean`)
 - `noImage` - hide default image (`type: boolean`)
 - `customDefaultIcon` - Use your own default no photo icon (`type: JSX`)
-<br /><br />
+  <br /><br />
 
 ## Pagination
+
 _For this component we are using `rc-pagination` and customizing it, if you want to see its [docs](https://www.npmjs.com/package/rc-pagination)_
 
 Select props
+
 - `id` - id of the pagination (`type: String`)
 - `className` - class of the pagination (`type: String`)
 - `pages` - number of pages (`type: Number`)
 - `secondary` - apply secondary style (`type: boolean`)
 - `currentPage` - current page with active style of the pagination component (`type: Number`)
-- `onChangePage` - function triggered when some page or next/prev/jump is clicked  (`type: function`)
+- `onChangePage` - function triggered when some page or next/prev/jump is clicked (`type: function`)
 - `itemWidth` - width of every page button (`type: String`)
 - `itemHeight` - height of every page button (`type: String`)
 - `activeBgColor` - background-color of active page (`type: String`)
@@ -315,18 +355,30 @@ Select props
 - `customInactiveItemStyles` - object with custom styles to be applied page not active (`type: object`)
 - `iconColor` - color of the icons (`type: String`)
 - `showLessItems` - show less pages (3), the default is always 5 (`type: boolean`)
-<br /><br />
+  <br /><br />
 
 ## Box
+
 Box Props
+
 - `colSize` - number between 1 and 12 to identify the size of the box (`type: Number`)
 - `colSpacing` - Number in px to put spacing between boxes (`margin-right`) (`type: Number`)
 - `customStyles` - customStyles to be inserted inside styled-components with high prority type (`type: default style object`)
-<br /><br />
+  <br /><br />
+
+## Header
+
+Header Props
+
+- `breadcrumbLinks` - array of links to be added to breadcrumbtrail navigation, optional (`type: array of objects`)
+- `title` - main text to be displayed on header (`type: String`)
+- `backlink` - link to previous page, optional (`type: object`)
+- `containerStyles` - custom styles to be applied to container (`type: default style object`)
 
 ## Theme
 
 ### Usage
+
 ```javascript
 import styled from 'styled-components';
 import { styles, mixins } from '4all-ui/styles';
@@ -335,10 +387,10 @@ const ContainerDiv = styled.div`
   background-color: ${styles.colors.MAIN_COLOR};
   ${mixins.flexPosition({ align: 'center', justify: 'space-between', direction: 'column' })}
 `;
-
 ```
 
 ### Properties
+
 ```javascript
 const theme = {
   styles: {
@@ -380,9 +432,13 @@ const theme = {
     },
   },
   mixins: {
-    flexPosition: function({ align/*(align-items)*/, justify/*(justify-content)*/, direction/*(flex-direction)*/ }) {
+    flexPosition: function({
+      align /*(align-items)*/,
+      justify /*(justify-content)*/,
+      direction /*(flex-direction)*/,
+    }) {
       /* return string to be inserted into your styled-component */
-      },
+    },
     fontStyle: function(color, fontSize, fontWeight) {
       /* return string to be inserted into your styled-component */
     },
@@ -391,10 +447,11 @@ const theme = {
     },
     globalStyle: function() {
       /* return string to be inserted into your styled-component */
-    }
-  }
-}
+    },
+  },
+};
 ```
+
 <br /><br />
 
 ## License
