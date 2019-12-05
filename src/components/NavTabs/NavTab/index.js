@@ -23,7 +23,7 @@ const NavTab = ({
     exact={!!exact}
     activeClassName="active"
     to={path}
-    customstyles={customStyles || undefined}
+    customStyles={customStyles || undefined}
     activeStyle={activeStyle}
     hoverstyle={hoverStyle || undefined}
     width={width}
@@ -53,7 +53,7 @@ NavTab.propTypes = {
 };
 
 NavTab.defaultProps = {
-  customStyles: {},
+  customStyles: null,
   path: null,
   exact: false,
   activeStyle: null,
