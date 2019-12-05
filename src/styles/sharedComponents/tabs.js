@@ -4,7 +4,10 @@ import { flexPosition, fontStyle, globalStyle } from '../mixins';
 import styles from '../variables';
 
 const removeLinkEffects = css`
-  &:hover, &:active, &:focus, &:visited {
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
     text-decoration: none;
   }
   box-sizing: border-box;
@@ -18,9 +21,10 @@ const tabStyle = css`
   width: ${({ width }) => width || 'auto'};
   height: ${({ height }) => height || '64px'};
   text-decoration: none;
-  ${({ nooutline }) => nooutline ? 'outline: none;' : {}}
+  ${({ nooutline }) => (nooutline ? 'outline: none;' : {})}
   &.active {
-    border-bottom: 4px solid ${({ activebordercolor }) => activebordercolor || styles.colors.MAIN_COLOR};
+    border-bottom: 4px solid
+      ${({ activebordercolor }) => activebordercolor || styles.colors.MAIN_COLOR};
     padding-bottom: 1px;
     color: ${styles.colors.GRAY_DARKER};
     ${({ activestyle }) => activestyle}
@@ -39,6 +43,7 @@ const tabStyle = css`
 export const CustomNavLink = styled(NavLink)`
   ${removeLinkEffects}
   ${tabStyle}
+  ${({ customStyles }) => customStyles}
 `;
 
 export const CustomButtonTab = styled.button`
@@ -62,5 +67,5 @@ const secondaryStyle = css`
 export const TabsContainer = styled.div`
   ${globalStyle()}
   ${flexPosition({ align: 'flex-end', justify: 'flex-start' })}
-  ${({ secondary }) => secondary ? secondaryStyle : {}}
+  ${({ secondary }) => (secondary ? secondaryStyle : {})}
 `;
