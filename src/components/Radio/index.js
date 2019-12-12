@@ -18,9 +18,7 @@ const Radio = ({
 
   return (
     <styles.RadioContainer
-      className={`radio-4all radio-4all--${
-        checked ? 'checked' : 'unchecked'
-      } ${className}`}
+      className={`radio-4all radio-4all--${checked ? 'checked' : 'unchecked'} ${className}`}
     >
       <styles.LabelContainer htmlFor={idFormatted}>
         <styles.InputContainer>
@@ -36,8 +34,8 @@ const Radio = ({
           <styles.CustomRadio checked={checked} disabled={disabled} />
         </styles.InputContainer>
         <styles.DescContainer customDescStyles={customDescStyles}>
-          <styles.Label className="radio-4all-label">{label}</styles.Label>
-          <styles.Desc className="radio-4all-description">{desc}</styles.Desc>
+          {label && <styles.Label className="radio-4all-label">{label}</styles.Label>}
+          {desc && <styles.Desc className="radio-4all-description">{desc}</styles.Desc>}
         </styles.DescContainer>
       </styles.LabelContainer>
     </styles.RadioContainer>
