@@ -23,7 +23,7 @@ jobs:
       deploy:
         provider: npm
         skip_cleanup: true
-        email: leo01_alves@hotmail.com
+        email: anny.figueira@gmail.com
         tag: latest
         api_key:
           secure: $NPM_AUTH_KEY
