@@ -14,6 +14,12 @@ storiesOf('Header', module)
       backLink={{ text: 'Voltar para Itens', external: true, link: '/' }}
     />
   ))
+  .add('Without backlink', () => (
+    <Header
+      breadcrumbLinks={[{ external: true, link: '/', text: 'Home' }, { link: '/', text: 'Itens' }]}
+      title="Item1"
+    />
+  ))
   .add('Custom style', () => (
     <Header
       breadcrumbLinks={[{ external: true, link: '/', text: 'Home' }, { link: '/', text: 'Itens' }]}
