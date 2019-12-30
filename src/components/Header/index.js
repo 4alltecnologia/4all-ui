@@ -31,7 +31,7 @@ function Header({ breadcrumbLinks, title, backLink, containerStyles }) {
             </styles.SmallHeader>
             <styles.Title>{title}</styles.Title>
           </styles.LeftHeader>
-          <styles.RightHeader>{renderBackLink(backLink)}</styles.RightHeader>
+          {backLink && <styles.RightHeader>{renderBackLink(backLink)}</styles.RightHeader>}
         </styles.InnerHeader>
       </styles.Container>
     </styles.Header>
@@ -40,15 +40,8 @@ function Header({ breadcrumbLinks, title, backLink, containerStyles }) {
 
 Header.defaultProps = {
   title: '',
-  breadcrumbLinks: [
-    { external: true, link: '/', text: 'Gestão de MKTP' },
-    { link: '/', text: 'Importação' },
-  ],
-  backLink: {
-    text: '',
-    external: false,
-    link: '',
-  },
+  breadcrumbLinks: [{ external: true, link: '/', text: 'Home' }, { link: '/', text: 'Listagem' }],
+  backLink: null,
   containerStyles: {
     width: '100%',
     margin: '0 auto',
