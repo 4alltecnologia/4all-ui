@@ -6,13 +6,9 @@ import customWithInfo from './helpers/customWithInfo';
 
 storiesOf('Alert', module)
   .addDecorator(customWithInfo())
-  .add('Primary style', () => (
-    <Alert>Lorem ipsum dolor sit amet consectetur adipiscing elit</Alert>
-  ))
+  .add('Primary style', () => <Alert>Lorem ipsum dolor sit amet consectetur adipiscing elit</Alert>)
   .add('Secondary style', () => (
-    <Alert secondary>
-      Lorem ipsum dolor sit amet consectetur adipiscing elit
-    </Alert>
+    <Alert secondary>Lorem ipsum dolor sit amet consectetur adipiscing elit</Alert>
   ))
   .add('Custom colors', () => (
     <Alert
@@ -20,6 +16,11 @@ storiesOf('Alert', module)
       iconColor={theme.colors.MAIN_COLOR}
       backgroundColor={theme.colors.GRAY_LIGHT}
     >
+      Lorem ipsum dolor sit amet consectetur adipiscing elit
+    </Alert>
+  ))
+  .add('Custom icon', () => (
+    <Alert iconColor={theme.colors.WHITE} iconSize="20px">
       Lorem ipsum dolor sit amet consectetur adipiscing elit
     </Alert>
   ))
