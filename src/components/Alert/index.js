@@ -10,6 +10,7 @@ const Alert = ({
   fontColor,
   backgroundColor,
   iconColor,
+  iconSize,
   secondary,
   customStyles,
   children,
@@ -25,6 +26,7 @@ const Alert = ({
     width={width}
   >
     <AlertIcon
+      size={iconSize}
       className="alert-icon"
       color={secondary ? theme.colors.DANGER_COLOR : iconColor}
     />
@@ -39,6 +41,7 @@ Alert.propTypes = {
   fontColor: PropTypes.string,
   backgroundColor: PropTypes.string,
   iconColor: PropTypes.string,
+  iconSize: PropTypes.string,
   secondary: PropTypes.bool,
   customStyles: PropTypes.object,
   children: PropTypes.any.isRequired,
@@ -51,6 +54,7 @@ Alert.defaultProps = {
   fontColor: theme.colors.WHITE,
   backgroundColor: theme.colors.DANGER_COLOR,
   iconColor: theme.colors.WHITE,
+  iconSize: '30px',
   secondary: false,
   customStyles: {},
   width: '250px',
