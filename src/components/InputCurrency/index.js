@@ -51,6 +51,7 @@ export default class InputCurrency extends Component {
       checked,
       className,
       width,
+      required,
     } = this.props;
     return (
       <Input
@@ -67,6 +68,7 @@ export default class InputCurrency extends Component {
         checked={checked}
         className={`input-currency-4all ${className}`}
         width={width}
+        required={required}
       />
     );
   }
@@ -86,6 +88,7 @@ InputCurrency.propTypes = {
   checked: PropTypes.bool,
   className: PropTypes.string,
   width: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 InputCurrency.defaultProps = {
@@ -101,4 +104,5 @@ InputCurrency.defaultProps = {
   customStyles: {},
   className: '',
   width: '100%',
+  required: false,
 };
