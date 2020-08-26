@@ -150,6 +150,7 @@ Input props
 - `customIcon` - customIcon to be inserted inside the input (`type: any`)
 - `onIconClick` - function for customIcon click event (`type: function`)
 - `iconColor` - color of the check and search icons (`type: string`)
+- `required` - set input as required (`type: bool`)
   <br /><br />
 
 ## InputCurrency
@@ -165,6 +166,7 @@ InputCurrency props
 - `value` - input value (`type: any`)
 - `placeholder` - default input placeholder (`type: String`)
 - `checked` - checked style (`type: bool`)
+- `required` - set input as required (`type: bool`)
   <br /><br />
 
 ## SearchInput
