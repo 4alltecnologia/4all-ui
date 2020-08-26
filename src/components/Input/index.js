@@ -24,6 +24,7 @@ const Input = ({
   customIcon,
   onIconClick,
   iconColor,
+  required,
 }) => {
   const hasIcon = checked || search || customIcon;
   const hasClickFunction = !!onIconClick && typeof onIconClick === 'function';
@@ -44,6 +45,7 @@ const Input = ({
         customStyles={customStyles}
         className={`input-4all ${className}`}
         width={width}
+        required={required}
       />
 
       {hasIcon && (
@@ -80,6 +82,7 @@ Input.propTypes = {
   customIcon: PropTypes.any,
   onIconClick: PropTypes.func,
   iconColor: PropTypes.string,
+  required: PropTypes.bool,
 };
 
 Input.defaultProps = {
@@ -100,6 +103,7 @@ Input.defaultProps = {
   customIcon: null,
   onIconClick: null,
   iconColor: theme.colors.MAIN_COLOR,
+  required: false,
 };
 
 export default Input;
